@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>野玩儿｜爱户外，爱科技！</title>
-
-    <meta name="description" content="爱户外,爱科技！Yeoner|智能户外产品科技资讯。---都在野玩儿！" />
-    <meta name="keywords" content="野玩儿,野玩科技,野玩网,户外运动,智能户外,智能穿戴,智能硬件,gopro,佳明,garmin,户外,户外摄影,运动相机,运动手表,户外手表,免费,评测,众测,滑雪,新户外" />
-    <link rel="canonical" href="http://www.yeoner.com/"/>
+    <meta name="description" content="" />
+    <meta name="keywords" content="众测聚合页 | 野玩儿" />
+    <link rel="canonical" href="http://www.yeoner.com/zhongce"/>
     <link rel="alternate" type="application/rss+xml" title="野玩儿 RSS Feed" href="http://www.yeoner.com/feed" />
     <link rel="alternate" type="application/atom+xml" title="野玩儿 Atom Feed" href="http://www.yeoner.com/feed/atom" />
     <script type="text/javascript">
-        var um = {"ajax_url":"http:\/\/www.yeoner.com\/wp-admin\/admin-ajax.php","admin_url":"http:\/\/www.yeoner.com\/wp-admin\/","wp_url":"http:\/\/www.yeoner.com","um_url":"http:\/\/www.yeoner.com\/wp-content\/plugins\/ucenter-and-market-yewan\/","uid":0,"is_admin":0,"redirecturl":"http:\/\/www.yeoner.com","loadingmessage":"\u6b63\u5728\u8bf7\u6c42\u4e2d\uff0c\u8bf7\u7a0d\u7b49...","paged":1,"cpage":1,"timthumb":"http:\/\/www.yeoner.com\/wp-content\/plugins\/ucenter-and-market-yewan\/func\/timthumb.php?src="};
+        var um = {"ajax_url":"http:\/\/www.yeoner.com\/wp-admin\/admin-ajax.php","admin_url":"http:\/\/www.yeoner.com\/wp-admin\/","wp_url":"http:\/\/www.yeoner.com","um_url":"http:\/\/www.yeoner.com\/wp-content\/plugins\/ucenter-and-market-yewan\/","uid":0,"is_admin":0,"redirecturl":"http:\/\/www.yeoner.com\/zhongce","loadingmessage":"\u6b63\u5728\u8bf7\u6c42\u4e2d\uff0c\u8bf7\u7a0d\u7b49...","paged":1,"cpage":1,"timthumb":"http:\/\/www.yeoner.com\/wp-content\/plugins\/ucenter-and-market-yewan\/func\/timthumb.php?src="};
     </script>
     <link rel='dns-prefetch' href='//www.yeoner.com' />
     <link rel='dns-prefetch' href='//s.w.org' />
@@ -21,46 +20,112 @@
     <link rel='stylesheet' id='fa-css'  href='http://www.yeoner.com/wp-content/plugins/ucenter-and-market-yewan/static/font-awesome/font-awesome.css?ver=17.4' type='text/css' media='all' />
     <link rel='stylesheet' id='style-css'  href='http://www.yeoner.com/wp-content/themes/yewan/style.css?ver=2016.03.28' type='text/css' media='all' />
     <link rel='stylesheet' id='main-css'  href='http://www.yeoner.com/wp-content/themes/yewan/css/main.css?ver=1.0' type='text/css' media='' />
+    <link rel='stylesheet' id='boxer.css-css'  href='http://www.yeoner.com/wp-content/themes/yewan/css/boxer/jquery.fs.boxer.css?ver=3.0.3' type='text/css' media='screen' />
     <script type='text/javascript' src='http://www.yeoner.com/wp-content/plugins/ucenter-and-market-yewan/static/jquery.min.js?ver=17.4'></script>
     <script type='text/javascript' src='http://www.yeoner.com/wp-content/themes/yewan/js/jquery-1.7.2.min.js?ver=1.7.2'></script>
     <script type='text/javascript' src='http://www.yeoner.com/wp-content/themes/yewan/js/swiper.jquery.min.js?ver=3.0.5'></script>
+    <link rel="canonical" href="http://www.yeoner.com/zhongce" />
     <link rel="shortcut icon" href="http://cdn.yeoner.com/wp-content/uploads/2015/11/ico.png" />
     <link rel="icon" href="http://cdn.yeoner.com/wp-content/uploads/2015/11/cropped-yeoner.com_2015-11-03_00-20-571-32x32.png" sizes="32x32" />
     <link rel="icon" href="http://cdn.yeoner.com/wp-content/uploads/2015/11/cropped-yeoner.com_2015-11-03_00-20-571-192x192.png" sizes="192x192" />
     <link rel="apple-touch-icon-precomposed" href="http://cdn.yeoner.com/wp-content/uploads/2015/11/cropped-yeoner.com_2015-11-03_00-20-571-180x180.png" />
     <meta name="msapplication-TileImage" content="http://cdn.yeoner.com/wp-content/uploads/2015/11/cropped-yeoner.com_2015-11-03_00-20-571-270x270.png" />
 
+
     <script type="text/javascript">
         $(function(){
             var resstr = '[';
-            $(".container").each(function (i,info){
+
+//            户外视频1
+
+//            $(".videotop .videotop_list .layout_li").each(function (i,info){
+//                resstr += '{';
+//                resstr += '"layout_li_a1_href":"'+$(info).find("a").attr("href")+'",';
+//                resstr += '"layout_li_a1_title":"'+$(info).find("a").attr("title")+'",';
+//                resstr += '"layout_li_a1_src":"'+$(info).find("img").attr("src")+'",';
+//                resstr += '"layout_li_a2_href":"'+$(info).find("a").attr("href")+'",';
+//                resstr += '"layout_li_a2_title":"'+$(info).find("a").attr("title")+'",';
+//                resstr += '"layout_li_a2_h3":"'+$(info).find("a h3").text()+'",';
+//                resstr += '},';
+//            } );
+
+//            众测试用
+
+            $(".test_cat .test_list .layout_li").each(function (i,info){
                 resstr += '{';
-                resstr += '"thumbnail_url":"'+$(info).find(".thumbnail a").attr("href")+'",';
-                resstr += '"thumbnail_title":"'+$(info).find(".thumbnail a").attr("title")+'",';
-                resstr += '"thumbnail_src":"'+$(info).find(".thumbnail a img").attr("src")+'",';
-                resstr += '"thumbnail_alt":"'+$(info).find(".thumbnail a img").attr("alt")+'",';
-                resstr += '"title":"'+$(info).find("h2 a").attr("href")+'",';
-                resstr += '"title":"'+$(info).find("h2 a").text()+'",';
-                resstr += '"labtime_url":"'+$(info).find(".postlist-info time a").attr("href")+'",';
-                resstr += '"time":"'+$(info).find(".postlist-info time a").text()+'",';
-                resstr += '"lab1_url":"'+$(info).find(".postlist-info a").eq(0).attr("href")+'",';
-                resstr += '"lab1":"'+$(info).find(".postlist-info a").eq(0).text()+'",';
-                resstr += '"lab2_url":"'+$(info).find(".postlist-info a").eq(1).attr("href")+'",';
-                resstr += '"lab2":"'+$(info).find(".postlist-info a").eq(1).text()+'",';
-                resstr += '"lab3_url":"'+$(info).find(".postlist-info a").eq(2).attr("href")+'",';
-                resstr += '"lab3":"'+$(info).find(".postlist-info a").eq(2).text()+'",';
-                resstr += '"content":"'+$(info).find(".entry-content").text()+'",';
-                resstr += '"tag1_url":"'+$(info).find(".tags a").eq(0).attr("href")+'",';
-                resstr += '"tag1":"'+$(info).find(".tags a").eq(0).text()+'",';
-                resstr += '"tag1_style":"'+$(info).find(".tags .bg").eq(0).attr("style")+'",';
-                resstr += '"tag2_url":"'+$(info).find(".tags a").eq(1).attr("href")+'",';
-                resstr += '"tag2":"'+$(info).find(".tags a").eq(1).text()+'",';
-                resstr += '"tag2_style":"'+$(info).find(".tags .bg").eq(1).attr("style")+'",';
-                resstr += '"tag3_url":"'+$(info).find(".tags a").eq(2).attr("href")+'",';
-                resstr += '"tag3":"'+$(info).find(".tags a").eq(2).text()+'",';
-                resstr += '"tag3_style":"'+$(info).find(".tags .bg").eq(2).attr("style")+'",';
+                resstr += '"article_url":"'+$(info).find("a").attr("href")+'",';
+                resstr += '"article_title":"'+$(info).find("a").attr("title")+'",';
+                resstr += '"article_src":"'+$(info).find("a img").attr("src")+'",';
+                resstr += '"article_alt":"'+$(info).find("a img").attr("alt")+'",';
+                resstr += '"article_h3":"'+$(info).find("a h3").text()+'",';
+                resstr += '"test_count_span1":"'+$(info).find(".test_count span").eq(0).text()+'",';
+                resstr += '"test_count_span2":"'+$(info).find(".test_count span").eq(1).text()+'",';
+                resstr += '"comment_count":"'+$(info).find(".comment_count").text()+'",';
+                resstr += '"comment_count_span":"'+$(info).find(".comment_count span").text()+'",';
+                resstr += '"test_state_span":"'+$(info).find(".test_state span").text()+'",';
                 resstr += '},';
             } );
+
+////            户外装备
+//            $(".one .cate_list article").each(function (i,info){
+//                resstr += '{';
+//                resstr += '"zhuangBei_url":"'+$(info).find("a").attr("href")+'",';
+//                resstr += '"zhuangBei_title":"'+$(info).find("a").attr("title")+'",';
+//                resstr += '"zhuangBei_src":"'+$(info).find("a img").attr("src")+'",';
+//                resstr += '"zhuangBei_alt":"'+$(info).find("a img").attr("alt")+'",';
+//                resstr += '"zhuangBei_h3":"'+$(info).find("a h3").text()+'",';
+//                resstr += '},';
+//            } );
+////            户外知识
+//            $(".two .cate_list article").each(function (i,info){
+//                resstr += '{';
+//                resstr += '"zhiShi_url":"'+$(info).find("a").attr("href")+'",';
+//                resstr += '"zhiShi_title":"'+$(info).find("a").attr("title")+'",';
+//                resstr += '"zhiShi_src":"'+$(info).find("a img").attr("src")+'",';
+//                resstr += '"zhiShi_alt":"'+$(info).find("a img").attr("alt")+'",';
+//                resstr += '"zhiShi_h3":"'+$(info).find("a h3").text()+'",';
+//                resstr += '},';
+//            });
+////            户外探索
+//            $(".three .cate_list article").each(function (i,info){
+//                resstr += '{';
+//                resstr += '"tanSuo_url":"'+$(info).find("a").attr("href")+'",';
+//                resstr += '"tanSuo_title":"'+$(info).find("a").attr("title")+'",';
+//                resstr += '"tanSuo_src":"'+$(info).find("a img").attr("src")+'",';
+//                resstr += '"tanSuo_alt":"'+$(info).find("a img").attr("alt")+'",';
+//                resstr += '"tanSuo_h3":"'+$(info).find("a h3").text()+'",';
+//                resstr += '},';
+//            });
+////            酷品
+//            $(".four .cate_list article").each(function (i,info){
+//                resstr += '{';
+//                resstr += '"kuPin_url":"'+$(info).find("a").attr("href")+'",';
+//                resstr += '"kuPin_title":"'+$(info).find("a").attr("title")+'",';
+//                resstr += '"kuPin_src":"'+$(info).find("a img").attr("src")+'",';
+//                resstr += '"kuPin_alt":"'+$(info).find("a img").attr("alt")+'",';
+//                resstr += '"kuPin_h3":"'+$(info).find("a h3").text()+'",';
+//                resstr += '},';
+//            });
+////            媒体平台
+//            $(".five .cate_list article").each(function (i,info){
+//                resstr += '{';
+//                resstr += '"meiTi_url":"'+$(info).find("a").attr("href")+'",';
+//                resstr += '"meiTi_title":"'+$(info).find("a").attr("title")+'",';
+//                resstr += '"meiTi_src":"'+$(info).find("a img").attr("src")+'",';
+//                resstr += '"meiTi_alt":"'+$(info).find("a img").attr("alt")+'",';
+//                resstr += '"meiTi_h3":"'+$(info).find("a h3").text()+'",';
+//                resstr += '},';
+//            });
+////            户外视频
+//            $(".six .cate_list article").each(function (i,info){
+//                resstr += '{';
+//                resstr += '"shiPin_url":"'+$(info).find("a").attr("href")+'",';
+//                resstr += '"shiPin_title":"'+$(info).find("a").attr("title")+'",';
+//                resstr += '"shiPin_src":"'+$(info).find("a img").attr("src")+'",';
+//                resstr += '"shiPin_alt":"'+$(info).find("a img").attr("alt")+'",';
+//                resstr += '"shiPin_h3":"'+$(info).find("a h3").text()+'",';
+//                resstr += '},';
+//            });
             resstr += ']';
             console.log(resstr);
         })
