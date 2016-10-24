@@ -1,0 +1,130 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    font: 13px Verdana,微软雅黑,Geneva,sans-serif;
+    line-height: 32px;
+    color: #666;
+    background: #fafafa;
+}
+h1,h2,h3,h4{
+    font-weight: normal;
+}
+h3{
+    font-size: 18px;
+}
+li{
+    list-style: none;
+    font-size: 14px;
+}
+a, a:hover {
+    text-decoration: none;
+}
+a {
+    color: #333;
+}
+a, input, textarea, b, button, i, li, h2, h3, span, img, strong, *::before, *::after, .sub-menu li, .share-btn, .salong_search, #test_respond, .share-popup, .bg, .lg, .swiper-button {
+    -moz-transition: ease-in-out 0.5s;
+    -webkit-transition: ease-in-out 0.5s;
+    -o-transition: ease-in-out 0.5s;
+    -ms-transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.5s;
+}
+
+
+.footer{
+    background-color: #fff;
+    border-top:1px solid #f4f4f4;
+    padding: 48px 0;
+    clear: both;
+    overflow: hidden;
+    margin-top: 60px;
+}
+.wrapper{
+    width: 1080px;
+    margin: 0 auto;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+.footer-nav a{
+    padding-right: 8px;
+}
+.footer-nav a:hover{
+    color: #d11f3c;
+}
+.footer-menu{
+    margin-bottom: 8px;
+}
+.footer-menu li{
+    display: inline-block;
+}
+.footer-menu li a{
+    display: block;
+    padding: 0 20px 0 4px;
+}
+.footer-menu li a:hover{
+    color: #d11f3c;
+}
+.copyright{
+    padding-left: 5px;
+}
+
+.footer-logo a, .footer-logo span{
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.footer-logo span i{
+    width: 56px;
+    height: 56px;
+    line-height: 48px;
+    border-radius: 100%;
+    border: 1px #eee solid;
+    display: inline-block;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+.footer-logo span.weixin i {
+    color: #14d212;
+    font-size: 35px;
+}
+.footer-logo span.app i {
+    color: #98c13d;
+    font-size: 22px;
+}
+.social .btn i:hover, .footer-logo span i:hover {
+    color: #fff;
+}
+.footer-logo span.weixin i:hover {
+    background-color: #14d212;
+}
+.footer-logo span.app i:hover {
+    background-color: #98c13d;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
