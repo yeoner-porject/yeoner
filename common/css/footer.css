@@ -1,4 +1,4 @@
-
+/*
 *{
     margin: 0;
     padding: 0;
@@ -114,6 +114,203 @@ a, input, textarea, b, button, i, li, h2, h3, span, img, strong, *::before, *::a
 .footer-logo span.app i:hover {
     background-color: #98c13d;
 }
+*/
+
+/*footer*/
+body {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font: 13px Verdana,微软雅黑,Geneva,sans-serif;
+    color: #666;
+    line-height: 32px;
+    background-color: #fafafa;
+}
+
+body * {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    transition: ease-in-out 0.5s;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:visited,
+a:link {
+    color: #666;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    font-size: 0;
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,.8);
+    visibility: hidden;
+}
+
+.bg.active {
+    visibility: visible;
+    opacity: 1;
+}
+#footer {
+    margin-top: 60px;
+    padding: 48px 0 32px;
+    background-color: #fff;
+    border-top: 1px solid #f4f4f4;
+    clear: both;
+    overflow: hidden;
+}
+
+#footer a {
+    color: #333;
+}
+
+#footer .footer_wp {
+    width: 1080px;
+    margin: auto;
+}
+
+#footer .footer_nav {
+    float: left;
+}
+
+#footer .footer_menu {
+    margin-bottom: 8px;
+}
+
+#footer .footer_menu > ul > li {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#footer .footer_menu > ul > li > a {
+    display: block;
+    padding: 0 24px 0 4px;
+    font-size: 14px;
+    color: #333;
+}
+
+#footer .footer_menu > ul > li > a:hover {
+    color: #eb0127;
+    transition: ease-in-out .5s;
+}
+
+#footer .footer_logo {
+    float: right;
+}
+
+#footer .footer_logo a,
+#footer .footer_logo span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+#footer .footer_logo span i {
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    font-size: 25px;
+    line-height: 48px;
+    border: 1px solid #eee;
+    background-color: #f8f8f8;
+    border-radius: 100%;
+    cursor: pointer;
+    text-align: center;
+}
+
+#footer .footer_logo span i:hover {
+    color: #fff;
+    transition: linear 1s;
+}
+
+#footer .footer_logo span.weixin {
+    color: #14d212;
+}
+
+#footer .footer_logo span.weixin i {
+    font-size: 30px;
+}
+
+#footer .footer_logo span.weixin i:hover {
+    background-color: #14d212;
+}
+
+#footer .footer_logo span.app {
+    color: #98c13d;
+}
+
+#footer .footer_logo span.app i:hover {
+    background-color: #98c13d;
+}
+
+#footer .footer_logo span img {
+    position: fixed;
+    top: 15%;
+    left: 40%;
+    padding: 8px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    transition-delay: 200ms;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: ease-in-out .5s;
+}
+
+#footer .footer_logo span img.active {
+    visibility: visible;
+    top: 20%;
+    opacity: 1;
+}
+
+#footer .footer_link {
+    padding-top: 16px;
+    clear: both;
+    overflow: hidden;
+}
+
+#footer .footer_link h4 {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+#footer .footer_link ul {
+    display: inline-block;
+}
+
+#footer .footer_link ul li {
+    display: inline-block;
+    padding: 0 8px;
+}
+
+#footer .footer_link ul li a {
+    color: #333;
+    font-size: 14px;
+}
+
+#footer .footer_link ul li a:hover {
+    color: #eb0127;
+    transition: ease-in-out .5s;
+}
+
 
 
 
