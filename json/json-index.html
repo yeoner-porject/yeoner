@@ -1,43 +1,106 @@
 <!doctype html>
 <html lang="zh-CN">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0, user-scalable=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>野玩儿｜爱户外，爱科技！</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="众测聚合页 | 野玩儿" />
-    <link rel="canonical" href="http://www.yeoner.com/zhongce"/>
-    <link rel="alternate" type="application/rss+xml" title="野玩儿 RSS Feed" href="http://www.yeoner.com/feed" />
-    <link rel="alternate" type="application/atom+xml" title="野玩儿 Atom Feed" href="http://www.yeoner.com/feed/atom" />
-    <script type="text/javascript">
-        var um = {"ajax_url":"http:\/\/www.yeoner.com\/wp-admin\/admin-ajax.php","admin_url":"http:\/\/www.yeoner.com\/wp-admin\/","wp_url":"http:\/\/www.yeoner.com","um_url":"http:\/\/www.yeoner.com\/wp-content\/plugins\/ucenter-and-market-yewan\/","uid":0,"is_admin":0,"redirecturl":"http:\/\/www.yeoner.com\/zhongce","loadingmessage":"\u6b63\u5728\u8bf7\u6c42\u4e2d\uff0c\u8bf7\u7a0d\u7b49...","paged":1,"cpage":1,"timthumb":"http:\/\/www.yeoner.com\/wp-content\/plugins\/ucenter-and-market-yewan\/func\/timthumb.php?src="};
-    </script>
-    <link rel='dns-prefetch' href='//www.yeoner.com' />
-    <link rel='dns-prefetch' href='//s.w.org' />
-    <link rel='stylesheet' id='um-css'  href='http://www.yeoner.com/wp-content/plugins/ucenter-and-market-yewan/static/um.css?ver=17.4' type='text/css' media='all' />
-    <link rel='stylesheet' id='fa-css'  href='http://www.yeoner.com/wp-content/plugins/ucenter-and-market-yewan/static/font-awesome/font-awesome.css?ver=17.4' type='text/css' media='all' />
-    <link rel='stylesheet' id='style-css'  href='http://www.yeoner.com/wp-content/themes/yewan/style.css?ver=2016.03.28' type='text/css' media='all' />
-    <link rel='stylesheet' id='main-css'  href='http://www.yeoner.com/wp-content/themes/yewan/css/main.css?ver=1.0' type='text/css' media='' />
-    <link rel='stylesheet' id='boxer.css-css'  href='http://www.yeoner.com/wp-content/themes/yewan/css/boxer/jquery.fs.boxer.css?ver=3.0.3' type='text/css' media='screen' />
-    <script type='text/javascript' src='http://www.yeoner.com/wp-content/plugins/ucenter-and-market-yewan/static/jquery.min.js?ver=17.4'></script>
-    <script type='text/javascript' src='http://www.yeoner.com/wp-content/themes/yewan/js/jquery-1.7.2.min.js?ver=1.7.2'></script>
-    <script type='text/javascript' src='http://www.yeoner.com/wp-content/themes/yewan/js/swiper.jquery.min.js?ver=3.0.5'></script>
-    <link rel="canonical" href="http://www.yeoner.com/zhongce" />
-    <link rel="shortcut icon" href="http://cdn.yeoner.com/wp-content/uploads/2015/11/ico.png" />
-    <link rel="icon" href="http://cdn.yeoner.com/wp-content/uploads/2015/11/cropped-yeoner.com_2015-11-03_00-20-571-32x32.png" sizes="32x32" />
-    <link rel="icon" href="http://cdn.yeoner.com/wp-content/uploads/2015/11/cropped-yeoner.com_2015-11-03_00-20-571-192x192.png" sizes="192x192" />
-    <link rel="apple-touch-icon-precomposed" href="http://cdn.yeoner.com/wp-content/uploads/2015/11/cropped-yeoner.com_2015-11-03_00-20-571-180x180.png" />
-    <meta name="msapplication-TileImage" content="http://cdn.yeoner.com/wp-content/uploads/2015/11/cropped-yeoner.com_2015-11-03_00-20-571-270x270.png" />
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0, user-scalable=no"/>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <title>野玩儿｜爱户外，爱科技！</title>
+        <meta name="description" content=""/>
+        <meta name="keywords" content="众测聚合页 | 野玩儿"/>
+        <link rel="canonical" href="http://www.yeoner.com/zhongce"/>
+        <link rel="alternate" type="application/rss+xml" title="野玩儿 RSS Feed" href="http://www.yeoner.com/feed"/>
+        <link rel="alternate" type="application/atom+xml" title="野玩儿 Atom Feed" href="http://www.yeoner.com/feed/atom"/>
+        <script type="text/javascript">
+            var um = {
+                "ajax_url": "http:\/\/www.yeoner.com\/wp-admin\/admin-ajax.php",
+                "admin_url": "http:\/\/www.yeoner.com\/wp-admin\/",
+                "wp_url": "http:\/\/www.yeoner.com",
+                "um_url": "http:\/\/www.yeoner.com\/wp-content\/plugins\/ucenter-and-market-yewan\/",
+                "uid": 0,
+                "is_admin": 0,
+                "redirecturl": "http:\/\/www.yeoner.com\/zhongce",
+                "loadingmessage": "\u6b63\u5728\u8bf7\u6c42\u4e2d\uff0c\u8bf7\u7a0d\u7b49...",
+                "paged": 1,
+                "cpage": 1,
+                "timthumb": "http:\/\/www.yeoner.com\/wp-content\/plugins\/ucenter-and-market-yewan\/func\/timthumb.php?src="
+            };
+        </script>
+        <link rel='dns-prefetch' href='//www.yeoner.com'/>
+        <link rel='dns-prefetch' href='//s.w.org'/>
+        <link rel='stylesheet' id='um-css'
+              href='http://www.yeoner.com/wp-content/plugins/ucenter-and-market-yewan/static/um.css?ver=17.4'
+              type='text/css' media='all'/>
+        <link rel='stylesheet' id='fa-css'
+              href='http://www.yeoner.com/wp-content/plugins/ucenter-and-market-yewan/static/font-awesome/font-awesome.css?ver=17.4'
+              type='text/css' media='all'/>
+        <link rel='stylesheet' id='style-css'
+              href='http://www.yeoner.com/wp-content/themes/yewan/style.css?ver=2016.03.28' type='text/css'
+              media='all'/>
+        <link rel='stylesheet' id='main-css' href='http://www.yeoner.com/wp-content/themes/yewan/css/main.css?ver=1.0'
+              type='text/css' media=''/>
+        <link rel='stylesheet' id='boxer.css-css'
+              href='http://www.yeoner.com/wp-content/themes/yewan/css/boxer/jquery.fs.boxer.css?ver=3.0.3'
+              type='text/css' media='screen'/>
+        <script type='text/javascript'
+                src='http://www.yeoner.com/wp-content/plugins/ucenter-and-market-yewan/static/jquery.min.js?ver=17.4'></script>
+        <script type='text/javascript'
+                src='http://www.yeoner.com/wp-content/themes/yewan/js/jquery-1.7.2.min.js?ver=1.7.2'></script>
+        <script type='text/javascript'
+                src='http://www.yeoner.com/wp-content/themes/yewan/js/swiper.jquery.min.js?ver=3.0.5'></script>
+        <link rel="canonical" href="http://www.yeoner.com/zhongce"/>
+        <link rel="shortcut icon" href="http://cdn.yeoner.com/wp-content/uploads/2015/11/ico.png"/>
+        <link rel="icon"
+              href="http://cdn.yeoner.com/wp-content/uploads/2015/11/cropped-yeoner.com_2015-11-03_00-20-571-32x32.png"
+              sizes="32x32"/>
+        <link rel="icon"
+              href="http://cdn.yeoner.com/wp-content/uploads/2015/11/cropped-yeoner.com_2015-11-03_00-20-571-192x192.png"
+              sizes="192x192"/>
+        <link rel="apple-touch-icon-precomposed"
+              href="http://cdn.yeoner.com/wp-content/uploads/2015/11/cropped-yeoner.com_2015-11-03_00-20-571-180x180.png"/>
+        <meta name="msapplication-TileImage"
+              content="http://cdn.yeoner.com/wp-content/uploads/2015/11/cropped-yeoner.com_2015-11-03_00-20-571-270x270.png"/>
 
 
-    <script type="text/javascript">
-        $(function(){
-            var resstr = '[';
+        <script type="text/javascript">
+            $(function () {
+                var resstr = '[';
 
-//            户外视频1
+//                home_header left news
+//                $(".news ul li a").each(function (i,info) {
+//                    resstr += '{';
+//                    resstr += '"news_url":"'+$(info).attr("href")+'",';
+//                    resstr += '"news_title":"'+$(info).attr("title")+'",';
+//                    resstr += '},';
+//                });
 
+//                home_slide_main
+//                $(".swiper-slide a").each(function (i,info) {
+//                    console.log(i);
+//                    var regExp = /\"(.*)\"/;
+//                    var str = $(info).css("background-image");
+//                    var img_url = str.match(regExp);
+//                    console.log(img_url[0]);
+
+//                    resstr += '{';
+//                    resstr += '"slide_url":"'+$(info).attr("href")+'",';
+//                    resstr += '"slide_title_link":"'+$(info).attr("title")+'",';
+//                    resstr += '"slide_img_url":'+img_url[0]+',';
+//                    resstr += '"slide_title":"'+$(info).find("h2").text()+'",';
+//                    resstr += '"slide_info":"'+$(info).find("p").text()+'",';
+//                    resstr += '},';
+//                });
+
+//                home_hot right
+                $(".hot ul li a").each(function (i,info) {
+                    resstr += '{';
+                    resstr += '"hot_url":"'+$(info).attr("href")+'",';
+                    resstr += '"hot_title":"'+$(info).attr("title")+'",';
+                    resstr += '"hot_num":"'+$(info).find("span").text()+'"';
+                    resstr += '},';
+                });
+
+//                户外视频1
 //            $(".videotop .videotop_list .layout_li").each(function (i,info){
 //                resstr += '{';
 //                resstr += '"layout_li_a1_href":"'+$(info).find("a").attr("href")+'",';
@@ -51,22 +114,22 @@
 
 //            众测试用
 
-            $(".test_cat .test_list .layout_li").each(function (i,info){
-                resstr += '{';
-                resstr += '"article_url":"'+$(info).find("a").attr("href")+'",';
-                resstr += '"article_title":"'+$(info).find("a").attr("title")+'",';
-                resstr += '"article_src":"'+$(info).find("a img").attr("src")+'",';
-                resstr += '"article_alt":"'+$(info).find("a img").attr("alt")+'",';
-                resstr += '"article_h3":"'+$(info).find("a h3").text()+'",';
-                resstr += '"test_count_span1":"'+$(info).find(".test_count span").eq(0).text()+'",';
-                resstr += '"test_count_span2":"'+$(info).find(".test_count span").eq(1).text()+'",';
-                resstr += '"comment_count":"'+$(info).find(".comment_count").text()+'",';
-                resstr += '"comment_count_span":"'+$(info).find(".comment_count span").text()+'",';
-                resstr += '"test_state_span":"'+$(info).find(".test_state span").text()+'",';
-                resstr += '},';
-            } );
+//                $(".test_cat .test_list .layout_li").each(function (i, info) {
+//                    resstr += '{';
+//                    resstr += '"article_url":"' + $(info).find("a").attr("href") + '",';
+//                    resstr += '"article_title":"' + $(info).find("a").attr("title") + '",';
+//                    resstr += '"article_src":"' + $(info).find("a img").attr("src") + '",';
+//                    resstr += '"article_alt":"' + $(info).find("a img").attr("alt") + '",';
+//                    resstr += '"article_h3":"' + $(info).find("a h3").text() + '",';
+//                    resstr += '"test_count_span1":"' + $(info).find(".test_count span").eq(0).text() + '",';
+//                    resstr += '"test_count_span2":"' + $(info).find(".test_count span").eq(1).text() + '",';
+//                    resstr += '"comment_count":"' + $(info).find(".comment_count").text() + '",';
+//                    resstr += '"comment_count_span":"' + $(info).find(".comment_count span").text() + '",';
+//                    resstr += '"test_state_span":"' + $(info).find(".test_state span").text() + '",';
+//                    resstr += '},';
+//                });
 
-////            户外装备
+//            户外装备
 //            $(".one .cate_list article").each(function (i,info){
 //                resstr += '{';
 //                resstr += '"zhuangBei_url":"'+$(info).find("a").attr("href")+'",';
@@ -126,1087 +189,1359 @@
 //                resstr += '"shiPin_h3":"'+$(info).find("a h3").text()+'",';
 //                resstr += '},';
 //            });
-            resstr += ']';
-            console.log(resstr);
-        })
-    </script>
+                resstr += ']';
+                console.log(resstr);
+            })
+        </script>
 
-</head>
+    </head>
 
-<body class="home blog">
-<!--头部-->
-<!--桌面-->
-<header class="header">
-    <section class="wrapper">
-        <!--LOGO-->
-        <a href="http://www.yeoner.com" class="logo left" title="野玩儿 | 爱户外，爱科技！"><img src="http://cdn.yeoner.com/wp-content/uploads/2016/04/logo-1.png" alt="野玩儿"></a>
-        <!--LOGOend-->
-        <!--菜单-->
-        <nav class="header-nav right">
-            <!--登录注册-->
-            <!--前台登录与注册-->
-            <section class="top-menu">
-                <a data-sign="0" id="user-login" class="user-login" title="登录投稿"><i class="icon-edit-1"></i>投稿</a>
-                <a data-sign="0" id="user-login" class="user-login">
-                    <i class="icon-login"></i>
-                    登录    </a>
-                <a data-sign="1" id="user-reg" class="user-reg">
-                    <i class="icon-plus-circled"></i>
-                    注册    </a>
-                <a href="https://open.weixin.qq.com/connect/qrconnect?appid=wxf93fff8c0dc1bcc5&redirect_uri=http%3A%2F%2Fwww.yeoner.com%2Fwp-content%2Fthemes%2Fyewan/wechat.php&response_type=code&scope=snsapi_login&state=d6f6a6040b3a979d75ca0e57454ee8fa#wechat_redirect" class="weixin" title="使用微信登录野玩儿"><i class="icon-wechat"></i></a>
+    <body class="home blog">
+        <!--头部-->
+        <!--桌面-->
+        <header class="header">
+            <section class="wrapper">
+                <!--LOGO-->
+                <a href="http://www.yeoner.com" class="logo left" title="野玩儿 | 爱户外，爱科技！"><img
+                        src="http://cdn.yeoner.com/wp-content/uploads/2016/04/logo-1.png" alt="野玩儿"></a>
+                <!--LOGOend-->
+                <!--菜单-->
+                <nav class="header-nav right">
+                    <!--登录注册-->
+                    <!--前台登录与注册-->
+                    <section class="top-menu">
+                        <a data-sign="0" id="user-login" class="user-login" title="登录投稿"><i
+                                class="icon-edit-1"></i>投稿</a>
+                        <a data-sign="0" id="user-login" class="user-login">
+                            <i class="icon-login"></i>
+                            登录 </a>
+                        <a data-sign="1" id="user-reg" class="user-reg">
+                            <i class="icon-plus-circled"></i>
+                            注册 </a>
+                        <a href="https://open.weixin.qq.com/connect/qrconnect?appid=wxf93fff8c0dc1bcc5&redirect_uri=http%3A%2F%2Fwww.yeoner.com%2Fwp-content%2Fthemes%2Fyewan/wechat.php&response_type=code&scope=snsapi_login&state=d6f6a6040b3a979d75ca0e57454ee8fa#wechat_redirect"
+                           class="weixin" title="使用微信登录野玩儿"><i class="icon-wechat"></i></a>
+                    </section>
+                    <!--前台登录与注册end-->            <!--顶部end-->
+                    <div class="header-menu">
+                        <ul id="menu-%e9%a6%96%e9%a1%b5" class="menu">
+                            <li id="menu-item-13"
+                                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-13">
+                                <a href="http://www.yeoner.com">首页</a></li>
+                            <li id="menu-item-913"
+                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-913">
+                                <a href="http://www.yeoner.com/zhuangbei">户外装备</a>
+                                <ul class="sub-menu">
+                                    <li id="menu-item-919"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-919">
+                                        <a href="http://www.yeoner.com/zhuangbei/news">资讯</a></li>
+                                    <li id="menu-item-918"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-918">
+                                        <a href="http://www.yeoner.com/zhuangbei/find">酷品</a></li>
+                                    <li id="menu-item-916"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-916">
+                                        <a href="http://www.yeoner.com/zhuangbei/test">测评</a></li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-13775"
+                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-13775">
+                                <a href="http://www.yeoner.com/zhishi">户外知识</a>
+                                <ul class="sub-menu">
+                                    <li id="menu-item-24247"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24247">
+                                        <a href="http://www.yeoner.com/zhishi/trekking">徒步/露营</a></li>
+                                    <li id="menu-item-24250"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24250">
+                                        <a href="http://www.yeoner.com/zhishi/run">跑步/健身</a></li>
+                                    <li id="menu-item-24251"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24251">
+                                        <a href="http://www.yeoner.com/zhishi/riding">骑行</a></li>
+                                    <li id="menu-item-24249"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24249">
+                                        <a href="http://www.yeoner.com/zhishi/skiing">滑雪</a></li>
+                                    <li id="menu-item-24248"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24248">
+                                        <a href="http://www.yeoner.com/zhishi/safe">户外安全</a></li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-13780"
+                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-13780">
+                                <a href="http://www.yeoner.com/discovery">户外探索</a>
+                                <ul class="sub-menu">
+                                    <li id="menu-item-13781"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13781">
+                                        <a href="http://www.yeoner.com/discovery/outdoor">美景</a></li>
+                                    <li id="menu-item-13782"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13782">
+                                        <a href="http://www.yeoner.com/discovery/quwen">趣闻</a></li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-29923"
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-29923">
+                                <a href="http://www.yeoner.com/video">户外视频</a>
+                                <ul class="sub-menu">
+                                    <li id="menu-item-30037"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-video_category menu-item-30037">
+                                        <a href="http://www.yeoner.com/video-category/shenrenzhi">神人志</a></li>
+                                    <li id="menu-item-30038"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-video_category menu-item-30038">
+                                        <a href="http://www.yeoner.com/video-category/extremesport">极限运动</a></li>
+                                    <li id="menu-item-30040"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-video_category menu-item-30040">
+                                        <a href="http://www.yeoner.com/video-category/outdoorgear">户外装备</a></li>
+                                    <li id="menu-item-30039"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-video_category menu-item-30039">
+                                        <a href="http://www.yeoner.com/video-category/funny">趣味视频</a></li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-36911"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36911"><a
+                                    href="http://www.yeoner.com/zhongce">装备众测</a></li>
+                            <li id="menu-item-33446"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-33446">
+                                <a href="http://www.yeoner.com/author">作者墙</a>
+                                <ul class="sub-menu">
+                                    <li id="menu-item-31363"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31363">
+                                        <a href="http://www.yeoner.com/author">作者</a></li>
+                                    <li id="menu-item-33445"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33445">
+                                        <a href="http://www.yeoner.com/shenren">野玩儿神人</a></li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-40614"
+                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40614"><a
+                                    target="_blank" href="http://ask.yeoner.com">野玩儿知道</a></li>
+                            <li class="menu-item menu-item-search"><a class="search_trigger" title="点击搜索"><i
+                                    class="icon-search-1"></i></a>
+                                <section class="salong_search"><h2><i class="icon-search-1"></i>野玩儿</h2>
+                                    <form method="get" class="menu-search-form" action="http://www.yeoner.com/"><select
+                                            name="post_type" class="search_type">
+                                        <option value="post">文章</option>
+                                        <option value="video">视频</option>
+                                        <option value="test">众测</option>
+                                    </select><input class="text_input" type="text" placeholder="输入关键字…" name="s"
+                                                    id="s"/><input type="submit" class="search_btn" id="searchsubmit"
+                                                                   value="搜索"/></form>
+                                </section>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!--菜单end-->
             </section>
-            <!--前台登录与注册end-->            <!--顶部end-->
-            <div class="header-menu"><ul id="menu-%e9%a6%96%e9%a1%b5" class="menu"><li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-13"><a href="http://www.yeoner.com">首页</a></li>
-                <li id="menu-item-913" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-913"><a href="http://www.yeoner.com/zhuangbei">户外装备</a>
-                    <ul class="sub-menu">
-                        <li id="menu-item-919" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-919"><a href="http://www.yeoner.com/zhuangbei/news">资讯</a></li>
-                        <li id="menu-item-918" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-918"><a href="http://www.yeoner.com/zhuangbei/find">酷品</a></li>
-                        <li id="menu-item-916" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-916"><a href="http://www.yeoner.com/zhuangbei/test">测评</a></li>
+        </header>
+        <!--桌面end-->
+        <!-- 头部下的广告 -->
+        <!--头部end-->
+        <section class="container wrapper">
+            <section class="home_header">
+                <section class="news">
+                    <section class="mobile_cate_name">
+                        <h3>最新文章</h3>
+                        <a target="_blank" href="http://www.yeoner.com/zhuangbei" title="户外装备">
+                            浏览更多<i class="icon-right"></i></a>
+                    </section>
+                    <ul>
+                        <li>
+                            <a target="_blank" href="http://www.yeoner.com/p/47273.html"
+                               title="Fitbit心率监测精确度堪忧 Moov称头戴式穿戴设备更专业">
+                                <h3>Fitbit心率监测精确度堪忧 Moov称头戴式穿戴设备更专业</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://www.yeoner.com/p/46468.html"
+                               title="光有测心率的表 但是你真的了解如何解读心率么？">
+                                <h3>光有测心率的表 但是你真的了解如何解读心率么？</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://www.yeoner.com/p/46122.html"
+                               title="中国最美的30个地方，没去过6个以上，活着还有什么意义！">
+                                <h3>中国最美的30个地方，没去过6个以上，活着还有什么意义！</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://www.yeoner.com/p/46462.html" title="为什么一跑步就嗓子疼 解决方法在这里">
+                                <h3>为什么一跑步就嗓子疼 解决方法在这里</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://www.yeoner.com/p/46130.html"
+                               title="一人一狗跋山涉水，这才算得上真正的旅行啊&#8230;">
+                                <h3>一人一狗跋山涉水，这才算得上真正的旅行啊&#8230;</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://www.yeoner.com/p/47135.html"
+                               title="有创意很够味!爱酒人士必备的吸睛利器-STANLEY户外酒壶套装评测">
+                                <h3>有创意很够味!爱酒人士必备的吸睛利器-STANLEY户外酒壶套装评测</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://www.yeoner.com/p/47221.html"
+                               title="苹果美学继承者Misfit 终于推出智能腕表了">
+                                <h3>苹果美学继承者Misfit 终于推出智能腕表了</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://www.yeoner.com/p/47206.html"
+                               title="699元！华为荣耀S1智能手表打响价格战 华米手表小心咯">
+                                <h3>699元！华为荣耀S1智能手表打响价格战 华米手表小心咯</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://www.yeoner.com/p/46873.html"
+                               title="2016-2017 最牛十款速降车——INTENSE M16C">
+                                <h3>2016-2017 最牛十款速降车——INTENSE M16C</h3>
+                            </a>
+                        </li>
                     </ul>
-                </li>
-                <li id="menu-item-13775" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-13775"><a href="http://www.yeoner.com/zhishi">户外知识</a>
-                    <ul class="sub-menu">
-                        <li id="menu-item-24247" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24247"><a href="http://www.yeoner.com/zhishi/trekking">徒步/露营</a></li>
-                        <li id="menu-item-24250" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24250"><a href="http://www.yeoner.com/zhishi/run">跑步/健身</a></li>
-                        <li id="menu-item-24251" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24251"><a href="http://www.yeoner.com/zhishi/riding">骑行</a></li>
-                        <li id="menu-item-24249" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24249"><a href="http://www.yeoner.com/zhishi/skiing">滑雪</a></li>
-                        <li id="menu-item-24248" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-24248"><a href="http://www.yeoner.com/zhishi/safe">户外安全</a></li>
-                    </ul>
-                </li>
-                <li id="menu-item-13780" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-13780"><a href="http://www.yeoner.com/discovery">户外探索</a>
-                    <ul class="sub-menu">
-                        <li id="menu-item-13781" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13781"><a href="http://www.yeoner.com/discovery/outdoor">美景</a></li>
-                        <li id="menu-item-13782" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13782"><a href="http://www.yeoner.com/discovery/quwen">趣闻</a></li>
-                    </ul>
-                </li>
-                <li id="menu-item-29923" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-29923"><a href="http://www.yeoner.com/video">户外视频</a>
-                    <ul class="sub-menu">
-                        <li id="menu-item-30037" class="menu-item menu-item-type-taxonomy menu-item-object-video_category menu-item-30037"><a href="http://www.yeoner.com/video-category/shenrenzhi">神人志</a></li>
-                        <li id="menu-item-30038" class="menu-item menu-item-type-taxonomy menu-item-object-video_category menu-item-30038"><a href="http://www.yeoner.com/video-category/extremesport">极限运动</a></li>
-                        <li id="menu-item-30040" class="menu-item menu-item-type-taxonomy menu-item-object-video_category menu-item-30040"><a href="http://www.yeoner.com/video-category/outdoorgear">户外装备</a></li>
-                        <li id="menu-item-30039" class="menu-item menu-item-type-taxonomy menu-item-object-video_category menu-item-30039"><a href="http://www.yeoner.com/video-category/funny">趣味视频</a></li>
-                    </ul>
-                </li>
-                <li id="menu-item-36911" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36911"><a href="http://www.yeoner.com/zhongce">装备众测</a></li>
-                <li id="menu-item-33446" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-33446"><a href="http://www.yeoner.com/author">作者墙</a>
-                    <ul class="sub-menu">
-                        <li id="menu-item-31363" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31363"><a href="http://www.yeoner.com/author">作者</a></li>
-                        <li id="menu-item-33445" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33445"><a href="http://www.yeoner.com/shenren">野玩儿神人</a></li>
-                    </ul>
-                </li>
-                <li id="menu-item-40614" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40614"><a target="_blank" href="http://ask.yeoner.com">野玩儿知道</a></li>
-                <li class="menu-item menu-item-search"><a class="search_trigger" title="点击搜索"><i class="icon-search-1"></i></a>
-                    <section class="salong_search"><h2><i class="icon-search-1"></i>野玩儿</h2><form method="get" class="menu-search-form" action="http://www.yeoner.com/"><select name="post_type" class="search_type"><option value="post">文章</option><option value="video">视频</option><option value="test">众测</option></select><input class="text_input" type="text" placeholder="输入关键字…" name="s" id="s" /><input type="submit" class="search_btn" id="searchsubmit" value="搜索" /></form></section></li></ul></div>        </nav>
-        <!--菜单end-->
-    </section>
-</header>
-<!--桌面end-->
-<!-- 头部下的广告 -->
-<!--头部end--><section class="container wrapper">
-    <section class="home_header">
-        <section class="news">
-            <section class="mobile_cate_name">
-                <h3>最新文章</h3>
-                <a  target="_blank" href="http://www.yeoner.com/zhuangbei" title="户外装备">
-                    浏览更多<i class="icon-right"></i></a>
-            </section>
-            <ul>
-                <li>
-                    <a  target="_blank" href="http://www.yeoner.com/p/47273.html" title="Fitbit心率监测精确度堪忧 Moov称头戴式穿戴设备更专业">
-                        <h3>Fitbit心率监测精确度堪忧 Moov称头戴式穿戴设备更专业</h3>
-                    </a>
-                </li>
-                <li>
-                    <a  target="_blank" href="http://www.yeoner.com/p/46468.html" title="光有测心率的表 但是你真的了解如何解读心率么？">
-                        <h3>光有测心率的表 但是你真的了解如何解读心率么？</h3>
-                    </a>
-                </li>
-                <li>
-                    <a  target="_blank" href="http://www.yeoner.com/p/46122.html" title="中国最美的30个地方，没去过6个以上，活着还有什么意义！">
-                        <h3>中国最美的30个地方，没去过6个以上，活着还有什么意义！</h3>
-                    </a>
-                </li>
-                <li>
-                    <a  target="_blank" href="http://www.yeoner.com/p/46462.html" title="为什么一跑步就嗓子疼 解决方法在这里">
-                        <h3>为什么一跑步就嗓子疼 解决方法在这里</h3>
-                    </a>
-                </li>
-                <li>
-                    <a  target="_blank" href="http://www.yeoner.com/p/46130.html" title="一人一狗跋山涉水，这才算得上真正的旅行啊&#8230;">
-                        <h3>一人一狗跋山涉水，这才算得上真正的旅行啊&#8230;</h3>
-                    </a>
-                </li>
-                <li>
-                    <a  target="_blank" href="http://www.yeoner.com/p/47135.html" title="有创意很够味!爱酒人士必备的吸睛利器-STANLEY户外酒壶套装评测">
-                        <h3>有创意很够味!爱酒人士必备的吸睛利器-STANLEY户外酒壶套装评测</h3>
-                    </a>
-                </li>
-                <li>
-                    <a  target="_blank" href="http://www.yeoner.com/p/47221.html" title="苹果美学继承者Misfit 终于推出智能腕表了">
-                        <h3>苹果美学继承者Misfit 终于推出智能腕表了</h3>
-                    </a>
-                </li>
-                <li>
-                    <a  target="_blank" href="http://www.yeoner.com/p/47206.html" title="699元！华为荣耀S1智能手表打响价格战 华米手表小心咯">
-                        <h3>699元！华为荣耀S1智能手表打响价格战 华米手表小心咯</h3>
-                    </a>
-                </li>
-                <li>
-                    <a  target="_blank" href="http://www.yeoner.com/p/46873.html" title="2016-2017 最牛十款速降车——INTENSE M16C">
-                        <h3>2016-2017 最牛十款速降车——INTENSE M16C</h3>
-                    </a>
-                </li>
-            </ul>
-        </section>
-        <section class="slide-main slide-home" data-snap-ignore="true">
-            <div class="swiper-container swiper-home">
-                <div class="swiper-wrapper">
-                    <article class="swiper-slide slide-single">
+                </section>
+                <section class="slide-main slide-home" data-snap-ignore="true">
+                    <div class="swiper-container swiper-home">
+                        <div class="swiper-wrapper">
+                            <article class="swiper-slide slide-single">
+                                <a target="_blank" href="http://www.yeoner.com/p/47206.html" class="swiper-image"
+                                   title="了解更多：699元！华为荣耀S1智能手表打响价格战 华米手表小心咯"
+                                   style="background-image: url(http://www.yeoner.com/wp-content/uploads/2016/10/2016102101324081.jpg);">
+                                    <div class="swiper-post">
+                                        <h2>699元！华为荣耀S1智能手表打响价格战 华米手表小心咯</h2>
+                                        <p>
+                                            论性价比，799元的华米手表以及999元起的魅族Mix智能手表，可能会是不少人的选择。不过现在，它们又多了一个竞争对手，就是华为刚刚发布的荣耀手表S1。
+                                        </p>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="swiper-slide slide-single">
 
-                        <a  target="_blank" href="http://www.yeoner.com/p/47206.html" class="swiper-image" title="了解更多：699元！华为荣耀S1智能手表打响价格战 华米手表小心咯"
-                            style="background-image: url(http://www.yeoner.com/wp-content/uploads/2016/10/2016102101324081.jpg);">
-                            <div class="swiper-post">
-                                <h2>699元！华为荣耀S1智能手表打响价格战 华米手表小心咯</h2>
-                                <p>
-                                    论性价比，799元的华米手表以及999元起的魅族Mix智能手表，可能会是不少人的选择。不过现在，它们又多了一个竞争对手，就是华为刚刚发布的荣耀手表S1。                        </p>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="swiper-slide slide-single">
+                                <a target="_blank" href="http://www.yeoner.com/p/47041.html" class="swiper-image"
+                                   title="了解更多：真正的硬汉 在户外玩情调——Stanley小酒壶套装测评"
+                                   style="background-image: url(http://www.yeoner.com/wp-content/uploads/2016/10/2016101902112149.jpg);">
+                                    <div class="swiper-post">
+                                        <h2>真正的硬汉 在户外玩情调——Stanley小酒壶套装测评</h2>
+                                        <p>
+                                            秋风习习，约上两三好友看清风白云，在云卷云舒之际推杯换盏，Stanley小酒壶套装正是为这样的情境所准备，爱喝酒的户外咖一定不要错过了~ </p>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="swiper-slide slide-single">
 
-                        <a  target="_blank" href="http://www.yeoner.com/p/47041.html" class="swiper-image" title="了解更多：真正的硬汉 在户外玩情调——Stanley小酒壶套装测评"
-                            style="background-image: url(http://www.yeoner.com/wp-content/uploads/2016/10/2016101902112149.jpg);">
-                            <div class="swiper-post">
-                                <h2>真正的硬汉 在户外玩情调——Stanley小酒壶套装测评</h2>
-                                <p>
-                                    秋风习习，约上两三好友看清风白云，在云卷云舒之际推杯换盏，Stanley小酒壶套装正是为这样的情境所准备，爱喝酒的户外咖一定不要错过了~                        </p>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="swiper-slide slide-single">
-
-                        <a  target="_blank" href="http://www.yeoner.com/p/47147.html" class="swiper-image" title="了解更多：超震撼！红牛2016极限运动摄影大赛作品新鲜出炉"
-                            style="background-image: url(http://www.yeoner.com/wp-content/uploads/2016/10/2016102101232367.jpg);">
-                            <div class="swiper-post">
-                                <h2>超震撼！红牛2016极限运动摄影大赛作品新鲜出炉</h2>
-                                <p>
-                                    极限运动一直是勇敢者的游戏，为了记录下极限运动的精彩瞬间，摄影师面临怎样的挑战我们可想而知，下面就来欣赏一下这些惊心动魄的作品吧~                        </p>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="swiper-slide slide-single">
-
-                        <a  target="_blank" href="http://www.yeoner.com/p/46118.html" class="swiper-image" title="了解更多：全球颜值最高的20个国家，中国才排第四？有没有搞错！"
-                            style="background-image: url(http://www.yeoner.com/wp-content/uploads/2016/10/2016102101232030.jpg);">
-                            <div class="swiper-post">
-                                <h2>全球颜值最高的20个国家，中国才排第四？有没有搞错！</h2>
-                                <p>
-                                    总说着世界那么大，想要去看看。可是，你最想去哪儿？说到底，在这个看脸的时代，吸引你去看看的，美丽且独特的风光必然是最大因素。                        </p>
-                            </div>
-                        </a>
-                    </article>
-                </div>
-                <!-- 导航 -->
-                <div class="swiper-pagination swiper-home-pagination"></div>
-                <!-- 按钮 -->
-                <div class="swiper-button swiper-home-button-next swiper-button-next icon-angle-right"></div>
-                <div class="swiper-button swiper-home-button-prev swiper-button-prev icon-angle-left"></div>
-                <script>
-                    var swiper = new Swiper('.swiper-home', {
-                        pagination: '.swiper-home-pagination',
-                        nextButton: '.swiper-home-button-next',
-                        prevButton: '.swiper-home-button-prev',
-                        paginationClickable: true,
-                        centeredSlides: true,
-                        autoplay: 5000,
-                        autoplayDisableOnInteraction: false,
-                        lazyLoading: true,
-                        keyboardControl: true,
-                        effect: 'fade',
-                        loop: true
-                    });
-                </script>
-            </div>
-        </section>                <section class="hot_right">
-        <!--众测展示-->
-        <section class="text_content" style="background-image: url(http://www.yeoner.com/wp-content/uploads/2016/10/2016101706312396.jpg);">
-            <!--标题-->
-            <h2>凯乐石新款阿尔法软壳</h2>
-            <!--数量-->
-            <section class="test_count">
-                <span>86申请</span>
-                <span>¥999</span>
-                <span>2件</span>
-            </section>
-            <!--倒计时-->
-            <section class="countdown">
-                <span>剩余：</span>
-                <div class="endtime" value="1477296000"></div>
-            </section>
-            <script>
-                var serverTime = 1477020479 * 1000;
-                $(function() {
-                    var dateTime = new Date();
-                    var difference = dateTime.getTime() - serverTime;
-                    setInterval(function() {
-                        $(".endtime").each(function() {
-                            var obj = $(this);
-                            var endTime = new Date(parseInt(obj.attr('value')) * 1000);
-                            var nowTime = new Date();
-                            var nMS = endTime.getTime() - nowTime.getTime() + difference;
-                            var myD = Math.floor(nMS / (1000 * 60 * 60 * 24));
-                            var myH = Math.floor(nMS / (1000 * 60 * 60)) % 24;
-                            var myM = Math.floor(nMS / (1000 * 60)) % 60;
-                            var myS = Math.floor(nMS / 1000) % 60;
-                            var myMS = Math.floor(nMS / 100) % 10;
-                            var str = myD + "天" + myH + "小时" + myM + "分" + myS + "秒";
-                            obj.html(str);
-                        });
-                    }, 100);
-
-                });
-            </script>
-            <!--倒计时end-->
-            <!--按钮-->
-            <a class="user-login apply_now btn" title="立即申请" href="http://www.yeoner.com/test/47048.html">
-                立即申请        </a>
-            <!--按钮end-->
-        </section>
-        <!--众测展示end-->
-        <section class="hot">
-            <section class="mobile_cate_name">
-                <h3>热门文章</h3>
-                <a  target="_blank" href="http://www.yeoner.com/zhishi" title="户外知识">浏览更多<i class="icon-right"></i></a>
-            </section>
-            <ul>
-                <li>
-                    <a  target="_blank" href="http://www.yeoner.com/p/46180.html" title="千万别让男朋友帮你拍照，丑到妈都不认识啊">
-                        <span>1</span>
-                        <h3>千万别让男朋友帮你拍照，丑到妈都不认识啊</h3>
-                    </a>
-                    </article>
-                </li>
-                <li>
-                    <a  target="_blank" href="http://www.yeoner.com/p/46993.html" title="迪拜到底多有钱？来看看迪拜的11项世界之最吧！">
-                        <span>2</span>
-                        <h3>迪拜到底多有钱？来看看迪拜的11项世界之最吧！</h3>
-                    </a>
-                    </article>
-                </li>
-                <li>
-                    <a  target="_blank" href="http://www.yeoner.com/p/46122.html" title="中国最美的30个地方，没去过6个以上，活着还有什么意义！">
-                        <span>3</span>
-                        <h3>中国最美的30个地方，没去过6个以上，活着还有什么意义！</h3>
-                    </a>
-                    </article>
-                </li>
-                <li>
-                    <a  target="_blank" href="http://www.yeoner.com/p/46793.html" title="有这个APP 不会编程拍照也能给Garmin换表盘风格了">
-                        <span>4</span>
-                        <h3>有这个APP 不会编程拍照也能给Garmin换表盘风格了</h3>
-                    </a>
-                    </article>
-                </li>
-                <li>
-                    <a  target="_blank" href="http://www.yeoner.com/p/46088.html" title="Patagonia 2016秋冬图册">
-                        <span>5</span>
-                        <h3>Patagonia 2016秋冬图册</h3>
-                    </a>
-                    </article>
-                </li>
-                <li>
-                    <a  target="_blank" href="http://www.yeoner.com/p/44616.html" title="十一去哪儿？ 凯乐石送你去最虐的地方耍！（中奖名单公布）">
-                        <span>6</span>
-                        <h3>十一去哪儿？ 凯乐石送你去最虐的地方耍！（中奖名单公布）</h3>
-                    </a>
-                    </article>
-                </li>
-                <li>
-                    <a  target="_blank" href="http://www.yeoner.com/p/46154.html" title="各国奇葩路标你认识几个，老司机前来挑战！">
-                        <span>7</span>
-                        <h3>各国奇葩路标你认识几个，老司机前来挑战！</h3>
-                    </a>
-                    </article>
-                </li>
-                <li>
-                    <a  target="_blank" href="http://www.yeoner.com/p/45151.html" title="2016-2017 最牛十款速降车——Giant Glory ADV">
-                        <span>8</span>
-                        <h3>2016-2017 最牛十款速降车——Giant Glory ADV</h3>
-                    </a>
-                    </article>
-                </li>
-            </ul>
-        </section>
-        <!-- 热门文章end -->
-    </section>
-    </section>
-    <!--分类列表4-->
-    <section class="videotop">
-        <section class="mobile_cate_name">
-            <h2>户外视频</h2>
-            <a href="http://www.yeoner.com/video" title="查看更多视频"  target="_blank">
-                浏览更多<i class="icon-right"></i></a>
-        </section>
-        <!-- 获取文章 -->
-        <section class="videotop_list">
-            <ul class="layout_ul">
-                <li class="layout_li">
-                    <article class="videotop_main">
-                        <!-- 缩略图 -->
-                        <a  target="_blank" href="http://www.yeoner.com/video/47210.html" title="把他的动作全部学会 你的身材绝对爆表" class="video_play">
-                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r1.ykimg.com/0541040857FDA4996A0A4E0448B9ACD8&amp;h=200&amp;w=294&amp;zc=1" alt="" />                        <span class="player"><i class="icon-play"></i></span>
-                        </a>
-                        <a  target="_blank" href="http://www.yeoner.com/video/47210.html" title="把他的动作全部学会 你的身材绝对爆表" class="video_title">
-                            <h3>把他的动作全部学会 你的身材绝对爆表</h3>
-                        </a>
-                        <!-- 缩略图end -->
-                    </article>
-                </li>
-                <li class="layout_li">
-                    <article class="videotop_main">
-                        <!-- 缩略图 -->
-                        <a  target="_blank" href="http://www.yeoner.com/video/47209.html" title="现在不多见的复古滚轴溜冰 高手玩起来还是很牛" class="video_play">
-                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r3.ykimg.com/0541040857FDA6156A0A4004E3E7EF4B&amp;h=200&amp;w=294&amp;zc=1" alt="" />                        <span class="player"><i class="icon-play"></i></span>
-                        </a>
-                        <a  target="_blank" href="http://www.yeoner.com/video/47209.html" title="现在不多见的复古滚轴溜冰 高手玩起来还是很牛" class="video_title">
-                            <h3>现在不多见的复古滚轴溜冰 高手玩起来还是很牛</h3>
-                        </a>
-                        <!-- 缩略图end -->
-                    </article>
-                </li>
-                <li class="layout_li">
-                    <article class="videotop_main">
-                        <!-- 缩略图 -->
-                        <a  target="_blank" href="http://www.yeoner.com/video/47208.html" title="GOPRO HERO5 BLACK 运动相机开箱上手视频" class="video_play">
-                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r2.ykimg.com/0541040857FC50266A0A4F051CED9452&amp;h=200&amp;w=294&amp;zc=1" alt="" />                        <span class="player"><i class="icon-play"></i></span>
-                        </a>
-                        <a  target="_blank" href="http://www.yeoner.com/video/47208.html" title="GOPRO HERO5 BLACK 运动相机开箱上手视频" class="video_title">
-                            <h3>GOPRO HERO5 BLACK 运动相机开箱上手视频</h3>
-                        </a>
-                        <!-- 缩略图end -->
-                    </article>
-                </li>
-                <li class="layout_li">
-                    <article class="videotop_main">
-                        <!-- 缩略图 -->
-                        <a  target="_blank" href="http://www.yeoner.com/video/47207.html" title="经典自由山地速降 一骑绝尘" class="video_play">
-                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r2.ykimg.com/0541040857FB46856A0A4F0520E30DAE&amp;h=200&amp;w=294&amp;zc=1" alt="" />                        <span class="player"><i class="icon-play"></i></span>
-                        </a>
-                        <a  target="_blank" href="http://www.yeoner.com/video/47207.html" title="经典自由山地速降 一骑绝尘" class="video_title">
-                            <h3>经典自由山地速降 一骑绝尘</h3>
-                        </a>
-                        <!-- 缩略图end -->
-                    </article>
-                </li>
-            </ul>
-        </section>
-        <!-- 获取文章end -->
-    </section>
-    <!--分类列表4-->
-    <section class="cate test_cat">
-        <section class="mobile_cate_name">
-            <h2>众测试用</h2>
-            <a  target="_blank" href="http://www.yeoner.com/zhongce" title="查看更多众测">浏览更多<i class="icon-right"></i></a>
-        </section>
-        <!-- 获取文章 -->
-        <section class="test_list">
-            <ul class="layout_ul">
-                <!-- 文章 -->
-                <!-- 文章 -->
-                <li class="layout_li">
-                    <article class="test_main test_apply">
-                        <!-- 缩略图 -->
-                        <a  target="_blank" href="http://www.yeoner.com/test/47235.html" title="华为荣耀S1智能手表">
-                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102006365120.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="华为荣耀S1智能手表" />            <h3>华为荣耀S1智能手表</h3>
-                        </a>
+                                <a target="_blank" href="http://www.yeoner.com/p/47147.html" class="swiper-image"
+                                   title="了解更多：超震撼！红牛2016极限运动摄影大赛作品新鲜出炉"
+                                   style="background-image: url(http://www.yeoner.com/wp-content/uploads/2016/10/2016102101232367.jpg);">
+                                    <div class="swiper-post">
+                                        <h2>超震撼！红牛2016极限运动摄影大赛作品新鲜出炉</h2>
+                                        <p>
+                                            极限运动一直是勇敢者的游戏，为了记录下极限运动的精彩瞬间，摄影师面临怎样的挑战我们可想而知，下面就来欣赏一下这些惊心动魄的作品吧~ </p>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="swiper-slide slide-single">
+                                <a target="_blank" href="http://www.yeoner.com/p/46118.html" class="swiper-image"
+                                   title="了解更多：全球颜值最高的20个国家，中国才排第四？有没有搞错！"
+                                   style="background-image: url(http://www.yeoner.com/wp-content/uploads/2016/10/2016102101232030.jpg);">
+                                    <div class="swiper-post">
+                                        <h2>全球颜值最高的20个国家，中国才排第四？有没有搞错！</h2>
+                                        <p>
+                                            总说着世界那么大，想要去看看。可是，你最想去哪儿？说到底，在这个看脸的时代，吸引你去看看的，美丽且独特的风光必然是最大因素。 </p>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                        <!-- 导航 -->
+                        <div class="swiper-pagination swiper-home-pagination"></div>
+                        <!-- 按钮 -->
+                        <div class="swiper-button swiper-home-button-next swiper-button-next icon-angle-right"></div>
+                        <div class="swiper-button swiper-home-button-prev swiper-button-prev icon-angle-left"></div>
+                        <script>
+                            var swiper = new Swiper('.swiper-home', {
+                                pagination: '.swiper-home-pagination',
+                                nextButton: '.swiper-home-button-next',
+                                prevButton: '.swiper-home-button-prev',
+                                paginationClickable: true,
+                                centeredSlides: true,
+                                autoplay: 5000,
+                                autoplayDisableOnInteraction: false,
+                                lazyLoading: true,
+                                keyboardControl: true,
+                                effect: 'fade',
+                                loop: true
+                            });
+                        </script>
+                    </div>
+                </section>
+                <section class="hot_right">
+                    <!--众测展示-->
+                    <section class="text_content"
+                             style="background-image: url(http://www.yeoner.com/wp-content/uploads/2016/10/2016101706312396.jpg);">
+                        <!--标题-->
+                        <h2>凯乐石新款阿尔法软壳</h2>
+                        <!--数量-->
                         <section class="test_count">
-                            <span>¥699</span>
-                            <span>2块</span>
-                        </section>
-                        <section class="comment_count">
-                            <span>5</span>
-                            人申请        </section>
-                        <section class="test_state">
-                            <span>剩余时间：6天</span>
-                        </section>
-                        <!-- 缩略图end -->
-                    </article>
-                </li>
-                <!-- 文章end -->                <!-- 文章end -->
-                <!-- 文章 -->
-                <!-- 文章 -->
-                <li class="layout_li">
-                    <article class="test_main test_apply">
-                        <!-- 缩略图 -->
-                        <a  target="_blank" href="http://www.yeoner.com/test/47048.html" title="凯乐石新款阿尔法软壳">
-                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101706282726.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="凯乐石新款阿尔法软壳" />            <h3>凯乐石新款阿尔法软壳</h3>
-                        </a>
-                        <section class="test_count">
+                            <span>86申请</span>
                             <span>¥999</span>
                             <span>2件</span>
                         </section>
-                        <section class="comment_count">
-                            <span>86</span>
-                            人申请        </section>
-                        <section class="test_state">
-                            <span>剩余时间：3天</span>
+                        <!--倒计时-->
+                        <section class="countdown">
+                            <span>剩余：</span>
+                            <div class="endtime" value="1477296000"></div>
                         </section>
-                        <!-- 缩略图end -->
-                    </article>
-                </li>
-                <!-- 文章end -->                <!-- 文章end -->
-                <!-- 文章 -->
-                <!-- 文章 -->
-                <li class="layout_li">
-                    <article class="test_main test_ing">
-                        <!-- 缩略图 -->
-                        <a  target="_blank" href="http://www.yeoner.com/test/46608.html" title="Wacaco Minipresso便携咖啡机（名单公布）">
-                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101305420779.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="Wacaco Minipresso便携咖啡机（名单公布）" />            <h3>Wacaco Minipresso便携咖啡机（名单公布）</h3>
-                        </a>
-                        <section class="test_count">
-                            <span>¥449</span>
-                            <span>3台</span>
+                        <script>
+                            var serverTime = 1477020479 * 1000;
+                            $(function () {
+                                var dateTime = new Date();
+                                var difference = dateTime.getTime() - serverTime;
+                                setInterval(function () {
+                                    $(".endtime").each(function () {
+                                        var obj = $(this);
+                                        var endTime = new Date(parseInt(obj.attr('value')) * 1000);
+                                        var nowTime = new Date();
+                                        var nMS = endTime.getTime() - nowTime.getTime() + difference;
+                                        var myD = Math.floor(nMS / (1000 * 60 * 60 * 24));
+                                        var myH = Math.floor(nMS / (1000 * 60 * 60)) % 24;
+                                        var myM = Math.floor(nMS / (1000 * 60)) % 60;
+                                        var myS = Math.floor(nMS / 1000) % 60;
+                                        var myMS = Math.floor(nMS / 100) % 10;
+                                        var str = myD + "天" + myH + "小时" + myM + "分" + myS + "秒";
+                                        obj.html(str);
+                                    });
+                                }, 100);
+
+                            });
+                        </script>
+                        <!--倒计时end-->
+                        <!--按钮-->
+                        <a class="user-login apply_now btn" title="立即申请" href="http://www.yeoner.com/test/47048.html">
+                            立即申请 </a>
+                        <!--按钮end-->
+                    </section>
+                    <!--众测展示end-->
+                    <section class="hot">
+                        <section class="mobile_cate_name">
+                            <h3>热门文章</h3>
+                            <a target="_blank" href="http://www.yeoner.com/zhishi" title="户外知识">浏览更多<i
+                                    class="icon-right"></i></a>
                         </section>
-                        <section class="comment_count">
-                            <span>514</span>
-                            人申请        </section>
-                        <section class="test_state">
-                        <span class="applyed btn">
-                试用中            </span>
-                        </section>
-                        <!-- 缩略图end -->
-                    </article>
-                </li>
-                <!-- 文章end -->                <!-- 文章end -->
-                <!-- 文章 -->
-                <!-- 文章 -->
-                <li class="layout_li">
-                    <article class="test_main test_ing">
-                        <!-- 缩略图 -->
-                        <a  target="_blank" href="http://www.yeoner.com/test/45614.html" title="NORTHLAND 2016款旅行冲锋衣（名单公布）">
-                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016100905125756.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="NORTHLAND 2016款旅行冲锋衣（名单公布）" />            <h3>NORTHLAND 2016款旅行冲锋衣（名单公布）</h3>
-                        </a>
-                        <section class="test_count">
-                            <span>¥1980</span>
-                            <span>3件</span>
-                        </section>
-                        <section class="comment_count">
-                            <span>648</span>
-                            人申请        </section>
-                        <section class="test_state">
-                        <span class="applyed btn">
-                试用中            </span>
-                        </section>
-                        <!-- 缩略图end -->
-                    </article>
-                </li>
-                <!-- 文章end -->                <!-- 文章end -->
-                <!--分页-->
-            </ul>
-        </section>
-        <!-- 获取文章end -->
-    </section>
-    <section class="tuijian">
-        <section class="recommend left">
-            <ul class="layout_ul">
+                        <ul>
+                            <li>
+                                <a target="_blank" href="http://www.yeoner.com/p/46180.html"
+                                   title="千万别让男朋友帮你拍照，丑到妈都不认识啊">
+                                    <span>1</span>
+                                    <h3>千万别让男朋友帮你拍照，丑到妈都不认识啊</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.yeoner.com/p/46993.html"
+                                   title="迪拜到底多有钱？来看看迪拜的11项世界之最吧！">
+                                    <span>2</span>
+                                    <h3>迪拜到底多有钱？来看看迪拜的11项世界之最吧！</h3>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.yeoner.com/p/46122.html"
+                                   title="中国最美的30个地方，没去过6个以上，活着还有什么意义！">
+                                    <span>3</span>
+                                    <h3>中国最美的30个地方，没去过6个以上，活着还有什么意义！</h3>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.yeoner.com/p/46793.html"
+                                   title="有这个APP 不会编程拍照也能给Garmin换表盘风格了">
+                                    <span>4</span>
+                                    <h3>有这个APP 不会编程拍照也能给Garmin换表盘风格了</h3>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.yeoner.com/p/46088.html" title="Patagonia 2016秋冬图册">
+                                    <span>5</span>
+                                    <h3>Patagonia 2016秋冬图册</h3>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.yeoner.com/p/44616.html"
+                                   title="十一去哪儿？ 凯乐石送你去最虐的地方耍！（中奖名单公布）">
+                                    <span>6</span>
+                                    <h3>十一去哪儿？ 凯乐石送你去最虐的地方耍！（中奖名单公布）</h3>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.yeoner.com/p/46154.html"
+                                   title="各国奇葩路标你认识几个，老司机前来挑战！">
+                                    <span>7</span>
+                                    <h3>各国奇葩路标你认识几个，老司机前来挑战！</h3>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </section>
+                    <!-- 热门文章end -->
+                </section>
+            </section>
+            <!--分类列表4-->
+            <section class="videotop">
+                <section class="mobile_cate_name">
+                    <h2>户外视频</h2>
+                    <a href="http://www.yeoner.com/video" title="查看更多视频" target="_blank">
+                        浏览更多<i class="icon-right"></i></a>
+                </section>
                 <!-- 获取文章 -->
-                <li class="layout_li">
-                    <!-- 文章 -->
-                    <article class="recommend_main effect0">
-                        <!-- 缩略图 -->
-                        <a  target="_blank" href="http://www.yeoner.com/p/45036.html" title="野玩儿体验官精选：有效缓解吃土症状 近期众测产品TOP20" class="imglayout" >
-                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/09/2016093004244894.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="野玩儿体验官精选：有效缓解吃土症状 近期众测产品TOP20" />                        <h3>野玩儿体验官精选：有效缓解吃土症状 近期众测产品TOP20</h3>
-                            <djv class="lg"></djv>
-                        </a>
-                        <!-- 缩略图end -->
-                    </article>
-                    <!-- 文章end -->
-                </li>
-                <li class="layout_li">
-                    <!-- 文章 -->
-                    <article class="recommend_main effect0">
-                        <!-- 缩略图 -->
-                        <a  target="_blank" href="http://www.yeoner.com/p/45020.html" title="野玩儿精选：盘点近期新品上手评测Top10" class="imglayout" >
-                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/09/2016093000494156.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="野玩儿精选：盘点近期新品上手评测Top10" />                        <h3>野玩儿精选：盘点近期新品上手评测Top10</h3>
-                            <djv class="lg"></djv>
-                        </a>
-                        <!-- 缩略图end -->
-                    </article>
-                    <!-- 文章end -->
-                </li>
-                <li class="layout_li">
-                    <!-- 文章 -->
-                    <article class="recommend_main effect0">
-                        <!-- 缩略图 -->
-                        <a  target="_blank" href="http://www.yeoner.com/p/44062.html" title="光电心率入门款GPS跑表 Garmin FR35新品评测" class="imglayout" >
-                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/09/2016091410005847.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="光电心率入门款GPS跑表 Garmin FR35新品评测" />                        <h3>光电心率入门款GPS跑表 Garmin FR35新品评测</h3>
-                            <djv class="lg"></djv>
-                        </a>
-                        <!-- 缩略图end -->
-                    </article>
-                    <!-- 文章end -->
-                </li>
-                <li class="layout_li">
-                    <!-- 文章 -->
-                    <article class="recommend_main effect0">
-                        <!-- 缩略图 -->
-                        <a  target="_blank" href="http://www.yeoner.com/p/42328.html" title="9种能量食物让你的跑步运动更有效" class="imglayout" >
-                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/08/yeoner.com_2016-08-26_02-56-27.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="9种能量食物让你的跑步运动更有效" />                        <h3>9种能量食物让你的跑步运动更有效</h3>
-                            <djv class="lg"></djv>
-                        </a>
-                        <!-- 缩略图end -->
-                    </article>
-                    <!-- 文章end -->
-                </li>
+                <section class="videotop_list">
+                    <ul class="layout_ul">
+                        <li class="layout_li">
+                            <article class="videotop_main">
+                                <!-- 缩略图 -->
+                                <a target="_blank" href="http://www.yeoner.com/video/47210.html"
+                                   title="把他的动作全部学会 你的身材绝对爆表" class="video_play">
+                                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r1.ykimg.com/0541040857FDA4996A0A4E0448B9ACD8&amp;h=200&amp;w=294&amp;zc=1"
+                                         alt=""/> <span class="player"><i class="icon-play"></i></span>
+                                </a>
+                                <a target="_blank" href="http://www.yeoner.com/video/47210.html"
+                                   title="把他的动作全部学会 你的身材绝对爆表" class="video_title">
+                                    <h3>把他的动作全部学会 你的身材绝对爆表</h3>
+                                </a>
+                                <!-- 缩略图end -->
+                            </article>
+                        </li>
+                        <li class="layout_li">
+                            <article class="videotop_main">
+                                <!-- 缩略图 -->
+                                <a target="_blank" href="http://www.yeoner.com/video/47209.html"
+                                   title="现在不多见的复古滚轴溜冰 高手玩起来还是很牛" class="video_play">
+                                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r3.ykimg.com/0541040857FDA6156A0A4004E3E7EF4B&amp;h=200&amp;w=294&amp;zc=1"
+                                         alt=""/> <span class="player"><i class="icon-play"></i></span>
+                                </a>
+                                <a target="_blank" href="http://www.yeoner.com/video/47209.html"
+                                   title="现在不多见的复古滚轴溜冰 高手玩起来还是很牛" class="video_title">
+                                    <h3>现在不多见的复古滚轴溜冰 高手玩起来还是很牛</h3>
+                                </a>
+                                <!-- 缩略图end -->
+                            </article>
+                        </li>
+                        <li class="layout_li">
+                            <article class="videotop_main">
+                                <!-- 缩略图 -->
+                                <a target="_blank" href="http://www.yeoner.com/video/47208.html"
+                                   title="GOPRO HERO5 BLACK 运动相机开箱上手视频" class="video_play">
+                                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r2.ykimg.com/0541040857FC50266A0A4F051CED9452&amp;h=200&amp;w=294&amp;zc=1"
+                                         alt=""/> <span class="player"><i class="icon-play"></i></span>
+                                </a>
+                                <a target="_blank" href="http://www.yeoner.com/video/47208.html"
+                                   title="GOPRO HERO5 BLACK 运动相机开箱上手视频" class="video_title">
+                                    <h3>GOPRO HERO5 BLACK 运动相机开箱上手视频</h3>
+                                </a>
+                                <!-- 缩略图end -->
+                            </article>
+                        </li>
+                        <li class="layout_li">
+                            <article class="videotop_main">
+                                <!-- 缩略图 -->
+                                <a target="_blank" href="http://www.yeoner.com/video/47207.html" title="经典自由山地速降 一骑绝尘"
+                                   class="video_play">
+                                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r2.ykimg.com/0541040857FB46856A0A4F0520E30DAE&amp;h=200&amp;w=294&amp;zc=1"
+                                         alt=""/> <span class="player"><i class="icon-play"></i></span>
+                                </a>
+                                <a target="_blank" href="http://www.yeoner.com/video/47207.html" title="经典自由山地速降 一骑绝尘"
+                                   class="video_title">
+                                    <h3>经典自由山地速降 一骑绝尘</h3>
+                                </a>
+                                <!-- 缩略图end -->
+                            </article>
+                        </li>
+                    </ul>
+                </section>
                 <!-- 获取文章end -->
-            </ul>
-        </section>
-        <!--社交-->
-        <section class="social right">
-            <section class="btn">
-                <span class="weixin"><i class="icon-wechat"></i><img src="http://cdn.yeoner.com/wp-content/themes/yewan/images/weixin.jpg" title="野玩儿微信公众号" alt="野玩儿微信公众号"></span>
-                <a  target="_blank" href="http://weibo.com/yeonercom" class="sina"><i class="icon-weibo"></i></a>
-                <a  target="_blank" href="http://www.yeoner.com/feed" class="rss"><i class="icon-rss"></i></a>
             </section>
-            <section class="rss">
+            <!--分类列表4-->
+            <section class="cate test_cat">
+                <section class="mobile_cate_name">
+                    <h2>众测试用</h2>
+                    <a target="_blank" href="http://www.yeoner.com/zhongce" title="查看更多众测">浏览更多<i
+                            class="icon-right"></i></a>
+                </section>
+                <!-- 获取文章 -->
+                <section class="test_list">
+                    <ul class="layout_ul">
+                        <!-- 文章 -->
+                        <!-- 文章 -->
+                        <li class="layout_li">
+                            <article class="test_main test_apply">
+                                <!-- 缩略图 -->
+                                <a target="_blank" href="http://www.yeoner.com/test/47235.html" title="华为荣耀S1智能手表">
+                                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102006365120.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                         alt="华为荣耀S1智能手表"/>
+                                    <h3>华为荣耀S1智能手表</h3>
+                                </a>
+                                <section class="test_count">
+                                    <span>¥699</span>
+                                    <span>2块</span>
+                                </section>
+                                <section class="comment_count">
+                                    <span>5</span>
+                                    人申请
+                                </section>
+                                <section class="test_state">
+                                    <span>剩余时间：6天</span>
+                                </section>
+                                <!-- 缩略图end -->
+                            </article>
+                        </li>
+                        <!-- 文章end -->                <!-- 文章end -->
+                        <!-- 文章 -->
+                        <!-- 文章 -->
+                        <li class="layout_li">
+                            <article class="test_main test_apply">
+                                <!-- 缩略图 -->
+                                <a target="_blank" href="http://www.yeoner.com/test/47048.html" title="凯乐石新款阿尔法软壳">
+                                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101706282726.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                         alt="凯乐石新款阿尔法软壳"/>
+                                    <h3>凯乐石新款阿尔法软壳</h3>
+                                </a>
+                                <section class="test_count">
+                                    <span>¥999</span>
+                                    <span>2件</span>
+                                </section>
+                                <section class="comment_count">
+                                    <span>86</span>
+                                    人申请
+                                </section>
+                                <section class="test_state">
+                                    <span>剩余时间：3天</span>
+                                </section>
+                                <!-- 缩略图end -->
+                            </article>
+                        </li>
+                        <!-- 文章end -->                <!-- 文章end -->
+                        <!-- 文章 -->
+                        <!-- 文章 -->
+                        <li class="layout_li">
+                            <article class="test_main test_ing">
+                                <!-- 缩略图 -->
+                                <a target="_blank" href="http://www.yeoner.com/test/46608.html"
+                                   title="Wacaco Minipresso便携咖啡机（名单公布）">
+                                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101305420779.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                         alt="Wacaco Minipresso便携咖啡机（名单公布）"/>
+                                    <h3>Wacaco Minipresso便携咖啡机（名单公布）</h3>
+                                </a>
+                                <section class="test_count">
+                                    <span>¥449</span>
+                                    <span>3台</span>
+                                </section>
+                                <section class="comment_count">
+                                    <span>514</span>
+                                    人申请
+                                </section>
+                                <section class="test_state">
+                        <span class="applyed btn">
+                试用中            </span>
+                                </section>
+                                <!-- 缩略图end -->
+                            </article>
+                        </li>
+                        <!-- 文章end -->                <!-- 文章end -->
+                        <!-- 文章 -->
+                        <!-- 文章 -->
+                        <li class="layout_li">
+                            <article class="test_main test_ing">
+                                <!-- 缩略图 -->
+                                <a target="_blank" href="http://www.yeoner.com/test/45614.html"
+                                   title="NORTHLAND 2016款旅行冲锋衣（名单公布）">
+                                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016100905125756.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                         alt="NORTHLAND 2016款旅行冲锋衣（名单公布）"/>
+                                    <h3>NORTHLAND 2016款旅行冲锋衣（名单公布）</h3>
+                                </a>
+                                <section class="test_count">
+                                    <span>¥1980</span>
+                                    <span>3件</span>
+                                </section>
+                                <section class="comment_count">
+                                    <span>648</span>
+                                    人申请
+                                </section>
+                                <section class="test_state">
+                        <span class="applyed btn">
+                试用中            </span>
+                                </section>
+                                <!-- 缩略图end -->
+                            </article>
+                        </li>
+                        <!-- 文章end -->                <!-- 文章end -->
+                        <!--分页-->
+                    </ul>
+                </section>
+                <!-- 获取文章end -->
+            </section>
+            <section class="tuijian">
+                <section class="recommend left">
+                    <ul class="layout_ul">
+                        <!-- 获取文章 -->
+                        <li class="layout_li">
+                            <!-- 文章 -->
+                            <article class="recommend_main effect0">
+                                <!-- 缩略图 -->
+                                <a target="_blank" href="http://www.yeoner.com/p/45036.html"
+                                   title="野玩儿体验官精选：有效缓解吃土症状 近期众测产品TOP20" class="imglayout">
+                                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/09/2016093004244894.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                         alt="野玩儿体验官精选：有效缓解吃土症状 近期众测产品TOP20"/>
+                                    <h3>野玩儿体验官精选：有效缓解吃土症状 近期众测产品TOP20</h3>
+                                    <djv class="lg"></djv>
+                                </a>
+                                <!-- 缩略图end -->
+                            </article>
+                            <!-- 文章end -->
+                        </li>
+                        <li class="layout_li">
+                            <!-- 文章 -->
+                            <article class="recommend_main effect0">
+                                <!-- 缩略图 -->
+                                <a target="_blank" href="http://www.yeoner.com/p/45020.html"
+                                   title="野玩儿精选：盘点近期新品上手评测Top10" class="imglayout">
+                                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/09/2016093000494156.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                         alt="野玩儿精选：盘点近期新品上手评测Top10"/>
+                                    <h3>野玩儿精选：盘点近期新品上手评测Top10</h3>
+                                    <djv class="lg"></djv>
+                                </a>
+                                <!-- 缩略图end -->
+                            </article>
+                            <!-- 文章end -->
+                        </li>
+                        <li class="layout_li">
+                            <!-- 文章 -->
+                            <article class="recommend_main effect0">
+                                <!-- 缩略图 -->
+                                <a target="_blank" href="http://www.yeoner.com/p/44062.html"
+                                   title="光电心率入门款GPS跑表 Garmin FR35新品评测" class="imglayout">
+                                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/09/2016091410005847.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                         alt="光电心率入门款GPS跑表 Garmin FR35新品评测"/>
+                                    <h3>光电心率入门款GPS跑表 Garmin FR35新品评测</h3>
+                                    <djv class="lg"></djv>
+                                </a>
+                                <!-- 缩略图end -->
+                            </article>
+                            <!-- 文章end -->
+                        </li>
+                        <li class="layout_li">
+                            <!-- 文章 -->
+                            <article class="recommend_main effect0">
+                                <!-- 缩略图 -->
+                                <a target="_blank" href="http://www.yeoner.com/p/42328.html" title="9种能量食物让你的跑步运动更有效"
+                                   class="imglayout">
+                                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/08/yeoner.com_2016-08-26_02-56-27.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                         alt="9种能量食物让你的跑步运动更有效"/>
+                                    <h3>9种能量食物让你的跑步运动更有效</h3>
+                                    <djv class="lg"></djv>
+                                </a>
+                                <!-- 缩略图end -->
+                            </article>
+                            <!-- 文章end -->
+                        </li>
+                        <!-- 获取文章end -->
+                    </ul>
+                </section>
+                <!--社交-->
+                <section class="social right">
+                    <section class="btn">
+                        <span class="weixin"><i class="icon-wechat"></i><img
+                                src="http://cdn.yeoner.com/wp-content/themes/yewan/images/weixin.jpg" title="野玩儿微信公众号"
+                                alt="野玩儿微信公众号"></span>
+                        <a target="_blank" href="http://weibo.com/yeonercom" class="sina"><i class="icon-weibo"></i></a>
+                        <a target="_blank" href="http://www.yeoner.com/feed" class="rss"><i class="icon-rss"></i></a>
+                    </section>
+                    <section class="rss">
+                        <p>
+                            填写您的邮件地址，订阅我们： </p>
+                        <!--以下是QQ邮件列表订阅嵌入代码-->
+                        <script>var nId = "0cc8075b47cc41a665a411e22fe21e8aae956256a602fffb", nWidth = "auto", sColor = "dark", sText = "";
+                        ;</script>
+                        <script src="http://list.qq.com/zh_CN/htmledition/js/qf/page/qfcode.js"
+                                charset="gb18030"></script>
+                    </section>
+                </section>
+                <!--社交end-->
+            </section><!-- 作者推荐下的广告 -->
+            <!--分类列表1-->
+            <section class="cate one">
+                <section class="cate_name">
+                    <h2>户外装备</h2>
+                    <a target="_blank" href="http://www.yeoner.com/zhuangbei" title="查看更多 户外装备">
+                        浏览更多<i class="icon-right"></i></a>
+                </section>
+                <!-- 获取文章 -->
+                <section class="cate_list">
+                    <!-- 文章 -->
+                    <article class="effect0 list1">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/47273.html"
+                           title="Fitbit心率监测精确度堪忧 Moov称头戴式穿戴设备更专业" class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102008575168.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt="Fitbit心率监测精确度堪忧 Moov称头戴式穿戴设备更专业"/>
+                            <h3>Fitbit心率监测精确度堪忧 Moov称头戴式穿戴设备更专业</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list2">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/47135.html"
+                           title="有创意很够味!爱酒人士必备的吸睛利器-STANLEY户外酒壶套装评测" class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102001224343.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt="有创意很够味!爱酒人士必备的吸睛利器-STANLEY户外酒壶套装评测"/>
+                            <h3>有创意很够味!爱酒人士必备的吸睛利器-STANLEY户外酒壶套装评测</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list3">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/47221.html" title="苹果美学继承者Misfit 终于推出智能腕表了"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101908540364.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt="苹果美学继承者Misfit 终于推出智能腕表了"/>
+                            <h3>苹果美学继承者Misfit 终于推出智能腕表了</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list4">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/47206.html"
+                           title="699元！华为荣耀S1智能手表打响价格战 华米手表小心咯" class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101907241088.jpg&amp;h=200&amp;w=596&amp;zc=1"
+                                 alt="699元！华为荣耀S1智能手表打响价格战 华米手表小心咯"/>
+                            <h3>699元！华为荣耀S1智能手表打响价格战 华米手表小心咯</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list5">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/46873.html"
+                           title="2016-2017 最牛十款速降车——INTENSE M16C" class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102002445660.jpg&amp;h=409&amp;w=294&amp;zc=1"
+                                 alt="2016-2017 最牛十款速降车——INTENSE M16C"/>
+                            <h3>2016-2017 最牛十款速降车——INTENSE M16C</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                </section>
+                <!-- 获取文章end -->
+            </section>
+            <!--分类列表2-->
+            <section class="cate two">
+                <section class="cate_name">
+                    <h2>户外知识</h2>
+                    <a target="_blank" href="http://www.yeoner.com/zhishi" title="查看更多 户外知识">
+                        浏览更多<i class="icon-right"></i></a>
+                </section>
+                <!-- 获取文章 -->
+                <section class="cate_list">
+                    <!-- 文章 -->
+                    <article class="effect0 list1">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/46468.html" title="光有测心率的表 但是你真的了解如何解读心率么？"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102008140671.jpg&amp;h=409&amp;w=294&amp;zc=1"
+                                 alt="光有测心率的表 但是你真的了解如何解读心率么？"/>
+                            <h3>光有测心率的表 但是你真的了解如何解读心率么？</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list2">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/46462.html" title="为什么一跑步就嗓子疼 解决方法在这里"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102008033662.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt="为什么一跑步就嗓子疼 解决方法在这里"/>
+                            <h3>为什么一跑步就嗓子疼 解决方法在这里</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list3">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/46991.html" title="旅游中最怕的7种突发状况 你需要学会的补救方法"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101706313898.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt="旅游中最怕的7种突发状况 你需要学会的补救方法"/>
+                            <h3>旅游中最怕的7种突发状况 你需要学会的补救方法</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list4">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/46965.html" title="高清图文详解红牛Rampage速降赛到底有多危险"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101706235524.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt="高清图文详解红牛Rampage速降赛到底有多危险"/>
+                            <h3>高清图文详解红牛Rampage速降赛到底有多危险</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list5">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/46911.html"
+                           title="恶心吐了！网传有人住酒店竟用电水壶煮内裤消毒！比这更奇葩的还有……" class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102102444668.jpg&amp;h=200&amp;w=596&amp;zc=1"
+                                 alt="恶心吐了！网传有人住酒店竟用电水壶煮内裤消毒！比这更奇葩的还有……"/>
+                            <h3>恶心吐了！网传有人住酒店竟用电水壶煮内裤消毒！比这更奇葩的还有……</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                </section>
+                <!-- 获取文章end -->
+            </section>
+            <!--分类列表3-->
+            <section class="cate three">
+                <section class="cate_name">
+                    <h2>户外探索</h2>
+                    <a target="_blank" href="http://www.yeoner.com/discovery" title="查看更多 户外探索">
+                        浏览更多<i class="icon-right"></i></a>
+                </section>
+                <!-- 获取文章 -->
+                <section class="cate_list">
+                    <!-- 文章 -->
+                    <article class="effect0 list1">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/46122.html"
+                           title="中国最美的30个地方，没去过6个以上，活着还有什么意义！" class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102008071315.jpg&amp;h=200&amp;w=596&amp;zc=1"
+                                 alt="中国最美的30个地方，没去过6个以上，活着还有什么意义！"/>
+                            <h3>中国最美的30个地方，没去过6个以上，活着还有什么意义！</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list2">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/46130.html" title="一人一狗跋山涉水，这才算得上真正的旅行啊&#8230;"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/5614683a5a3123524ed2dca82917c731.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt="一人一狗跋山涉水，这才算得上真正的旅行啊..."/>
+                            <h3>一人一狗跋山涉水，这才算得上真正的旅行啊&#8230;</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list3">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/46118.html" title="全球颜值最高的20个国家，中国才排第四？有没有搞错！"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/c2b95d25172e1fc48abaa6b24fa9f61b.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt="全球颜值最高的20个国家，中国才排第四？有没有搞错！"/>
+                            <h3>全球颜值最高的20个国家，中国才排第四？有没有搞错！</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list4">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/45584.html" title="Matt Hunter教父级山地车手 奶孩子也是一级棒"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101908430752.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt="Matt Hunter教父级山地车手 奶孩子也是一级棒"/>
+                            <h3>Matt Hunter教父级山地车手 奶孩子也是一级棒</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list5">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/46134.html" title="2016最震撼的34张照片！美遍朋友圈！"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101908420944.jpg&amp;h=409&amp;w=294&amp;zc=1"
+                                 alt="2016最震撼的34张照片！美遍朋友圈！"/>
+                            <h3>2016最震撼的34张照片！美遍朋友圈！</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                </section>
+                <!-- 获取文章end -->
+            </section>
+            <!--引用-->
+            <section class="quote">
                 <p>
-                    填写您的邮件地址，订阅我们：            </p>
-                <!--以下是QQ邮件列表订阅嵌入代码-->
-                <script>var nId = "0cc8075b47cc41a665a411e22fe21e8aae956256a602fffb",nWidth = "auto",sColor = "dark",sText = "";;</script>
-                <script src="http://list.qq.com/zh_CN/htmledition/js/qf/page/qfcode.js" charset="gb18030"></script>
+                    最前沿科技资讯，最具创意的智能穿戴产品，丰富多彩的户外视频，以及触手可得的最新产品试用。最新上线『视频频道』，就在下面，各种极限户外视频值得你去看看~~ </p>
+                <span>———野玩儿</span>
+            </section>
+            <!--分类列表4-->
+            <section class="cate four">
+                <section class="cate_name">
+                    <h2>酷品</h2>
+                    <a target="_blank" href="http://www.yeoner.com/zhuangbei/find" title="查看更多 酷品">
+                        浏览更多<i class="icon-right"></i></a>
+                </section>
+                <!-- 获取文章 -->
+                <section class="cate_list">
+                    <!-- 文章 -->
+                    <article class="effect0 list1">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/47273.html"
+                           title="Fitbit心率监测精确度堪忧 Moov称头戴式穿戴设备更专业" class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102008575168.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt="Fitbit心率监测精确度堪忧 Moov称头戴式穿戴设备更专业"/>
+                            <h3>Fitbit心率监测精确度堪忧 Moov称头戴式穿戴设备更专业</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list2">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/47221.html" title="苹果美学继承者Misfit 终于推出智能腕表了"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101908540364.jpg&amp;h=409&amp;w=294&amp;zc=1"
+                                 alt="苹果美学继承者Misfit 终于推出智能腕表了"/>
+                            <h3>苹果美学继承者Misfit 终于推出智能腕表了</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list3">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/47206.html"
+                           title="699元！华为荣耀S1智能手表打响价格战 华米手表小心咯" class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101907241088.jpg&amp;h=200&amp;w=596&amp;zc=1"
+                                 alt="699元！华为荣耀S1智能手表打响价格战 华米手表小心咯"/>
+                            <h3>699元！华为荣耀S1智能手表打响价格战 华米手表小心咯</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list4">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/47173.html" title="头盔车架上都可以安装的骑行灯 让你成为酷炫的夜骑骚年"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101809053359.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt="头盔车架上都可以安装的骑行灯 让你成为酷炫的夜骑骚年"/>
+                            <h3>头盔车架上都可以安装的骑行灯 让你成为酷炫的夜骑骚年</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list5">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/47136.html" title="三星深陷爆炸阴云 索尼推出类Gear系列无线耳机"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101806144314.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt="三星深陷爆炸阴云 索尼推出类Gear系列无线耳机"/>
+                            <h3>三星深陷爆炸阴云 索尼推出类Gear系列无线耳机</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                </section>
+                <!-- 获取文章end -->
+            </section>
+            <!--分类列表4-->
+            <section class="cate five">
+                <section class="cate_name">
+                    <h2>媒体平台</h2>
+                    <a target="_blank" href="http://www.yeoner.com/mt" title="查看更多 媒体平台">
+                        浏览更多<i class="icon-right"></i></a>
+                </section>
+                <!-- 获取文章 -->
+                <section class="cate_list">
+                    <!-- 文章 -->
+                    <article class="effect0 list1">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/46468.html" title="光有测心率的表 但是你真的了解如何解读心率么？"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102008140671.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt="光有测心率的表 但是你真的了解如何解读心率么？"/>
+                            <h3>光有测心率的表 但是你真的了解如何解读心率么？</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list2">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/46122.html"
+                           title="中国最美的30个地方，没去过6个以上，活着还有什么意义！" class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102008071315.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt="中国最美的30个地方，没去过6个以上，活着还有什么意义！"/>
+                            <h3>中国最美的30个地方，没去过6个以上，活着还有什么意义！</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list3">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/46462.html" title="为什么一跑步就嗓子疼 解决方法在这里"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102008033662.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt="为什么一跑步就嗓子疼 解决方法在这里"/>
+                            <h3>为什么一跑步就嗓子疼 解决方法在这里</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list4">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/46130.html" title="一人一狗跋山涉水，这才算得上真正的旅行啊&#8230;"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/5614683a5a3123524ed2dca82917c731.jpg&amp;h=409&amp;w=294&amp;zc=1"
+                                 alt="一人一狗跋山涉水，这才算得上真正的旅行啊..."/>
+                            <h3>一人一狗跋山涉水，这才算得上真正的旅行啊&#8230;</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list5">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/46873.html"
+                           title="2016-2017 最牛十款速降车——INTENSE M16C" class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102002445660.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt="2016-2017 最牛十款速降车——INTENSE M16C"/>
+                            <h3>2016-2017 最牛十款速降车——INTENSE M16C</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list6">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/p/46118.html" title="全球颜值最高的20个国家，中国才排第四？有没有搞错！"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/c2b95d25172e1fc48abaa6b24fa9f61b.jpg&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt="全球颜值最高的20个国家，中国才排第四？有没有搞错！"/>
+                            <h3>全球颜值最高的20个国家，中国才排第四？有没有搞错！</h3>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                </section>
+                <!-- 获取文章end -->
+            </section>
+            <!-- 视频列表上的广告 -->
+            <!--分类列表4-->
+            <section class="cate six">
+                <section class="cate_name">
+                    <h2>户外视频</h2>
+                    <a target="_blank" href="http://www.yeoner.com/video" title="查看更多视频">
+                        浏览更多<i class="icon-right"></i></a>
+                </section>
+                <!-- 获取文章 -->
+                <section class="cate_list video_list">
+                    <!-- 文章 -->
+                    <article class="effect0 list1">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/video/47210.html" title="把他的动作全部学会 你的身材绝对爆表"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r1.ykimg.com/0541040857FDA4996A0A4E0448B9ACD8&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt=""/>
+                            <h3>把他的动作全部学会 你的身材绝对爆表</h3>
+                            <span class="player"><i class="icon-play"></i></span>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list2">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/video/47209.html" title="现在不多见的复古滚轴溜冰 高手玩起来还是很牛"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r3.ykimg.com/0541040857FDA6156A0A4004E3E7EF4B&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt=""/>
+                            <h3>现在不多见的复古滚轴溜冰 高手玩起来还是很牛</h3>
+                            <span class="player"><i class="icon-play"></i></span>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list3">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/video/47208.html"
+                           title="GOPRO HERO5 BLACK 运动相机开箱上手视频" class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r2.ykimg.com/0541040857FC50266A0A4F051CED9452&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt=""/>
+                            <h3>GOPRO HERO5 BLACK 运动相机开箱上手视频</h3>
+                            <span class="player"><i class="icon-play"></i></span>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list4">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/video/47207.html" title="经典自由山地速降 一骑绝尘"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r2.ykimg.com/0541040857FB46856A0A4F0520E30DAE&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt=""/>
+                            <h3>经典自由山地速降 一骑绝尘</h3>
+                            <span class="player"><i class="icon-play"></i></span>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list5">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/video/47076.html" title="大力金刚脚 开瓶我有新技巧"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r2.ykimg.com/0541040857FB45046A0A410462F5CEFE&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt=""/>
+                            <h3>大力金刚脚 开瓶我有新技巧</h3>
+                            <span class="player"><i class="icon-play"></i></span>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list6">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/video/47075.html" title="达人视频集锦 各路高手告诉你什么叫极限"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r3.ykimg.com/0541040857FB475E6A0A4004E130B894&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt=""/>
+                            <h3>达人视频集锦 各路高手告诉你什么叫极限</h3>
+                            <span class="player"><i class="icon-play"></i></span>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                    <!-- 文章 -->
+                    <article class="effect0 list7">
+                        <!-- 缩略图 -->
+                        <a target="_blank" href="http://www.yeoner.com/video/47074.html" title="谁说女人不能玩机车 偏要弄把机车成粉红色炫技"
+                           class="imglayout">
+                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r3.ykimg.com/0541040857FB48D26A0A4604E3F37C1F&amp;h=200&amp;w=294&amp;zc=1"
+                                 alt=""/>
+                            <h3>谁说女人不能玩机车 偏要弄把机车成粉红色炫技</h3>
+                            <span class="player"><i class="icon-play"></i></span>
+                            <div class="lg"></div>
+                        </a>
+                        <!-- 缩略图end -->
+                    </article>
+                    <!-- 文章end -->
+                </section>
+                <!-- 获取文章end -->
             </section>
         </section>
-        <!--社交end-->
-    </section><!-- 作者推荐下的广告 -->
-    <!--分类列表1-->
-    <section class="cate one">
-        <section class="cate_name">
-            <h2>户外装备</h2>
-            <a  target="_blank" href="http://www.yeoner.com/zhuangbei" title="查看更多 户外装备">
-                浏览更多<i class="icon-right"></i></a>
-        </section>
-        <!-- 获取文章 -->
-        <section class="cate_list">
-            <!-- 文章 -->
-            <article class="effect0 list1">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/47273.html" title="Fitbit心率监测精确度堪忧 Moov称头戴式穿戴设备更专业" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102008575168.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="Fitbit心率监测精确度堪忧 Moov称头戴式穿戴设备更专业" />                                                <h3>Fitbit心率监测精确度堪忧 Moov称头戴式穿戴设备更专业</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list2">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/47135.html" title="有创意很够味!爱酒人士必备的吸睛利器-STANLEY户外酒壶套装评测" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102001224343.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="有创意很够味!爱酒人士必备的吸睛利器-STANLEY户外酒壶套装评测" />                                                <h3>有创意很够味!爱酒人士必备的吸睛利器-STANLEY户外酒壶套装评测</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list3">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/47221.html" title="苹果美学继承者Misfit 终于推出智能腕表了" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101908540364.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="苹果美学继承者Misfit 终于推出智能腕表了" />                                                <h3>苹果美学继承者Misfit 终于推出智能腕表了</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list4">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/47206.html" title="699元！华为荣耀S1智能手表打响价格战 华米手表小心咯" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101907241088.jpg&amp;h=200&amp;w=596&amp;zc=1" alt="699元！华为荣耀S1智能手表打响价格战 华米手表小心咯" />                                                <h3>699元！华为荣耀S1智能手表打响价格战 华米手表小心咯</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list5">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/46873.html" title="2016-2017 最牛十款速降车——INTENSE M16C" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102002445660.jpg&amp;h=409&amp;w=294&amp;zc=1" alt="2016-2017 最牛十款速降车——INTENSE M16C" />                                                <h3>2016-2017 最牛十款速降车——INTENSE M16C</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-        </section>
-        <!-- 获取文章end -->
-    </section>
-    <!--分类列表2-->
-    <section class="cate two">
-        <section class="cate_name">
-            <h2>户外知识</h2>
-            <a  target="_blank" href="http://www.yeoner.com/zhishi" title="查看更多 户外知识">
-                浏览更多<i class="icon-right"></i></a>
-        </section>
-        <!-- 获取文章 -->
-        <section class="cate_list">
-            <!-- 文章 -->
-            <article class="effect0 list1">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/46468.html" title="光有测心率的表 但是你真的了解如何解读心率么？" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102008140671.jpg&amp;h=409&amp;w=294&amp;zc=1" alt="光有测心率的表 但是你真的了解如何解读心率么？" />                                                <h3>光有测心率的表 但是你真的了解如何解读心率么？</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list2">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/46462.html" title="为什么一跑步就嗓子疼 解决方法在这里" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102008033662.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="为什么一跑步就嗓子疼 解决方法在这里" />                                                <h3>为什么一跑步就嗓子疼 解决方法在这里</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list3">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/46991.html" title="旅游中最怕的7种突发状况 你需要学会的补救方法" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101706313898.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="旅游中最怕的7种突发状况 你需要学会的补救方法" />                                                <h3>旅游中最怕的7种突发状况 你需要学会的补救方法</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list4">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/46965.html" title="高清图文详解红牛Rampage速降赛到底有多危险" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101706235524.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="高清图文详解红牛Rampage速降赛到底有多危险" />                                                <h3>高清图文详解红牛Rampage速降赛到底有多危险</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list5">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/46911.html" title="恶心吐了！网传有人住酒店竟用电水壶煮内裤消毒！比这更奇葩的还有……" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102102444668.jpg&amp;h=200&amp;w=596&amp;zc=1" alt="恶心吐了！网传有人住酒店竟用电水壶煮内裤消毒！比这更奇葩的还有……" />                                                <h3>恶心吐了！网传有人住酒店竟用电水壶煮内裤消毒！比这更奇葩的还有……</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-        </section>
-        <!-- 获取文章end -->
-    </section>
-    <!--分类列表3-->
-    <section class="cate three">
-        <section class="cate_name">
-            <h2>户外探索</h2>
-            <a  target="_blank" href="http://www.yeoner.com/discovery" title="查看更多 户外探索">
-                浏览更多<i class="icon-right"></i></a>
-        </section>
-        <!-- 获取文章 -->
-        <section class="cate_list">
-            <!-- 文章 -->
-            <article class="effect0 list1">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/46122.html" title="中国最美的30个地方，没去过6个以上，活着还有什么意义！" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102008071315.jpg&amp;h=200&amp;w=596&amp;zc=1" alt="中国最美的30个地方，没去过6个以上，活着还有什么意义！" />                                                <h3>中国最美的30个地方，没去过6个以上，活着还有什么意义！</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list2">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/46130.html" title="一人一狗跋山涉水，这才算得上真正的旅行啊&#8230;" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/5614683a5a3123524ed2dca82917c731.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="一人一狗跋山涉水，这才算得上真正的旅行啊..." />                                                <h3>一人一狗跋山涉水，这才算得上真正的旅行啊&#8230;</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list3">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/46118.html" title="全球颜值最高的20个国家，中国才排第四？有没有搞错！" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/c2b95d25172e1fc48abaa6b24fa9f61b.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="全球颜值最高的20个国家，中国才排第四？有没有搞错！" />                                                <h3>全球颜值最高的20个国家，中国才排第四？有没有搞错！</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list4">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/45584.html" title="Matt Hunter教父级山地车手 奶孩子也是一级棒" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101908430752.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="Matt Hunter教父级山地车手 奶孩子也是一级棒" />                                                <h3>Matt Hunter教父级山地车手 奶孩子也是一级棒</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list5">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/46134.html" title="2016最震撼的34张照片！美遍朋友圈！" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101908420944.jpg&amp;h=409&amp;w=294&amp;zc=1" alt="2016最震撼的34张照片！美遍朋友圈！" />                                                <h3>2016最震撼的34张照片！美遍朋友圈！</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-        </section>
-        <!-- 获取文章end -->
-    </section>
-    <!--引用-->
-    <section class="quote">
-        <p>
-            最前沿科技资讯，最具创意的智能穿戴产品，丰富多彩的户外视频，以及触手可得的最新产品试用。最新上线『视频频道』，就在下面，各种极限户外视频值得你去看看~~    </p>
-        <span>———野玩儿</span>
-    </section>
-    <!--分类列表4-->
-    <section class="cate four">
-        <section class="cate_name">
-            <h2>酷品</h2>
-            <a  target="_blank" href="http://www.yeoner.com/zhuangbei/find" title="查看更多 酷品">
-                浏览更多<i class="icon-right"></i></a>
-        </section>
-        <!-- 获取文章 -->
-        <section class="cate_list">
-            <!-- 文章 -->
-            <article class="effect0 list1">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/47273.html" title="Fitbit心率监测精确度堪忧 Moov称头戴式穿戴设备更专业" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102008575168.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="Fitbit心率监测精确度堪忧 Moov称头戴式穿戴设备更专业" />                                                <h3>Fitbit心率监测精确度堪忧 Moov称头戴式穿戴设备更专业</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list2">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/47221.html" title="苹果美学继承者Misfit 终于推出智能腕表了" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101908540364.jpg&amp;h=409&amp;w=294&amp;zc=1" alt="苹果美学继承者Misfit 终于推出智能腕表了" />                                                <h3>苹果美学继承者Misfit 终于推出智能腕表了</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list3">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/47206.html" title="699元！华为荣耀S1智能手表打响价格战 华米手表小心咯" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101907241088.jpg&amp;h=200&amp;w=596&amp;zc=1" alt="699元！华为荣耀S1智能手表打响价格战 华米手表小心咯" />                                                <h3>699元！华为荣耀S1智能手表打响价格战 华米手表小心咯</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list4">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/47173.html" title="头盔车架上都可以安装的骑行灯 让你成为酷炫的夜骑骚年" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101809053359.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="头盔车架上都可以安装的骑行灯 让你成为酷炫的夜骑骚年" />                                                <h3>头盔车架上都可以安装的骑行灯 让你成为酷炫的夜骑骚年</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list5">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/47136.html" title="三星深陷爆炸阴云 索尼推出类Gear系列无线耳机" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101806144314.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="三星深陷爆炸阴云 索尼推出类Gear系列无线耳机" />                                                <h3>三星深陷爆炸阴云 索尼推出类Gear系列无线耳机</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-        </section>
-        <!-- 获取文章end -->
-    </section>
-    <!--分类列表4-->
-    <section class="cate five">
-        <section class="cate_name">
-            <h2>媒体平台</h2>
-            <a  target="_blank" href="http://www.yeoner.com/mt" title="查看更多 媒体平台">
-                浏览更多<i class="icon-right"></i></a>
-        </section>
-        <!-- 获取文章 -->
-        <section class="cate_list">
-            <!-- 文章 -->
-            <article class="effect0 list1">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/46468.html" title="光有测心率的表 但是你真的了解如何解读心率么？" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102008140671.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="光有测心率的表 但是你真的了解如何解读心率么？" />                                                <h3>光有测心率的表 但是你真的了解如何解读心率么？</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list2">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/46122.html" title="中国最美的30个地方，没去过6个以上，活着还有什么意义！" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102008071315.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="中国最美的30个地方，没去过6个以上，活着还有什么意义！" />                                                <h3>中国最美的30个地方，没去过6个以上，活着还有什么意义！</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list3">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/46462.html" title="为什么一跑步就嗓子疼 解决方法在这里" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102008033662.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="为什么一跑步就嗓子疼 解决方法在这里" />                                                <h3>为什么一跑步就嗓子疼 解决方法在这里</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list4">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/46130.html" title="一人一狗跋山涉水，这才算得上真正的旅行啊&#8230;" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/5614683a5a3123524ed2dca82917c731.jpg&amp;h=409&amp;w=294&amp;zc=1" alt="一人一狗跋山涉水，这才算得上真正的旅行啊..." />                                                <h3>一人一狗跋山涉水，这才算得上真正的旅行啊&#8230;</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list5">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/46873.html" title="2016-2017 最牛十款速降车——INTENSE M16C" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102002445660.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="2016-2017 最牛十款速降车——INTENSE M16C" />                                                <h3>2016-2017 最牛十款速降车——INTENSE M16C</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list6">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/p/46118.html" title="全球颜值最高的20个国家，中国才排第四？有没有搞错！" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/c2b95d25172e1fc48abaa6b24fa9f61b.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="全球颜值最高的20个国家，中国才排第四？有没有搞错！" />                                                <h3>全球颜值最高的20个国家，中国才排第四？有没有搞错！</h3>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-        </section>
-        <!-- 获取文章end -->
-    </section>
-    <!-- 视频列表上的广告 -->
-    <!--分类列表4-->
-    <section class="cate six">
-        <section class="cate_name">
-            <h2>户外视频</h2>
-            <a  target="_blank" href="http://www.yeoner.com/video" title="查看更多视频">
-                浏览更多<i class="icon-right"></i></a>
-        </section>
-        <!-- 获取文章 -->
-        <section class="cate_list video_list">
-            <!-- 文章 -->
-            <article class="effect0 list1">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/video/47210.html" title="把他的动作全部学会 你的身材绝对爆表" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r1.ykimg.com/0541040857FDA4996A0A4E0448B9ACD8&amp;h=200&amp;w=294&amp;zc=1" alt="" />                <h3>把他的动作全部学会 你的身材绝对爆表</h3>
-                    <span class="player"><i class="icon-play"></i></span>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list2">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/video/47209.html" title="现在不多见的复古滚轴溜冰 高手玩起来还是很牛" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r3.ykimg.com/0541040857FDA6156A0A4004E3E7EF4B&amp;h=200&amp;w=294&amp;zc=1" alt="" />                <h3>现在不多见的复古滚轴溜冰 高手玩起来还是很牛</h3>
-                    <span class="player"><i class="icon-play"></i></span>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list3">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/video/47208.html" title="GOPRO HERO5 BLACK 运动相机开箱上手视频" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r2.ykimg.com/0541040857FC50266A0A4F051CED9452&amp;h=200&amp;w=294&amp;zc=1" alt="" />                <h3>GOPRO HERO5 BLACK 运动相机开箱上手视频</h3>
-                    <span class="player"><i class="icon-play"></i></span>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list4">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/video/47207.html" title="经典自由山地速降 一骑绝尘" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r2.ykimg.com/0541040857FB46856A0A4F0520E30DAE&amp;h=200&amp;w=294&amp;zc=1" alt="" />                <h3>经典自由山地速降 一骑绝尘</h3>
-                    <span class="player"><i class="icon-play"></i></span>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list5">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/video/47076.html" title="大力金刚脚 开瓶我有新技巧" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r2.ykimg.com/0541040857FB45046A0A410462F5CEFE&amp;h=200&amp;w=294&amp;zc=1" alt="" />                <h3>大力金刚脚 开瓶我有新技巧</h3>
-                    <span class="player"><i class="icon-play"></i></span>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list6">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/video/47075.html" title="达人视频集锦 各路高手告诉你什么叫极限" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r3.ykimg.com/0541040857FB475E6A0A4004E130B894&amp;h=200&amp;w=294&amp;zc=1" alt="" />                <h3>达人视频集锦 各路高手告诉你什么叫极限</h3>
-                    <span class="player"><i class="icon-play"></i></span>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-            <!-- 文章 -->
-            <article class="effect0 list7">
-                <!-- 缩略图 -->
-                <a  target="_blank" href="http://www.yeoner.com/video/47074.html" title="谁说女人不能玩机车 偏要弄把机车成粉红色炫技" class="imglayout">
-                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r3.ykimg.com/0541040857FB48D26A0A4604E3F37C1F&amp;h=200&amp;w=294&amp;zc=1" alt="" />                <h3>谁说女人不能玩机车 偏要弄把机车成粉红色炫技</h3>
-                    <span class="player"><i class="icon-play"></i></span>
-                    <div class="lg"></div>
-                </a>
-                <!-- 缩略图end -->
-            </article>
-            <!-- 文章end -->
-        </section>
-        <!-- 获取文章end -->
-    </section>
-</section>
-<footer class="footer">
-    <section class="wrapper">
-        <section class="footer-nav left">
-            <!--菜单-->
-            <div class="footer-menu"><ul id="menu-%e6%a0%87%e7%ad%be" class="menu"><li id="menu-item-44643" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44643"><a href="http://www.yeoner.com/aboutus">关于野玩儿</a></li>
-                <li id="menu-item-38296" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38296"><a href="http://www.yeoner.com/recruiting">加入野玩儿</a></li>
-                <li id="menu-item-38302" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38302"><a href="http://www.yeoner.com/partner">合作伙伴</a></li>
-                <li id="menu-item-38297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38297"><a href="http://www.yeoner.com/contact">联系野玩儿</a></li>
-            </ul></div>                        <!-- 版权 -->
-            <p class="copyright">
-                Copyright © 2015-2017 Yeoner 野玩儿 . 保留所有权利                                京ICP备15028529号-1            </p>
-            友情链接：<a href="http://www.toread.com.cn/" target="_blank">探路者</a>&nbsp;&nbsp;
-            <a href="http://www.360.cn/" target="_blank">奇虎360</a>&nbsp;&nbsp;
-            <a href="http://www.lvye.cn/" target="_blank">绿野网</a>&nbsp;&nbsp;
-            <a href="http://www.easytour.cn/" target="_blank">易游天下</a>&nbsp;&nbsp;
-            <a href="http://www.garmin.com.cn/" target="_blank">佳明GARMIN</a>&nbsp;&nbsp;
-            <a href="http://go.360.cn/" target="_blank">360旅游</a>&nbsp;&nbsp;
-            <br/><a href="http://www.banghw.com/" target="_blank">户外帮</a>&nbsp;&nbsp;
-            <a href="http://www.717c.com/" target="_blank">717c骑车论坛</a>&nbsp;&nbsp;
-            <a href="http://www.backpacker.net.cn/" target="_blank">背包客·中国网</a>&nbsp;&nbsp;
-            <a href="http://www.1gear.cn/" target="_blank">第一装备网</a>&nbsp;&nbsp;
-            <a href="http://www.ezon.cn/" target="_blank">EZON宜准</a>&nbsp;&nbsp;
-            <!-- 版权end -->
-        </section>
-        <!-- LOGO与二维码 -->
-        <section class="footer-logo right">
-            <a href="http://www.yeoner.com" class="logo" title="野玩儿 | 爱户外，爱科技！"><img src="http://cdn.yeoner.com/wp-content/themes/yewan/images/footer-logo.png" alt="野玩儿"></a>
-            <span class="weixin"><i title="点击扫描野玩儿微信公众号" class="icon-wechat"></i><img src="http://cdn.yeoner.com/wp-content/themes/yewan/images/weixin.jpg" title="野玩儿微信公众号" alt="野玩儿微信公众号"></span>
-            <span class="app"><i title="点击扫描下载野玩儿APP" class="icon-android"></i><img src="http://cdn.yeoner.com/wp-content/uploads/2016/07/erweima.png" title="野玩儿APP" alt="野玩儿APP"></span>
-        </section>
-        <!-- LOGO与二维码end -->
-    </section>
-    <!-- 回顶部 -->
-    <div id="back-to-top"><a class="top-btn" href="#top" title="返回顶部"><i class="icon-flight"></i></a>
-    </div>
-    <!--黑背影-->
-    <div class="bg"></div>
-</footer>
-<div id="sign" class="um_sign">
-    <div class="part loginPart">
-        <form id="login" action="http://www.yeoner.com/wp-login.php" method="post" novalidate="novalidate">
-            <h3>登录<p class="status"></p></h3>
-            <div id="register-active" class="switch"><i class="fa fa-toggle-on"></i>切换注册</div>        <p>
-            <label class="icon" for="username"><i class="fa fa-user"></i></label>
-            <input class="input-control" id="username" type="text" placeholder="请输入用户名" name="username" required="" aria-required="true">
-        </p>
-            <p>
-                <label class="icon" for="password"><i class="fa fa-lock"></i></label>
-                <input class="input-control" id="password" type="password" placeholder="请输入密码" name="password" required="" aria-required="true">
-            </p>
-            <p class="safe">
-                <label class="remembermetext" for="rememberme"><input name="rememberme" type="checkbox" checked="checked" id="rememberme" class="rememberme" value="forever">记住我的登录</label>
-                <a class="lost" href="http://www.yeoner.com/wp-login.php?action=lostpassword">忘记密码 ?</a>
-            </p>
-            <p>
-                <input class="submit" type="submit" value="登录" name="submit">
-            </p>
-            <a class="close"><i class="fa fa-times"></i></a>
-            <input type="hidden" id="security" name="security" value="cd66acd637">
-            <input type="hidden" name="_wp_http_referer" value="/">
-        </form>
-        <div class="other-sign">
-            <p>您也可以使用第三方帐号快捷登录</p>
-            <div><a class="weixinlogin" href="https://open.weixin.qq.com/connect/qrconnect?appid=wxf93fff8c0dc1bcc5&redirect_uri=http%3A%2F%2Fwww.yeoner.com%2Fwp-content%2Fthemes%2Fyewan/wechat.php&response_type=code&scope=snsapi_login&state=d6f6a6040b3a979d75ca0e57454ee8fa#wechat_redirect"><i class="fa fa-weixin"></i><span>微信登录</span></a></div>
-            <div><a class="qqlogin" href="http://www.yeoner.com/?connect=qq&action=login&redirect=http%3A%2F%2Fwww.yeoner.com"><i class="fa fa-qq"></i><span>Q Q 登录</span></a></div>
-            <div><a class="weibologin" href="http://www.yeoner.com/?connect=weibo&action=login&redirect=http%3A%2F%2Fwww.yeoner.com"><i class="fa fa-weibo"></i><span>微博登录</span></a></div>
+        <footer class="footer">
+            <section class="wrapper">
+                <section class="footer-nav left">
+                    <!--菜单-->
+                    <div class="footer-menu">
+                        <ul id="menu-%e6%a0%87%e7%ad%be" class="menu">
+                            <li id="menu-item-44643"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44643"><a
+                                    href="http://www.yeoner.com/aboutus">关于野玩儿</a></li>
+                            <li id="menu-item-38296"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38296"><a
+                                    href="http://www.yeoner.com/recruiting">加入野玩儿</a></li>
+                            <li id="menu-item-38302"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38302"><a
+                                    href="http://www.yeoner.com/partner">合作伙伴</a></li>
+                            <li id="menu-item-38297"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38297"><a
+                                    href="http://www.yeoner.com/contact">联系野玩儿</a></li>
+                        </ul>
+                    </div>                        <!-- 版权 -->
+                    <p class="copyright">
+                        Copyright © 2015-2017 Yeoner 野玩儿 . 保留所有权利 京ICP备15028529号-1 </p>
+                    友情链接：<a href="http://www.toread.com.cn/" target="_blank">探路者</a>&nbsp;&nbsp;
+                    <a href="http://www.360.cn/" target="_blank">奇虎360</a>&nbsp;&nbsp;
+                    <a href="http://www.lvye.cn/" target="_blank">绿野网</a>&nbsp;&nbsp;
+                    <a href="http://www.easytour.cn/" target="_blank">易游天下</a>&nbsp;&nbsp;
+                    <a href="http://www.garmin.com.cn/" target="_blank">佳明GARMIN</a>&nbsp;&nbsp;
+                    <a href="http://go.360.cn/" target="_blank">360旅游</a>&nbsp;&nbsp;
+                    <br/><a href="http://www.banghw.com/" target="_blank">户外帮</a>&nbsp;&nbsp;
+                    <a href="http://www.717c.com/" target="_blank">717c骑车论坛</a>&nbsp;&nbsp;
+                    <a href="http://www.backpacker.net.cn/" target="_blank">背包客·中国网</a>&nbsp;&nbsp;
+                    <a href="http://www.1gear.cn/" target="_blank">第一装备网</a>&nbsp;&nbsp;
+                    <a href="http://www.ezon.cn/" target="_blank">EZON宜准</a>&nbsp;&nbsp;
+                    <!-- 版权end -->
+                </section>
+                <!-- LOGO与二维码 -->
+                <section class="footer-logo right">
+                    <a href="http://www.yeoner.com" class="logo" title="野玩儿 | 爱户外，爱科技！"><img
+                            src="http://cdn.yeoner.com/wp-content/themes/yewan/images/footer-logo.png" alt="野玩儿"></a>
+                    <span class="weixin"><i title="点击扫描野玩儿微信公众号" class="icon-wechat"></i><img
+                            src="http://cdn.yeoner.com/wp-content/themes/yewan/images/weixin.jpg" title="野玩儿微信公众号"
+                            alt="野玩儿微信公众号"></span>
+                    <span class="app"><i title="点击扫描下载野玩儿APP" class="icon-android"></i><img
+                            src="http://cdn.yeoner.com/wp-content/uploads/2016/07/erweima.png" title="野玩儿APP"
+                            alt="野玩儿APP"></span>
+                </section>
+                <!-- LOGO与二维码end -->
+            </section>
+            <!-- 回顶部 -->
+            <div id="back-to-top"><a class="top-btn" href="#top" title="返回顶部"><i class="icon-flight"></i></a>
+            </div>
+            <!--黑背影-->
+            <div class="bg"></div>
+        </footer>
+        <div id="sign" class="um_sign">
+            <div class="part loginPart">
+                <form id="login" action="http://www.yeoner.com/wp-login.php" method="post" novalidate="novalidate">
+                    <h3>登录<p class="status"></p></h3>
+                    <div id="register-active" class="switch"><i class="fa fa-toggle-on"></i>切换注册</div>
+                    <p>
+                        <label class="icon" for="username"><i class="fa fa-user"></i></label>
+                        <input class="input-control" id="username" type="text" placeholder="请输入用户名" name="username"
+                               required="" aria-required="true">
+                    </p>
+                    <p>
+                        <label class="icon" for="password"><i class="fa fa-lock"></i></label>
+                        <input class="input-control" id="password" type="password" placeholder="请输入密码" name="password"
+                               required="" aria-required="true">
+                    </p>
+                    <p class="safe">
+                        <label class="remembermetext" for="rememberme"><input name="rememberme" type="checkbox"
+                                                                              checked="checked" id="rememberme"
+                                                                              class="rememberme" value="forever">记住我的登录</label>
+                        <a class="lost" href="http://www.yeoner.com/wp-login.php?action=lostpassword">忘记密码 ?</a>
+                    </p>
+                    <p>
+                        <input class="submit" type="submit" value="登录" name="submit">
+                    </p>
+                    <a class="close"><i class="fa fa-times"></i></a>
+                    <input type="hidden" id="security" name="security" value="cd66acd637">
+                    <input type="hidden" name="_wp_http_referer" value="/">
+                </form>
+                <div class="other-sign">
+                    <p>您也可以使用第三方帐号快捷登录</p>
+                    <div><a class="weixinlogin"
+                            href="https://open.weixin.qq.com/connect/qrconnect?appid=wxf93fff8c0dc1bcc5&redirect_uri=http%3A%2F%2Fwww.yeoner.com%2Fwp-content%2Fthemes%2Fyewan/wechat.php&response_type=code&scope=snsapi_login&state=d6f6a6040b3a979d75ca0e57454ee8fa#wechat_redirect"><i
+                            class="fa fa-weixin"></i><span>微信登录</span></a></div>
+                    <div><a class="qqlogin"
+                            href="http://www.yeoner.com/?connect=qq&action=login&redirect=http%3A%2F%2Fwww.yeoner.com"><i
+                            class="fa fa-qq"></i><span>Q Q 登录</span></a></div>
+                    <div><a class="weibologin"
+                            href="http://www.yeoner.com/?connect=weibo&action=login&redirect=http%3A%2F%2Fwww.yeoner.com"><i
+                            class="fa fa-weibo"></i><span>微博登录</span></a></div>
+                </div>
+            </div>
+            <div class="part registerPart">
+                <form id="register" action="http://www.yeoner.com/wp-login.php?action=register" method="post"
+                      novalidate="novalidate">
+                    <h3>注册<p class="status"></p></h3>
+                    <div id="login-active" class="switch"><i class="fa fa-toggle-off"></i>切换登录</div>
+                    <p>
+                        <label class="icon" for="user_name"><i class="fa fa-user"></i></label>
+                        <input class="input-control" id="user_name" type="text" name="user_name" placeholder="输入英文用户名"
+                               required="" aria-required="true">
+                    </p>
+                    <p>
+                        <label class="icon" for="user_email"><i class="fa fa-envelope"></i></label>
+                        <input class="input-control" id="user_email" type="email" name="user_email" placeholder="输入常用邮箱"
+                               required="" aria-required="true">
+                    </p>
+                    <p>
+                        <label class="icon" for="user_pass"><i class="fa fa-lock"></i></label>
+                        <input class="input-control" id="user_pass" type="password" name="user_pass"
+                               placeholder="密码最小长度为6" required="" aria-required="true">
+                    </p>
+                    <p>
+                        <label class="icon" for="user_pass2"><i class="fa fa-retweet"></i></label>
+                        <input class="input-control" type="password" id="user_pass2" name="user_pass2"
+                               placeholder="再次输入密码" required="" aria-required="true">
+                    </p>
+                    <p id="captcha_inline">
+                        <input class="input-control inline" type="text" id="um_captcha" name="um_captcha"
+                               placeholder="输入验证码" required>
+                        <img src="http://cdn.yeoner.com/wp-content/plugins/ucenter-and-market-yewan//static/img/captcha-clk.png"
+                             class="captcha_img inline" title="点击刷新验证码">
+                    </p>
+                    <p>
+                        <input class="submit inline" type="submit" value="注册" name="submit">
+                    </p>
+                    <a class="close"><i class="fa fa-times"></i></a>
+                    <input type="hidden" id="user_security" name="user_security" value="5dc0574cfb"><input type="hidden"
+                                                                                                           name="_wp_http_referer"
+                                                                                                           value="/">
+                </form>
+            </div>
         </div>
-    </div>
-    <div class="part registerPart">
-        <form id="register" action="http://www.yeoner.com/wp-login.php?action=register" method="post" novalidate="novalidate">
-            <h3>注册<p class="status"></p></h3>
-            <div id="login-active" class="switch"><i class="fa fa-toggle-off"></i>切换登录</div>
-            <p>
-                <label class="icon" for="user_name"><i class="fa fa-user"></i></label>
-                <input class="input-control" id="user_name" type="text" name="user_name" placeholder="输入英文用户名" required="" aria-required="true">
-            </p>
-            <p>
-                <label class="icon" for="user_email"><i class="fa fa-envelope"></i></label>
-                <input class="input-control" id="user_email" type="email" name="user_email" placeholder="输入常用邮箱" required="" aria-required="true">
-            </p>
-            <p>
-                <label class="icon" for="user_pass"><i class="fa fa-lock"></i></label>
-                <input class="input-control" id="user_pass" type="password" name="user_pass" placeholder="密码最小长度为6" required="" aria-required="true">
-            </p>
-            <p>
-                <label class="icon" for="user_pass2"><i class="fa fa-retweet"></i></label>
-                <input class="input-control" type="password" id="user_pass2" name="user_pass2" placeholder="再次输入密码" required="" aria-required="true">
-            </p>
-            <p id="captcha_inline">
-                <input class="input-control inline" type="text" id="um_captcha" name="um_captcha" placeholder="输入验证码" required>
-                <img src="http://cdn.yeoner.com/wp-content/plugins/ucenter-and-market-yewan//static/img/captcha-clk.png" class="captcha_img inline" title="点击刷新验证码">
-            </p>
-            <p>
-                <input class="submit inline" type="submit" value="注册" name="submit">
-            </p>
-            <a class="close"><i class="fa fa-times"></i></a>
-            <input type="hidden" id="user_security" name="user_security" value="5dc0574cfb"><input type="hidden" name="_wp_http_referer" value="/">
-        </form>
-    </div>
-</div>
-<script type="text/javascript">var _hmt = _hmt || [];
-(function() {
-    var hm = document.createElement("script");
-    hm.src = "//hm.baidu.com/hm.js?a9cdc386168fa7b69b2f4b8928985ad1";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-})();</script><script type='text/javascript' src='http://www.yeoner.com/wp-content/plugins/ucenter-and-market-yewan/static/um.js?ver=17.4'></script>
-<script type='text/javascript' src='http://www.yeoner.com/wp-content/themes/yewan/js/custom.js?ver=1.0'></script>
-<script type='text/javascript' src='http://www.yeoner.com/wp-content/themes/yewan/js/comments-ajax.js?ver=1.3'></script>
-<script type="text/javascript">var ias=$.ias({container:".content,.video_post > ul,.test_list > ul,.panel,#goodslist,.user-msg,.commentlist,.experience_list,.dynamic_list",item:".post,.video_post > ul > li,.test_list > ul > li,.archive,#goodslist > .col,.user-mli,.commentlist > li,.experience_main,.dynamic_main",pagination:".pagination,#comments-nav",next:".pagination a.next,#comments-nav a.next",});ias.extension(new IASTriggerExtension({text:'加载更多',offset:2,}));ias.extension(new IASSpinnerExtension());ias.extension(new IASNoneLeftExtension({text:'已经加载到天涯海角了！',}));</script><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1259037362'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/stat.php%3Fid%3D1259037362' type='text/javascript'%3E%3C/script%3E"));
-document.getElementById("cnzz_stat_icon_5844924").style.display = "none";
-</script>
-</body>
+        <script type="text/javascript">var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?a9cdc386168fa7b69b2f4b8928985ad1";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();</script>
+        <script type='text/javascript'
+                src='http://www.yeoner.com/wp-content/plugins/ucenter-and-market-yewan/static/um.js?ver=17.4'></script>
+        <script type='text/javascript'
+                src='http://www.yeoner.com/wp-content/themes/yewan/js/custom.js?ver=1.0'></script>
+        <script type='text/javascript'
+                src='http://www.yeoner.com/wp-content/themes/yewan/js/comments-ajax.js?ver=1.3'></script>
+        <script type="text/javascript">var ias = $.ias({
+            container: ".content,.video_post > ul,.test_list > ul,.panel,#goodslist,.user-msg,.commentlist,.experience_list,.dynamic_list",
+            item: ".post,.video_post > ul > li,.test_list > ul > li,.archive,#goodslist > .col,.user-mli,.commentlist > li,.experience_main,.dynamic_main",
+            pagination: ".pagination,#comments-nav",
+            next: ".pagination a.next,#comments-nav a.next",
+        });
+        ias.extension(new IASTriggerExtension({text: '加载更多', offset: 2,}));
+        ias.extension(new IASSpinnerExtension());
+        ias.extension(new IASNoneLeftExtension({text: '已经加载到天涯海角了！',}));</script>
+        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1259037362'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/stat.php%3Fid%3D1259037362' type='text/javascript'%3E%3C/script%3E"));
+        document.getElementById("cnzz_stat_icon_5844924").style.display = "none";
+        </script>
+    </body>
 
 </html>

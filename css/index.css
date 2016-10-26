@@ -17,13 +17,13 @@ body * {
 }
 
 a {
-    color: #666;
+    color: #333;
     text-decoration: none;
 }
 
 a:visited,
 a:link {
-    color: #666;
+    color: #333;
     text-decoration: none;
 }
 
@@ -32,9 +32,351 @@ ul {
     font-size: 0;
 }
 
+li {
+    list-style: none;
+    font-size: 14px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h1,h2,h3,h4 {
+    line-height: 24px;
+    font-weight: normal;
+}
+
+img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/*广告*/
+#ad {
+    width: 1080px;
+    margin: 0 auto 24px;
+    padding: 12px;
+    background-color: #fff;
+    border: 1px solid #f4f4f4;
+    overflow: hidden;
+}
+
+/*内容*/
 #content {
     width: 1080px;
-    height: 1200px;
     margin: auto;
-    background-color: #fff;
 }
+
+#content > section {
+    margin-bottom: 36px;
+}
+
+#content .home_header > section {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#content .home_header .news,
+#content .home_header .hot_list {
+    padding: 12px;
+    background-color: #fff;
+    border: 1px solid #f4f4f4;
+    overflow: hidden;
+}
+
+#content .news > section > h3,
+#content .hot_list > section > h3{
+    display: inline-block;
+    padding-bottom: 8px;
+    color: #d11f3c;
+}
+
+#content .mobile_cate_name {
+    position: relative;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+}
+
+#content .mobile_cate_name:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 1px;
+    background-color: #f53999;
+}
+
+#content .mobile_cate_name a {
+    float: right;
+    font-size: 12px;
+}
+
+#content .mobile_cate_name a:hover {
+    color: #eb0127;
+}
+
+#content .mobile_cate_name .icon-right1 {
+    font-size: 10px;
+}
+
+#content .news ul,
+#content .hot_list ul{
+    padding: 8px 0;
+}
+
+#content .news ul li,
+#content .hot_list ul li {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+}
+
+#content .news ul li h3,
+#content .hot_list ul li h3{
+    font-size: 15px;
+}
+
+#content .home_header .news {
+    width: 230px;
+    height: 580px;
+    margin-right: 15px;
+}
+
+#content .news ul li {
+    clear: both;
+}
+
+#content .news li a:hover {
+    color: #eb0127;
+}
+
+#content .news ul li h3 {
+    display: block;
+    min-height: 32px;
+    height: 48px;
+    overflow: hidden;
+}
+
+#content .home_header .hot_right {
+    float: right;
+    width: 230px;
+}
+
+#content .hot_right {
+    float: right;
+    width: 230px;
+}
+
+#content .hot_right .text_content {
+    position: relative;
+    height: 256px;
+    padding: 12px;
+    margin-bottom: 12px;
+    background-image: url(http://www.yeoner.com/wp-content/uploads/2016/10/2016102006365433.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+
+}
+
+#content .hot_right .text_content h2 {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 0;
+}
+
+#content .hot_right .text_content .test_count {
+    margin: 36px 0 12px;
+}
+
+#content .text_content .test_count span {
+    padding: 2px 12px;
+    display: inline-block;
+    background-color: rgba(255,255,255,.3);
+}
+
+#content .text_content .apply_now {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    margin-top: 12px;
+    padding: 10px 0;
+    width: auto;
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+    background-color: #d11f3c;
+    cursor: pointer;
+    color: #fff;
+}
+
+#content .text_content .apply_now:hover {
+    background-color: #eb0127;
+}
+
+#content .hot_right .hot_list {
+    height: 314px;
+}
+
+#content .hot_list ul li {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+#content .hot_list ul li a {
+    padding-left: 26px;
+    display: block;
+    white-space: nowrap;
+}
+
+#content .hot_list ul li a span {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+    margin-left: -26px;
+    text-align: center;
+    line-height: 18px;
+    background-color: #ddd;
+}
+
+#content .hot_list ul li:nth-child(2) a span,
+#content .hot_list ul li:nth-child(3) a span,
+#content .hot_list ul li:nth-child(4) a span {
+    color: #fff;
+}
+
+#content .hot_list ul li:nth-child(2) a span {
+    background-color: #d11f3c;
+}
+
+#content .hot_list ul li:nth-child(3) a span {
+    background-color: #7bb742;
+}
+
+#content .hot_list ul li:nth-child(4) a span {
+    background-color: #00a9e3;
+}
+
+#content .hot_list ul li h3 {
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#content .swiper_container {
+    position: relative;
+    height: 612px;
+    margin: 0 auto;
+    clear: both;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#content .swiper_container .swiper_wp {
+    position: relative;
+    display: flex;
+    width: 580px;
+    height: 580px;
+}
+
+#content .swiper_wp .swiper_slide {
+    position: relative;
+    width: 580px;
+    height: 100%;
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1;
+}
+
+#content .swiper_slide .swiper_img {
+    display: block;
+    width: 580px;
+    height: 580px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#content .swiper_slide .swiper_post {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 18px;
+    color: #fff;
+    background-color: rgba(0,0,0,.3);
+}
+
+#content .swiper_post h2 {
+    margin-bottom: 8px;
+}
+
+#content .swiper_post p {
+    color: #eee;
+}
+
+#content .swiper_pagination {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+#content .swiper_pagination_bullet {
+    display: inline-block;
+    width: 28px;
+    height: 6px;
+    margin: 0 3px;
+    background-color: #000;
+    opacity: .3;
+    cursor: pointer;
+}
+
+#content .swiper_pagination_bullet_active,
+#content .swiper_pagination_bullet:hover {
+    background-color: #eb0127;
+    opacity: 1;
+}
+
+#content .swiper_container .swiper_btn {
+    position: absolute;
+    top: 50%;
+    margin-top: -22px;
+    width: 32px;
+    height: 32px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 100%;
+    background-color: rgba(0,0,0,.2);
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 10;
+}
+
+#content .swiper_container .swiper_btn_next {
+    right: 32px;
+}
+
+#content .swiper_container .swiper_btn_prev {
+    left: 32px;
+}
+

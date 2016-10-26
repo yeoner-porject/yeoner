@@ -42,6 +42,7 @@ a:link {
     border-radius: 4px;
     text-align: center;
     line-height: 36px;
+    color: #999;
 }
 
 #toTop .top_btn:hover {
