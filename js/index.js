@@ -30,6 +30,9 @@ $(function () {
                     transition: "ease-in-out 0.5s"
                 });
             });
+
+            var $swiperList = $(".swiper_slide");
+            console.log($swiperList);
         }
     })
 });
