@@ -31,8 +31,73 @@ $(function () {
                 });
             });
 
-            var $swiperList = $(".swiper_slide");
-            console.log($swiperList);
+            //        设置轮播图片
+            var imgs = $(".swiper_slide");
+            console.log(imgs)
+
+            //        t 保存setTimeOut 返回值
+            var index = 0, imgCount = imgs.length, t;
+            //        切换图片
+            function toggleImg() {
+                var $li = $(".swiper_container .swiper_wp article");
+                $li.each(function (i, elem) {
+                    var $item = $(".swiper_pagination_bullet");
+                    if (i == index) {
+                        $(elem).fadeIn("fast");
+                        $item.eq(i).addClass("swiper_pagination_bullet_active");
+                    } else {
+                        $(elem).fadeOut("fast");
+                        $item.eq(i).removeClass("swiper_pagination_bullet_active");
+                    }
+                });
+            }
+
+            //        轮播
+            function scroll() {
+                index += 1;
+                if (index == imgCount) index = 0;
+                toggleImg();
+                t = setTimeout(scroll, 3000);
+            }
+
+
+            t = setTimeout(scroll, 3000);
+
+            var $btn = $(".swiper_btn_prev, .swiper_btn_next").on({
+                "click": function () {
+                    clearTimeout(t);
+                    if ($(this).attr("class") == "swiper_btn_prev") {
+                        index -= 1;
+                        if (index < 0) index = imgCount - 1;
+                    } else {
+                        index += 1;
+                        if (index == imgCount) index = 0;
+                    }
+                    toggleImg();
+                    t = setTimeout(scroll, 3000);
+                }
+            });
+
+            //    动态绑定
+            $(".swiper_pagination").on({
+                "mouseenter": function () {
+                    clearTimeout(t);
+                    index = $(this).index();
+                    toggleImg();
+                },
+                "mouseleave": function () {
+                    t = setTimeout(scroll, 3000);
+                }
+            }, ".swiper_pagination_bullet");
+
+            $(".swiper_container").on({
+                "mouseenter": function () {
+                    $btn.css("opacity", "1");
+                },
+                "mouseleave": function () {
+                    $btn.css("opacity", "0");
+                }
+            })
         }
     })
 });

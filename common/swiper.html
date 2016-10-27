@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../common/iconfont/iconfont.css">
+    <!--<link rel="stylesheet" type="text/css" href="../css/index.css">-->
+
+    <script src="../common/js/jquery-3.0.0.js"></script>
+    <script src="../common/js/artTemplate.js"></script>
+
+    <style>
+        #content .swiper_container {
+            position: relative;
+            height: 612px;
+            margin: 0 auto;
+            clear: both;
+            z-index: 1;
+            /*overflow: hidden;*/
+        }
+
+        #content .swiper_container .swiper_wp {
+            position: relative;
+            /*display: flex;*/
+            width: 580px;
+            height: 580px;
+            overflow: hidden;
+        }
+
+        #content .swiper_wp .swiper_slide {
+            position: relative;
+            width: 580px;
+            height: 100%;
+            opacity: 1;
+            transform-style: preserve-3d;
+            transition-duration: 300ms;
+        }
+
+        #content .swiper_slide .swiper_img {
+            display: block;
+            width: 580px;
+            height: 580px;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        #content .swiper_slide .swiper_post {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            padding: 18px;
+            color: #fff;
+            background-color: rgba(0,0,0,.3);
+        }
+
+        #content .swiper_post h2 {
+            margin-bottom: 8px;
+        }
+
+        #content .swiper_post p {
+            color: #eee;
+        }
+
+        #content .swiper_pagination {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 10;
+        }
+
+        #content .swiper_pagination_bullet {
+            display: inline-block;
+            width: 28px;
+            height: 6px;
+            margin: 0 3px;
+            background-color: #000;
+            opacity: .3;
+            cursor: pointer;
+        }
+
+        #content .swiper_pagination_bullet_active,
+        #content .swiper_pagination_bullet:hover {
+            background-color: #eb0127;
+            opacity: 1;
+        }
+
+        #content .swiper_container .swiper_btn {
+            position: absolute;
+            top: 50%;
+            margin-top: -22px;
+            width: 32px;
+            height: 32px;
+            font-size: 25px;
+            text-align: center;
+            line-height: 32px;
+            border-radius: 100%;
+            background-color: rgba(0,0,0,.2);
+            color: #fff;
+            cursor: pointer;
+            opacity: 0;
+            z-index: 10;
+        }
+
+        #content .swiper_container .swiper_btn_next {
+            right: 32px;
+        }
+
+        #content .swiper_container .swiper_btn_prev {
+            left: 32px;
+        }
+    </style>
+</head>
+<body>
+
+<section id="content">
+    <section class="slide_main slide_home">
+        <div class="swiper_container">
+            <!--轮播图片-->
+            <div class="swiper_wp">
+                <!--<article class="swiper_slide">-->
+                    <!--<a href="http://www.yeoner.com/p/47686.html"-->
+                    <!--title="了解更多：超值|让你保住荷包的16个绝美景点"-->
+                    <!--target="_blank" class="swiper_img"-->
+                    <!--style="background-image: url(http://cdn.yeoner.com/wp-content/uploads/2016/10/2016102402484946.jpg);">-->
+                        <!--<div class="swiper_post">-->
+                            <!--<h2>超值|让你保住荷包的16个绝美景点</h2>-->
+                            <!--<p>-->
+                                <!--世界这么大，想去看看却苦于囊中羞涩？没关系，穿越君为您收集了16个好玩不贵的绝美景点，都是网友们的亲身提体验哦！快把他们加入你的旅游清单吧!-->
+                            <!--</p>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</article>-->
+                <!--<article class="swiper_slide">-->
+                <!--<a href="http://www.yeoner.com/p/47686.html"-->
+                <!--title="了解更多：超值|让你保住荷包的16个绝美景点"-->
+                <!--target="_blank" class="swiper_img"-->
+                <!--style="background-image: url(http://cdn.yeoner.com/wp-content/uploads/2016/10/2016102402484946.jpg);">-->
+                <!--<div class="swiper_post">-->
+                <!--<h2>超值|让你保住荷包的16个绝美景点</h2>-->
+                <!--<p>-->
+                <!--世界这么大，想去看看却苦于囊中羞涩？没关系，穿越君为您收集了16个好玩不贵的绝美景点，都是网友们的亲身提体验哦！快把他们加入你的旅游清单吧!-->
+                <!--</p>-->
+                <!--</div>-->
+                <!--</a>-->
+                <!--</article>-->
+                <!--<article class="swiper_slide">-->
+                <!--<a href="http://www.yeoner.com/p/47686.html"-->
+                <!--title="了解更多：超值|让你保住荷包的16个绝美景点"-->
+                <!--target="_blank" class="swiper_img"-->
+                <!--style="background-image: url(http://cdn.yeoner.com/wp-content/uploads/2016/10/2016102402484946.jpg);">-->
+                <!--<div class="swiper_post">-->
+                <!--<h2>超值|让你保住荷包的16个绝美景点</h2>-->
+                <!--<p>-->
+                <!--世界这么大，想去看看却苦于囊中羞涩？没关系，穿越君为您收集了16个好玩不贵的绝美景点，都是网友们的亲身提体验哦！快把他们加入你的旅游清单吧!-->
+                <!--</p>-->
+                <!--</div>-->
+                <!--</a>-->
+                <!--</article>-->
+                <!--<article class="swiper_slide">-->
+                <!--<a href="http://www.yeoner.com/p/47686.html"-->
+                <!--title="了解更多：超值|让你保住荷包的16个绝美景点"-->
+                <!--target="_blank" class="swiper_img"-->
+                <!--style="background-image: url(http://cdn.yeoner.com/wp-content/uploads/2016/10/2016102402484946.jpg);">-->
+                <!--<div class="swiper_post">-->
+                <!--<h2>超值|让你保住荷包的16个绝美景点</h2>-->
+                <!--<p>-->
+                <!--世界这么大，想去看看却苦于囊中羞涩？没关系，穿越君为您收集了16个好玩不贵的绝美景点，都是网友们的亲身提体验哦！快把他们加入你的旅游清单吧!-->
+                <!--</p>-->
+                <!--</div>-->
+                <!--</a>-->
+                <!--</article>-->
+                <script type="text/html" id="swiperTemp">
+                    <article class="swiper_slide">
+                        <a href="{{ slide_url }}"
+                           title="{{ slide_title_link }}"
+                           target="_blank" class="swiper_img"
+                           style="background-image: url({{ slide_img_url }});">
+                            <div class="swiper_post">
+                                <h2>{{ slide_title }}</h2>
+                                <p>{{ slide_info }}</p>
+                            </div>
+                        </a>
+                    </article>
+                </script>
+            </div>
+            <!--底部按钮-->
+            <div class="swiper_pagination">
+                <span class="swiper_pagination_bullet swiper_pagination_bullet_active"></span>
+                <span class="swiper_pagination_bullet"></span>
+                <span class="swiper_pagination_bullet"></span>
+                <span class="swiper_pagination_bullet"></span>
+            </div>
+            <!--两边按钮-->
+            <div class="swiper_btn swiper_btn_next iconfont icon-right"></div>
+            <div class="swiper_btn swiper_btn_prev iconfont icon-left"></div>
+        </div>
+    </section>
+</section>
+
+</body>
+
+<script>
+    $(function () {
+
+        $.ajax({
+            url: "../json/content.json",
+            success: function (data) {
+                // console.log(data);
+
+                $.each(data.slide, function (i,val) {
+                    var $slideDiv = $(template("swiperTemp",val));
+                    $slideDiv.appendTo(".swiper_wp");
+                });
+
+        //        设置轮播图片
+                var imgs = $(".swiper_slide");
+                console.log(imgs)
+
+        //        t 保存setTimeOut 返回值
+                var index = 0, imgCount = imgs.length, t;
+        //        切换图片
+                function toggleImg() {
+                    var $li = $(".swiper_container .swiper_wp article");
+                    $li.each(function (i, elem) {
+                        var $item = $(".swiper_pagination_bullet");
+                        if (i == index) {
+                            $(elem).fadeIn("fast");
+                            $item.eq(i).addClass("swiper_pagination_bullet_active");
+                        } else {
+                            $(elem).fadeOut("fast");
+                            $item.eq(i).removeClass("swiper_pagination_bullet_active");
+                        }
+                    });
+                }
+
+        //        轮播
+                function scroll() {
+                    index += 1;
+                    if (index == imgCount) index = 0;
+                    toggleImg();
+                    t = setTimeout(scroll, 1000);
+                }
+
+
+                t = setTimeout(scroll, 1000);
+
+                var $btn = $(".swiper_btn_prev, .swiper_btn_next").on({
+                    "click": function () {
+                        clearTimeout(t);
+                        if ($(this).attr("class") == "swiper_btn_prev") {
+                            index -= 1;
+                            if (index < 0) index = imgCount - 1;
+                        } else {
+                            index += 1;
+                            if (index == imgCount) index = 0;
+                        }
+                        toggleImg();
+                        t = setTimeout(scroll, 1000);
+                    }
+                });
+
+                //    动态绑定
+                $(".swiper_pagination").on({
+                    "mouseenter": function () {
+                        clearTimeout(t);
+                        index = $(this).index();
+                        toggleImg();
+                    },
+                    "mouseleave": function () {
+                        t = setTimeout(scroll, 1000);
+                    }
+                }, ".swiper_pagination_bullet");
+
+                $(".swiper_container").on({
+                    "mouseenter": function () {
+                        $btn.css("opacity", "1");
+                    },
+                    "mouseleave": function () {
+                        $btn.css("opacity", "0");
+                    }
+                })
+
+            }
+        })
+    });
+
+
+</script>
+
+</html>
