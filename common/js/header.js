@@ -10,11 +10,21 @@ $(function () {
             opacity: "1",
             transform: "rotateY(0)"
         })
+        $li.eq(0).css("transition-delay","0ms")
+        $li.eq(1).css("transition-delay","40ms")
+        $li.eq(2).css("transition-delay","80ms")
+        $li.eq(3).css("transition-delay","120ms")
+        $li.eq(4).css("transition-delay","160ms")
     },function () {
         $li.css({
             opacity: "0",
             transform: "rotateY(90deg)"
         })
+        $li.eq(4).css("transition-delay","0ms")
+        $li.eq(3).css("transition-delay","200ms")
+        $li.eq(2).css("transition-delay","400ms")
+        $li.eq(1).css("transition-delay","600ms")
+        $li.eq(0).css("transition-delay","800ms")
     });
 
     // 导航栏hover的颜色变化
