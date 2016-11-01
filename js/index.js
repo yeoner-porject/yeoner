@@ -7,16 +7,58 @@ $(function () {
         success: function (data) {
             // console.log(data);
             $.each(data.news, function (i,val) {
-                var $newsDiv = $(template("newsTemp",val));
-                $newsDiv.appendTo(".news ul");
+                $(template("newsTemp",val)).appendTo(".news ul");
             });
             $.each(data.slide, function (i,val) {
-                var $slideDiv = $(template("swiperTemp",val));
-                $slideDiv.appendTo(".swiper_wp");
+                $(template("swiperTemp",val)).appendTo(".swiper_wp");
             });
             $.each(data.hot, function (i,val) {
-                var $hotDiv = $(template("hotTemp",val));
-                $hotDiv.appendTo(".hot_list ul");
+                $(template("hotTemp",val)).appendTo(".hot_list ul");
+            });
+            $.each(data.tuijian,function (i,val) {
+               $(template("tuijianTemp",val)).appendTo(".tuijian .layout_ul");
+            });
+            $.each(data.zhuangBei, function (i,val) {
+                var $li = $(template("zhuangBeiTemp",val));
+                var className = "list"+(i+1);
+                console.log(className);
+                $li.addClass(className);
+                $li.appendTo(".one .cate_list");
+            });
+            $.each(data.zhiShi, function (i,val) {
+                var $li = $(template("zhiShiTemp",val));
+                var className = "list"+(i+1);
+                console.log(className);
+                $li.addClass(className);
+                $li.appendTo(".two .cate_list");
+            });
+            $.each(data.tanSuo, function (i,val) {
+                var $li = $(template("tanSuoTemp",val));
+                var className = "list"+(i+1);
+                console.log(className);
+                $li.addClass(className);
+                $li.appendTo(".three .cate_list");
+            });
+            $.each(data.kuPin, function (i,val) {
+                var $li = $(template("kuPinTemp",val));
+                var className = "list"+(i+1);
+                console.log(className);
+                $li.addClass(className);
+                $li.appendTo(".four .cate_list");
+            });
+            $.each(data.meiTi, function (i,val) {
+                var $li = $(template("meiTiTemp",val));
+                var className = "list"+(i+1);
+                console.log(className);
+                $li.addClass(className);
+                $li.appendTo(".five .cate_list");
+            });
+            $.each(data.shiPin, function (i,val) {
+                var $li = $(template("shiPinTemp",val));
+                var className = "list"+(i+1);
+                console.log(className);
+                $li.addClass(className);
+                $li.appendTo(".six .cate_list");
             });
 
             $(".hot_list li a").hover(function () {
@@ -33,7 +75,7 @@ $(function () {
 
             //        设置轮播图片
             var imgs = $(".swiper_slide");
-            console.log(imgs)
+            // console.log(imgs);
 
             //        t 保存setTimeOut 返回值
             var index = 0, imgCount = imgs.length, t;
@@ -97,6 +139,27 @@ $(function () {
                 "mouseleave": function () {
                     $btn.css("opacity", "0");
                 }
+            })
+        }
+    });
+
+    $.ajax({
+        url: "json/index-ZCSY.json",
+        success: function (data) {
+            // console.log(data);
+            $.each(data, function (i,val) {
+                var $li = $(template("testTemp",val));
+                $li.appendTo(".test_list .layout_ul");
+            })
+        }
+    });
+
+    $.ajax({
+        url: "json/index-HWSP.json",
+        success: function (data) {
+            // console.log(data);
+            $.each(data, function (i,val) {
+                $(template("videoTemp",val)).appendTo(".videotop_list .layout_ul");
             })
         }
     })

@@ -92,13 +92,23 @@
 //                });
 
 //                home_hot right
-                $(".hot ul li a").each(function (i,info) {
+//                $(".hot ul li a").each(function (i,info) {
+//                    resstr += '{';
+//                    resstr += '"hot_url":"'+$(info).attr("href")+'",';
+//                    resstr += '"hot_title":"'+$(info).attr("title")+'",';
+//                    resstr += '"hot_num":"'+$(info).find("span").text()+'"';
+//                    resstr += '},';
+//                });
+
+//                tuiajian
+                $(".tuijian ul li article a").each(function (i,info) {
                     resstr += '{';
-                    resstr += '"hot_url":"'+$(info).attr("href")+'",';
-                    resstr += '"hot_title":"'+$(info).attr("title")+'",';
-                    resstr += '"hot_num":"'+$(info).find("span").text()+'"';
+                    resstr += '"tuijian_url":"'+$(info).attr("href")+'",';
+                    resstr += '"tuijian_title":"'+$(info).attr("title")+'",';
+                    resstr += '"tuijian_src":"'+$(info).find("img").attr("src")+'",';
                     resstr += '},';
                 });
+
 
 //                户外视频1
 //            $(".videotop .videotop_list .layout_li").each(function (i,info){
@@ -776,6 +786,7 @@
                 </section>
                 <!-- 获取文章end -->
             </section>
+
             <section class="tuijian">
                 <section class="recommend left">
                     <ul class="layout_ul">
@@ -784,11 +795,8 @@
                             <!-- 文章 -->
                             <article class="recommend_main effect0">
                                 <!-- 缩略图 -->
-                                <a target="_blank" href="http://www.yeoner.com/p/45036.html"
-                                   title="野玩儿体验官精选：有效缓解吃土症状 近期众测产品TOP20" class="imglayout">
-                                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/09/2016093004244894.jpg&amp;h=200&amp;w=294&amp;zc=1"
-                                         alt="野玩儿体验官精选：有效缓解吃土症状 近期众测产品TOP20"/>
-                                    <h3>野玩儿体验官精选：有效缓解吃土症状 近期众测产品TOP20</h3>
+                                <a target="_blank" href="http://www.yeoner.com/p/47282.html" title="FIIL发布两款Carat新品耳机：是时候用运动耳机代替手环了" class="imglayout">
+                                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102107262996.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="FIIL发布两款Carat新品耳机：是时候用运动耳机代替手环了">                        <h3>FIIL发布两款Carat新品耳机：是时候用运动耳机代替手环了</h3>
                                     <djv class="lg"></djv>
                                 </a>
                                 <!-- 缩略图end -->
@@ -799,11 +807,8 @@
                             <!-- 文章 -->
                             <article class="recommend_main effect0">
                                 <!-- 缩略图 -->
-                                <a target="_blank" href="http://www.yeoner.com/p/45020.html"
-                                   title="野玩儿精选：盘点近期新品上手评测Top10" class="imglayout">
-                                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/09/2016093000494156.jpg&amp;h=200&amp;w=294&amp;zc=1"
-                                         alt="野玩儿精选：盘点近期新品上手评测Top10"/>
-                                    <h3>野玩儿精选：盘点近期新品上手评测Top10</h3>
+                                <a target="_blank" href="http://www.yeoner.com/p/46468.html" title="光有测心率的表 但是你真的了解如何解读心率么？" class="imglayout">
+                                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016102008140671.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="光有测心率的表 但是你真的了解如何解读心率么？">                        <h3>光有测心率的表 但是你真的了解如何解读心率么？</h3>
                                     <djv class="lg"></djv>
                                 </a>
                                 <!-- 缩略图end -->
@@ -814,11 +819,8 @@
                             <!-- 文章 -->
                             <article class="recommend_main effect0">
                                 <!-- 缩略图 -->
-                                <a target="_blank" href="http://www.yeoner.com/p/44062.html"
-                                   title="光电心率入门款GPS跑表 Garmin FR35新品评测" class="imglayout">
-                                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/09/2016091410005847.jpg&amp;h=200&amp;w=294&amp;zc=1"
-                                         alt="光电心率入门款GPS跑表 Garmin FR35新品评测"/>
-                                    <h3>光电心率入门款GPS跑表 Garmin FR35新品评测</h3>
+                                <a target="_blank" href="http://www.yeoner.com/p/47147.html" title="超震撼！红牛2016极限运动摄影大赛作品新鲜出炉" class="imglayout">
+                                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/10/2016101808421351.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="超震撼！红牛2016极限运动摄影大赛作品新鲜出炉">                        <h3>超震撼！红牛2016极限运动摄影大赛作品新鲜出炉</h3>
                                     <djv class="lg"></djv>
                                 </a>
                                 <!-- 缩略图end -->
@@ -829,11 +831,8 @@
                             <!-- 文章 -->
                             <article class="recommend_main effect0">
                                 <!-- 缩略图 -->
-                                <a target="_blank" href="http://www.yeoner.com/p/42328.html" title="9种能量食物让你的跑步运动更有效"
-                                   class="imglayout">
-                                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/08/yeoner.com_2016-08-26_02-56-27.jpg&amp;h=200&amp;w=294&amp;zc=1"
-                                         alt="9种能量食物让你的跑步运动更有效"/>
-                                    <h3>9种能量食物让你的跑步运动更有效</h3>
+                                <a target="_blank" href="http://www.yeoner.com/p/45020.html" title="野玩儿精选：盘点近期新品上手评测Top10" class="imglayout">
+                                    <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/09/2016093000494156.jpg&amp;h=200&amp;w=294&amp;zc=1" alt="野玩儿精选：盘点近期新品上手评测Top10">                        <h3>野玩儿精选：盘点近期新品上手评测Top10</h3>
                                     <djv class="lg"></djv>
                                 </a>
                                 <!-- 缩略图end -->
