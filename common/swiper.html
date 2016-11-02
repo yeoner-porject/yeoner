@@ -218,7 +218,6 @@
                             index += 1;
                             if (index == imgCount) index = 0;
                         }
-                        console.log($(this).hasClass('swiper_btn_prev'))
                         toggleImg();
                         t = setTimeout(scroll, 3000);
                     }
@@ -239,13 +238,13 @@
                 $(".swiper_container").on({
                     "mouseenter": function () {
                         $btn.css("opacity", "1");
-                        $('.swiper_btn_prev').css('left','10px')
-                        $('.swiper_btn_next').css('right','10px')
+                        $('.swiper_btn_prev').css('left',10)
+                        $('.swiper_btn_next').css('right',10)
                     },
                     "mouseleave": function () {
                         $btn.css("opacity", "0");
-                        $('.swiper_btn_prev').css('left','32px')
-                        $('.swiper_btn_next').css('right','32px')
+                        $('.swiper_btn_prev').css('left',32)
+                        $('.swiper_btn_next').css('right',32)
                     }
                 })
 
