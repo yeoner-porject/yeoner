@@ -165,8 +165,9 @@ ul {
 
 .bg.active {
     visibility: visible;
-    opacity: 1;
+    opacity: 0.7;
 }
+
 #footer {
     margin-top: 60px;
     padding: 48px 0 32px;

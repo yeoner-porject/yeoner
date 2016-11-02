@@ -413,6 +413,10 @@ img {
     z-index: 10;
 }
 
+#content .swiper_btn:hover {
+    background-color: #eb0127;
+}
+
 #content .swiper_container .swiper_btn_next {
     right: 32px;
 }
@@ -452,6 +456,16 @@ img {
     overflow: hidden;
 }
 
+#content .video_play:hover i {
+    background-color: #d11f3c;
+    transition: ease-in-out 0.5s;
+}
+
+#content .video_play:hover img {
+    transform: scale(1.1);
+    transition: ease-in-out 0.5s;
+}
+
 #content .video_play i {
     position: absolute;
     bottom: 20px;
@@ -461,6 +475,10 @@ img {
     color: #fff;
     text-align: center;
     background-color: rgba(0, 0, 0, .6);
+}
+
+#content .video_play i:hover {
+    border-color: #eb0127;
 }
 
 #content .video_title {
@@ -611,7 +629,23 @@ img {
 }
 
 #content .social .btn .weixin img {
-    display: none;
+    position: fixed;
+    top: 15%;
+    left: 40%;
+    padding: 8px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    transition-delay: 200ms;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: ease-in-out .5s;
+}
+
+#content .social .btn .weixin img.active {
+    visibility: visible;
+    top: 25%;
+    opacity: 1;
 }
 
 #content .social .btn .weixin i {
@@ -619,14 +653,32 @@ img {
     font-size: 25px;
 }
 
+#content .social .btn .weixin i:hover {
+    background-color: #14d212;
+    color: #fff;
+    transition: ease-in-out 1s;
+}
+
 #content .social .btn .sina i {
     color: #e63336;
     font-size: 22px;
 }
 
+#content .social .btn .sina i:hover {
+    background-color: #e63336;
+    color: #fff;
+    transition: ease-in-out 1s;
+}
+
 #content .social .btn .rss i {
     color: #fe7701;
     font-size: 15px;
+}
+
+#content .social .btn .rss i:hover {
+    background-color: #fe7701;
+    color: #fff;
+    transition: ease-in-out 1s;
 }
 
 #content .social .rss .rssbook {
@@ -866,4 +918,47 @@ img {
 #content .quote span {
     display: block;
     color: #999;
+}
+
+#content .imglayout .player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 80%;
+    display: block;
+    z-index: 10;
+    background-color: rgba(0,0,0,0);
+}
+
+#content .imglayout .player i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    transform: translate(-50%,-50%);
+    border: 3px solid #fff;
+    color: #fff;
+    text-align: center;
+    font-size: 23px;
+    text-indent: 2px;
+    line-height: 38px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#content .six .imglayout:hover .player {
+    bottom: 0;
+    background-color: rgba(0,0,0,.1);
+}
+
+#content .six .imglayout:hover .player i {
+    opacity: 1;
+    visibility: visible;
+}
+
+#content .six .imglayout .player i:hover {
+    color: #eb0127;
 }
