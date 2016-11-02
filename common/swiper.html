@@ -133,45 +133,6 @@
                         <!--</div>-->
                     <!--</a>-->
                 <!--</article>-->
-                <!--<article class="swiper_slide">-->
-                <!--<a href="http://www.yeoner.com/p/47686.html"-->
-                <!--title="了解更多：超值|让你保住荷包的16个绝美景点"-->
-                <!--target="_blank" class="swiper_img"-->
-                <!--style="background-image: url(http://cdn.yeoner.com/wp-content/uploads/2016/10/2016102402484946.jpg);">-->
-                <!--<div class="swiper_post">-->
-                <!--<h2>超值|让你保住荷包的16个绝美景点</h2>-->
-                <!--<p>-->
-                <!--世界这么大，想去看看却苦于囊中羞涩？没关系，穿越君为您收集了16个好玩不贵的绝美景点，都是网友们的亲身提体验哦！快把他们加入你的旅游清单吧!-->
-                <!--</p>-->
-                <!--</div>-->
-                <!--</a>-->
-                <!--</article>-->
-                <!--<article class="swiper_slide">-->
-                <!--<a href="http://www.yeoner.com/p/47686.html"-->
-                <!--title="了解更多：超值|让你保住荷包的16个绝美景点"-->
-                <!--target="_blank" class="swiper_img"-->
-                <!--style="background-image: url(http://cdn.yeoner.com/wp-content/uploads/2016/10/2016102402484946.jpg);">-->
-                <!--<div class="swiper_post">-->
-                <!--<h2>超值|让你保住荷包的16个绝美景点</h2>-->
-                <!--<p>-->
-                <!--世界这么大，想去看看却苦于囊中羞涩？没关系，穿越君为您收集了16个好玩不贵的绝美景点，都是网友们的亲身提体验哦！快把他们加入你的旅游清单吧!-->
-                <!--</p>-->
-                <!--</div>-->
-                <!--</a>-->
-                <!--</article>-->
-                <!--<article class="swiper_slide">-->
-                <!--<a href="http://www.yeoner.com/p/47686.html"-->
-                <!--title="了解更多：超值|让你保住荷包的16个绝美景点"-->
-                <!--target="_blank" class="swiper_img"-->
-                <!--style="background-image: url(http://cdn.yeoner.com/wp-content/uploads/2016/10/2016102402484946.jpg);">-->
-                <!--<div class="swiper_post">-->
-                <!--<h2>超值|让你保住荷包的16个绝美景点</h2>-->
-                <!--<p>-->
-                <!--世界这么大，想去看看却苦于囊中羞涩？没关系，穿越君为您收集了16个好玩不贵的绝美景点，都是网友们的亲身提体验哦！快把他们加入你的旅游清单吧!-->
-                <!--</p>-->
-                <!--</div>-->
-                <!--</a>-->
-                <!--</article>-->
                 <script type="text/html" id="swiperTemp">
                     <article class="swiper_slide">
                         <a href="{{ slide_url }}"
@@ -194,8 +155,8 @@
                 <span class="swiper_pagination_bullet"></span>
             </div>
             <!--两边按钮-->
-            <div class="swiper_btn swiper_btn_next iconfont icon-right"></div>
-            <div class="swiper_btn swiper_btn_prev iconfont icon-left"></div>
+            <div id="swiper_btn_prev" class="swiper_btn swiper_btn_prev iconfont icon-left"></div>
+            <div id="swiper_btn_next" class="swiper_btn swiper_btn_next iconfont icon-right"></div>
         </div>
     </section>
 </section>
@@ -216,8 +177,8 @@
                 });
 
         //        设置轮播图片
-                var imgs = $(".swiper_slide");
-                console.log(imgs)
+                var imgs = $("#content .swiper_container article");
+//                console.log(imgs)
 
         //        t 保存setTimeOut 返回值
                 var index = 0, imgCount = imgs.length, t;
@@ -241,24 +202,25 @@
                     index += 1;
                     if (index == imgCount) index = 0;
                     toggleImg();
-                    t = setTimeout(scroll, 1000);
+                    t = setTimeout(scroll, 3000);
                 }
 
 
-                t = setTimeout(scroll, 1000);
-
-                var $btn = $(".swiper_btn_prev, .swiper_btn_next").on({
+                t = setTimeout(scroll, 3000);
+//                上一个/下一个
+                var $btn = $("#swiper_btn_prev, #swiper_btn_next").on({
                     "click": function () {
                         clearTimeout(t);
-                        if ($(this).attr("class") == "swiper_btn_prev") {
+                        if ($(this).attr("id") == "swiper_btn_prev") {
                             index -= 1;
                             if (index < 0) index = imgCount - 1;
                         } else {
                             index += 1;
                             if (index == imgCount) index = 0;
                         }
+                        console.log($(this).hasClass('swiper_btn_prev'))
                         toggleImg();
-                        t = setTimeout(scroll, 1000);
+                        t = setTimeout(scroll, 3000);
                     }
                 });
 
@@ -270,16 +232,20 @@
                         toggleImg();
                     },
                     "mouseleave": function () {
-                        t = setTimeout(scroll, 1000);
+                        t = setTimeout(scroll,3000);
                     }
                 }, ".swiper_pagination_bullet");
 
                 $(".swiper_container").on({
                     "mouseenter": function () {
                         $btn.css("opacity", "1");
+                        $('.swiper_btn_prev').css('left','10px')
+                        $('.swiper_btn_next').css('right','10px')
                     },
                     "mouseleave": function () {
                         $btn.css("opacity", "0");
+                        $('.swiper_btn_prev').css('left','32px')
+                        $('.swiper_btn_next').css('right','32px')
                     }
                 })
 
