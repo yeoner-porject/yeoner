@@ -319,13 +319,13 @@ ul {
 }
 
 #sign.sign .part.loginPart {
-    transform: rotateY(0deg);
-    z-index: 1;
+    /*transform: rotateY(0deg);*/
+    z-index: 0;
     display: block;
 }
 
 #sign.sign .part.registerPart {
-    transform: rotateY(-180deg);
+    /*transform: rotateY(-180deg);*/
     z-index: 1;
     display: block;
 }

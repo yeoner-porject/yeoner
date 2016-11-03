@@ -9,22 +9,22 @@ $(function () {
         $li.css({
             opacity: "1",
             transform: "rotateY(0)"
-        })
-        $li.eq(0).css("transition-delay","0ms")
-        $li.eq(1).css("transition-delay","40ms")
-        $li.eq(2).css("transition-delay","80ms")
-        $li.eq(3).css("transition-delay","120ms")
-        $li.eq(4).css("transition-delay","160ms")
+        });
+        $li.eq(0).css("transition-delay","0ms");
+        $li.eq(1).css("transition-delay","40ms");
+        $li.eq(2).css("transition-delay","80ms");
+        $li.eq(3).css("transition-delay","120ms");
+        $li.eq(4).css("transition-delay","160ms");
     },function () {
         $li.css({
             opacity: "0",
             transform: "rotateY(90deg)"
-        })
-        $li.eq(4).css("transition-delay","100ms")
-        $li.eq(3).css("transition-delay","150ms")
-        $li.eq(2).css("transition-delay","200ms")
-        $li.eq(1).css("transition-delay","250ms")
-        $li.eq(0).css("transition-delay","300ms")
+        });
+        $li.eq(4).css("transition-delay","100ms");
+        $li.eq(3).css("transition-delay","150ms");
+        $li.eq(2).css("transition-delay","200ms");
+        $li.eq(1).css("transition-delay","250ms");
+        $li.eq(0).css("transition-delay","300ms");
     });
 
     // 导航栏hover的颜色变化
@@ -38,20 +38,32 @@ $(function () {
     // 画出登录、注册框
     var $signDiv = $(".sign");
     var $close = $(".close");
-    var $login = $(".loginPart");
-    var $register = $(".registerPart");
+    var $login = $(".part.loginPart");
+    var $register = $(".part.registerPart");
     var $switch = $(".switch");
 
     // 显示登录框
     function changeToLoginPart() {
-        $login.css("z-index","1");
-        $register.css("z-index","0");
+        $login.css("z-index",1);
+        $register.css("z-index",0);
+        $login.css({
+            transform: "rotateY(0)"
+        });
+        $register.css({
+            transform: "rotateY(-180deg)"
+        });
     }
 
     // 显示注册框
     function changeToRegisterPart() {
-        $login.css("z-index","0");
-        $register.css("z-index","1");
+        $login.css("z-index",0);
+        $register.css("z-index",1);
+        $login.css({
+            transform: "rotateY(180deg)"
+        });
+        $register.css({
+            transform: "rotateY(0)"
+        });
     }
 
     // 登录框滑入
@@ -142,7 +154,6 @@ $(function () {
     $switch.click(function () {
         var flag = $login.css("z-index");
         if(flag == 1){
-            changeToRegisterPart();
             $login.css({
                 transform: "rotateY(180deg)",
                 transition: "all 1s ease"
@@ -150,9 +161,10 @@ $(function () {
             $register.css({
                 transform: "rotateY(0)",
                 transition: "all 1s ease"
-            })
+            });
+            changeToRegisterPart();
         }else {
-            changeToLoginPart();
+
             $login.css({
                 transform: "rotateY(0)",
                 transition: "all 1s ease"
@@ -160,7 +172,8 @@ $(function () {
             $register.css({
                 transform: "rotateY(-180deg)",
                 transition: "all 1s ease"
-            })
+            });
+            changeToLoginPart();
         }
     });
 
