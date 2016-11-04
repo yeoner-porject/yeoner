@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Fri Nov  4 10:37:48 2016
+Created by FontForge 20120731 at Fri Nov  4 14:02:28 2016
  By admin
 </metadata>
 <defs>
@@ -63,6 +63,8 @@ t15.5 -6.5t15.5 6.5t6.5 15.5zM654 595q0 9 -6.5 15.5t-15.5 6.5t-15.5 -6.5t-6.5 -1
     <glyph glyph-name="icon_heart" unicode="&#xe63f;" 
 d="M511 472q-24 56 -63.5 93t-82 48.5t-86 2t-77.5 -38.5t-54.5 -80.5t-18.5 -117.5q2 -43 19 -80.5t46 -67.5t56.5 -52.5t63.5 -49t54 -42.5q40 -37 84 -75t60 -54q10 11 54.5 49t87.5 80q18 17 53 44t62 50t55.5 53t46.5 67.5t22 79.5q6 65 -13 116t-53.5 79t-79.5 37
 t-89 -3t-84 -48t-63 -90v0zM511 472z" />
+    <glyph glyph-name="v" unicode="&#xe622;" 
+d="M62 706h361v-95h-88l130 -354h94l227 449h176v-96h-93l-356 -716h-81l-275 716h-95v96z" />
     <glyph glyph-name="up" unicode="&#xe63d;" 
 d="M1021 66q0 -13 -9.5 -22.5t-22.5 -9.5t-22 9l-454 453l-453 -453q-10 -9 -23 -9t-22 9.5t-9 22.5t9 22l476 475q9 9 22 9t23 -9l476 -475q9 -9 9 -22z" />
     <glyph glyph-name="search1" unicode="&#xe604;" 
