@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1477291806'); /* IE9*/
-  src: url('iconfont.eot?t=1477291806#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1477291806') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1477291806') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1477291806#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1478225342318'); /* IE9*/
+  src: url('iconfont.eot?t=1478225342318#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1478225342318') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1478225342318') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1478225342318#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -15,24 +15,54 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .icon-top:before { content: "\e600"; }
+
 .icon-QQ:before { content: "\e601"; }
+
 .icon-weibo:before { content: "\e602"; }
+
 .icon-android:before { content: "\e603"; }
+
+.icon-icon_heart:before { content: "\e63f"; }
+
 .icon-search:before { content: "\e604"; }
+
+.icon-comment:before { content: "\e68a"; }
+
 .icon-play:before { content: "\e605"; }
+
 .icon-wechat:before { content: "\e606"; }
+
 .icon-suo:before { content: "\e607"; }
+
 .icon-right:before { content: "\e608"; }
+
 .icon-left:before { content: "\e609"; }
+
 .icon-signin:before { content: "\e60a"; }
+
+.icon-zy:before { content: "\e615"; }
+
+.icon-xingxing101:before { content: "\e616"; }
+
 .icon-pluscircled:before { content: "\e60b"; }
+
 .icon-xiasanjiaoxing-copy-copy-copy:before { content: "\e60c"; }
+
 .icon-003denglu:before { content: "\e60d"; }
+
 .icon-rss:before { content: "\e60e"; }
+
 .icon-fatoggleoff:before { content: "\e60f"; }
+
 .icon-fatoggleon:before { content: "\e610"; }
+
 .icon-email:before { content: "\e611"; }
+
 .icon-xunhuan:before { content: "\e612"; }
+
 .icon-iconedit:before { content: "\e613"; }
+
 .icon-right1:before { content: "\e614"; }
+

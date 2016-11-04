@@ -99,6 +99,81 @@
             </div>
         </header>
 
+        <!--登入、注册弹框-->
+        <div id="sign" class="sign">
+            <div class="part loginPart">
+                <form id="login">
+                    <h3>登录</h3>
+                    <div class="switch"><i class="iconfont icon-fatoggleon"></i>切换注册</div>
+                    <p>
+                        <label for="username"><i class="iconfont icon-003denglu"></i></label>
+                        <input id="username" class="input-control" type="text" placeholder="请输入用户名">
+                    </p>
+                    <p>
+                        <label for="password"><i class="iconfont icon-suo"></i></label>
+                        <input id="password" class="input-control" type="text" placeholder="请输入密码">
+                    </p>
+                    <p class="safe">
+                        <label for="remember"><input id="remember" type="checkbox" class="rememberme" checked="checked">记住我的登录</label>
+                        <a href="#" class="forgot">忘记密码?</a>
+                    </p>
+                    <p>
+                        <input type="submit" class="submit" value="登录">
+                    </p>
+                    <a class="close">X</a>
+                </form>
+                <div class="other-sign">
+                    <p>您也可以使用第三方账号快捷登录</p>
+                    <div>
+                        <a class="weixinlogin" href="#">
+                            <i class="iconfont icon-wechat"></i><span>微信登录</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="qqlogin" href="#">
+                            <i class="iconfont icon-QQ"></i><span>Q Q登录</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="weibologin" href="#">
+                            <i class="iconfont icon-weibo"></i><span>微博登录</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="part registerPart">
+                <form id="register">
+                    <h3>注册</h3>
+                    <div class="switch"><i class="iconfont icon-fatoggleoff"></i>切换登录</div>
+                    <p>
+                        <label for="user_name"><i class="iconfont icon-003denglu"></i></label>
+                        <input id="user_name" class="input-control" type="text" placeholder="请输入英文用户名">
+                    </p>
+                    <p>
+                        <label for="user_email"><i class="iconfont icon-email"></i></label>
+                        <input id="user_email" class="input-control" type="text" placeholder="输入常用邮箱">
+                    </p>
+                    <p>
+                        <label for="user_password"><i class="iconfont icon-suo"></i></label>
+                        <input id="user_password" class="input-control" type="text" placeholder="密码最小长度为6">
+                    </p>
+                    <p>
+                        <label for="user_password2"><i class="iconfont icon-xunhuan"></i></label>
+                        <input id="user_password2" class="input-control" type="text" placeholder="再次输入密码">
+                    </p>
+                    <p class="captcha_inline">
+                        <input class="input-control" type="text" placeholder="输入验证码">
+                        <img src="http://cdn.yeoner.com/wp-content/plugins/ucenter-and-market-yewan//static/img/captcha-clk.png"
+                             title="点击刷新验证码">
+                    </p>
+                    <p>
+                        <input class="submit" type="submit" value="注册">
+                    </p>
+                    <a class="close">X</a>
+                </form>
+            </div>
+        </div>
+
         <!--广告-->
         <!--<section id="ad">-->
             <!--<a href="http://www.yeoner.com/p/48417.html" target="_blank" title="HHL南极招募">-->
@@ -1078,81 +1153,6 @@
                 </section>
             </section>
         </footer>
-
-        <!--登入、注册弹框-->
-        <div id="sign" class="sign">
-            <div class="part loginPart">
-                <form id="login">
-                    <h3>登录</h3>
-                    <div class="switch"><i class="iconfont icon-fatoggleon"></i>切换注册</div>
-                    <p>
-                        <label for="username"><i class="iconfont icon-003denglu"></i></label>
-                        <input id="username" class="input-control" type="text" placeholder="请输入用户名">
-                    </p>
-                    <p>
-                        <label for="password"><i class="iconfont icon-suo"></i></label>
-                        <input id="password" class="input-control" type="text" placeholder="请输入密码">
-                    </p>
-                    <p class="safe">
-                        <label for="remember"><input id="remember" type="checkbox" class="rememberme" checked="checked">记住我的登录</label>
-                        <a href="#" class="forgot">忘记密码?</a>
-                    </p>
-                    <p>
-                        <input type="submit" class="submit" value="登录">
-                    </p>
-                    <a class="close">X</a>
-                </form>
-                <div class="other-sign">
-                    <p>您也可以使用第三方账号快捷登录</p>
-                    <div>
-                        <a class="weixinlogin" href="#">
-                            <i class="iconfont icon-wechat"></i><span>微信登录</span>
-                        </a>
-                    </div>
-                    <div>
-                        <a class="qqlogin" href="#">
-                            <i class="iconfont icon-QQ"></i><span>Q Q登录</span>
-                        </a>
-                    </div>
-                    <div>
-                        <a class="weibologin" href="#">
-                            <i class="iconfont icon-weibo"></i><span>微博登录</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="part registerPart">
-                <form id="register">
-                    <h3>注册</h3>
-                    <div class="switch"><i class="iconfont icon-fatoggleoff"></i>切换登录</div>
-                    <p>
-                        <label for="user_name"><i class="iconfont icon-003denglu"></i></label>
-                        <input id="user_name" class="input-control" type="text" placeholder="请输入英文用户名">
-                    </p>
-                    <p>
-                        <label for="user_email"><i class="iconfont icon-email"></i></label>
-                        <input id="user_email" class="input-control" type="text" placeholder="输入常用邮箱">
-                    </p>
-                    <p>
-                        <label for="user_password"><i class="iconfont icon-suo"></i></label>
-                        <input id="user_password" class="input-control" type="text" placeholder="密码最小长度为6">
-                    </p>
-                    <p>
-                        <label for="user_password2"><i class="iconfont icon-xunhuan"></i></label>
-                        <input id="user_password2" class="input-control" type="text" placeholder="再次输入密码">
-                    </p>
-                    <p class="captcha_inline">
-                        <input class="input-control" type="text" placeholder="输入验证码">
-                        <img src="http://cdn.yeoner.com/wp-content/plugins/ucenter-and-market-yewan//static/img/captcha-clk.png"
-                             title="点击刷新验证码">
-                    </p>
-                    <p>
-                        <input class="submit" type="submit" value="注册">
-                    </p>
-                    <a class="close">X</a>
-                </form>
-            </div>
-        </div>
 
         <!--到顶部按钮-->
         <div id="toTop">
