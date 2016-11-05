@@ -36,17 +36,6 @@
     margin-top: 0;
 }
 
-#content .home_header .news,
-#content .home_header .hot_list,
-#content .tuijian .recommend,
-#content .tuijian .social,
-#content .quote {
-    padding: 12px;
-    background-color: #fff;
-    border: 1px solid #f4f4f4;
-    overflow: hidden;
-}
-
 #content .news > section > h3,
 #content .hot_list > section > h3 {
     display: inline-block;

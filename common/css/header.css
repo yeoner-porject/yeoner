@@ -127,11 +127,12 @@ ul {
     padding-right: 18px;
 }
 
-#header .current_item a {
+#header .current_item > a,
+#header .current_item:after {
     color: #eb0127;
 }
 
-#header .current_item a:after {
+#header .current_item > a:after {
     content: "";
     position: absolute;
     bottom: 1px;

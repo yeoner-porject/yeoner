@@ -81,3 +81,16 @@ img {
 .right {
     float: right;
 }
+
+.home_header .news,
+.home_header .hot_list,
+.tuijian .recommend,
+.tuijian .social,
+.quote,
+.sidebar .sidebar_widget,
+.crumbs_wrap {
+    padding: 12px;
+    background-color: #fff;
+    border: 1px solid #f4f4f4;
+    overflow: hidden;
+}

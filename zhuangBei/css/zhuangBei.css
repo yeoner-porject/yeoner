@@ -1,0 +1,432 @@
+#content {
+    width: 1080px;
+    margin: auto;
+}
+
+#content .container > section {
+    margin-bottom: 36px;
+}
+
+#content .container .crumbs_wrap {
+    position: relative;
+    padding: 12px;
+    overflow: hidden;
+    line-height: 32px;
+    background-color: #fff;
+    border: 1px solid #f4f4f4;
+}
+
+#content .container .crumbs_wrap:before {
+    position: absolute;
+    top: 34px;
+    right: 20px;
+    content: "";
+    width: 92%;
+    height: 1px;
+    background-color: #eee;
+    z-index: 1;
+}
+
+#content .crumbs_wrap .crumbs_cate,
+#content .crumbs_wrap .crumbs {
+    position: relative;
+    background-color: #fff;
+    z-index: 10;
+}
+
+#content .crumbs_cate h3,
+#content .crumbs_cate ul {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#content .crumbs_cate h3 {
+    position: relative;
+    display: inline-block;
+    padding: 0 28px;
+    margin-right: 8px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #d11f3c;
+    color: #fff;
+}
+
+#content .crumbs_cate h3:before,
+#content .crumbs_cate h3:after {
+    position: absolute;
+    top: 8px;
+    content: "";
+    height: 0;
+    width: 0;
+    display: block;
+    border: 12px solid transparent;
+    transform: scaleY(2);
+}
+
+#content .crumbs_cate h3:before {
+    right: 0;
+    border-left-width: 0;
+    border-right-color: #fff;
+}
+
+#content .crumbs_cate h3:after {
+    left: 0;
+    border-right-width: 0;
+    border-left-color: #fff;
+}
+
+#content .crumbs_cate ul {
+    margin-bottom: -4px;
+}
+
+#content .crumbs_cate ul li {
+    margin: 0 16px;
+    display: inline-block;
+}
+
+#content .crumbs_cate .current_cat a {
+    display: block;
+    border: 1px solid #eee;
+    padding: 0 12px;
+    background-color: #f8f8f8;
+}
+
+#content .crumbs_cate a:hover,
+#content .crumbs a:hover,
+#content .crumbs_tags a:hover,
+#content .comment a:hover,
+#content .content_wrap .post_head a:hover,
+#content .info.down > a:hover,
+#content .sidebar_widget.widget_salong_author ul.widget_img .new_post:hover,
+#content .widget_img li a:hover {
+    color: #eb0127;
+}
+
+#content .crumbs {
+    padding: 4px 0 4px 12px;
+    color: #999;
+}
+
+#content .crumbs a {
+    color: #999;
+}
+
+#content .crumbs_tags {
+    width: 100%;
+    padding-top: 12px;
+    overflow: hidden;
+}
+
+#content .crumbs_tags a {
+    padding: 4px 8px;
+    background-color: #f8f8f8;
+    font-size: 10pt;
+}
+
+#content .content {
+    overflow: hidden;
+}
+
+#content .content .content_wrap {
+    float: left;
+    width: 740px;
+}
+
+#content .content_wrap .post {
+    position: relative;
+    padding: 20px 20px 20px 282px;
+    border: 1px solid #f4f4f4;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+#content .content_wrap .post img:hover {
+    transform: scale(1.2);
+}
+
+#content .content_wrap .post_thumb {
+    position: relative;
+    margin-left: -262px;
+}
+
+#content .content_wrap .post_thumb a {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: auto;
+    overflow: hidden;
+}
+
+#content .content_wrap .post_head h2 {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    height: 28px;
+    white-space: nowrap;
+}
+
+#content .content_wrap .post_head h2 a {
+    color: #333;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#content .info {
+    font-size: 14px;
+}
+
+#content .info > span > a,
+#content .info > span {
+    color: #aaa;
+}
+
+#content .info .author img,
+#content .info a,
+#content .info > span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#content .info.up span {
+    position: relative;
+    margin-right: 5px;
+    padding-right: 10px;
+}
+
+#content .info.up span:before,
+#content .info.down span:before {
+    position: absolute;
+    right: 0;
+    content: "";
+    height: 10px;
+    width: 1px;
+    background-color: #ddd;
+}
+
+#content .info.up span:before {
+    top: 12px;
+}
+
+#content .info.down span:before {
+    top: 10px;
+}
+
+#content .info .author img {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-right: 6px;
+}
+
+#content .info.up span:last-child:before,
+#content .info.down span:last-child:before {
+    width: 0;
+}
+
+#content .info.up span:last-child,
+#content .info.down span:last-child {
+    padding-right: 0;
+}
+
+#content .post .excerpt {
+    height: 56px;
+    line-height: 28px;
+    margin-bottom: 10px;
+    color: #666;
+    overflow: hidden;
+}
+
+#content .info.down {
+    text-align: right;
+}
+
+#content .info .readmore {
+    float: left;
+    padding: 4px 20px;
+    border: 1px solid #eee;
+    font-size: 15px;
+    color: #999;
+}
+
+#content .info i {
+    margin-right: 4px;
+}
+
+#content .info .icon-zy,
+#content .info .icon-comment,
+#content .info .icon-xingxing101 {
+    font-size: 14px;
+}
+
+#content .info .icon-icon_heart {
+    font-size: 18px;
+    margin-right: 2px;
+}
+
+#content .info .readmore i {
+    margin-right: 6px;
+}
+
+#content .info.down > span {
+    position: relative;
+    margin-left: 12px;
+    padding-right: 16px;
+}
+
+#content .like-btn {
+    cursor: pointer;
+}
+
+#content .sidebar {
+    width: 300px;
+        float: right;
+}
+
+#content .sidebar .sidebar_widget {
+    margin-bottom: 20px;
+    padding: 12px;
+    background-color: #fff;
+    border: 1px solid #f4f4f4;
+    overflow: hidden;
+}
+
+#content .sidebar .sidebar_widget h3 {
+    position: relative;
+    font-size: 17px;
+    padding-bottom: 8px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
+
+#content .sidebar_widget ul.widget_img {
+    margin-top: 0;
+}
+
+#content .sidebar_widget ul {
+    font-size: 0;
+    overflow: hidden;
+}
+
+#content .sidebar_widget.widget_salong_author ul.widget_img li {
+    position: relative;
+    min-height: 100px;
+    padding: 16px 0 16px 90px;
+}
+
+#content .sidebar_widget ul.widget_img li {
+    overflow: hidden;
+    padding: 15px 4px;
+}
+
+#content .sidebar_widget ul.widget_img li:last-child {
+    padding-bottom: 8px;
+    border-bottom: 0;
+}
+
+#content .sidebar_widget ul li {
+    position: relative;
+    padding: 4px;
+    line-height: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+#content .sidebar_widget ul li a {
+    height: 30px;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: hidden;
+    display: block;
+}
+
+#content .sidebar_widget.widget_salong_author ul.widget_img .author_name {
+    font-size: 17px;
+    line-height: 32px;
+}
+
+#content .sidebar_widget ul.widget_img li > a {
+    display: block;
+    height: auto;
+    clear: both;
+    overflow: visible;
+    line-height: 24px;
+}
+
+#content .sidebar_widget ul.widget_img img {
+    float: left;
+    margin-right: 8px;
+    width: 108px;
+}
+
+#content .sidebar_widget.widget_salong_author ul.widget_img img {
+    width: 78px;
+    border-radius: 100%;
+    left: 0;
+    padding: 6px;
+    background-color: #f8f8f8;
+}
+
+#content .widget_salong_author ul.widget_img img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#content .sidebar_widget.widget_salong_author ul.widget_img .new_post {
+    font-size: 14px;
+    color: #999;
+}
+
+#content .sidebar_widget ul.widget_img a span {
+    max-height: 44px;
+    overflow: hidden;
+    display: block;
+}
+
+#content .sidebar_widget ul.widget_img .info > span {
+    vertical-align: top;
+}
+
+#content .widget_img span.category {
+    max-width: 96px;
+    white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#content .sidebar_widget ul.widget_img .category a {
+    width: auto;
+    display: inline-block;
+}
+
+#content .sidebar_widget ul.widget_img .info > span:last-child {
+    margin-right: 0;
+}
+
+#content .widget_sl_comments .comment-avatar {
+    width: 100%;
+    display: inline-block;
+    padding-left: 50px;
+}
+
+#content .widget_sl_comments .comment-avatar img,
+#content .widget_sl_comments .comment-avatar a {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#content .sidebar_widget.widget_sl_comments .comment-avatar img {
+    float: left;
+    margin-left: -50px;
+    width: 40px;
+    height: auto;
+    border-radius: 100%;
+    padding: 4px;
+    background-color: #f8f8f8;
+}
+
+
