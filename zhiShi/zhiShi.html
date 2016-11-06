@@ -4,21 +4,555 @@
         <meta charset="UTF-8">
         <title>户外知识 | 野玩儿</title>
         <link rel="stylesheet" type="text/css" href="../common/iconfont/iconfont.css">
+        <link rel="stylesheet" type="text/css" href="../common/css/common.css">
+        <link rel="stylesheet" type="text/css" href="../common/css/header.css">
+        <link rel="stylesheet" type="text/css" href="../common/css/footer.css">
+        <link rel="stylesheet" type="text/css" href="../common/css/toTop.css">
+        <link rel="stylesheet" type="text/css" href="css/zhiShi.css">
 
         <script src="../common/js/jquery-3.0.0.js"></script>
         <script src="../common/js/artTemplate.js"></script>
+        <script src="../common/js/header.js"></script>
+        <script src="../common/js/footer.js"></script>
+        <script src="../common/js/toTop.js"></script>
+        <script src="js/zhiShi.js"></script>
     </head>
     <body>
         <!--头部-->
-        <header id="header"></header>
+        <header id="header">
+            <div class="header_wp">
+                <a class="header_logo" href="#" title="野玩儿 | 爱户外,爱科技!">
+                    <img src="http://cdn.yeoner.com/wp-content/uploads/2016/04/logo-1.png">
+                </a>
+                <nav class="header_nav">
+                    <div class="nav_top">
+                        <a href="#" id="tougao"><i class="iconfont icon-iconedit"></i>投稿</a>
+                        <a href="#" id="denglu"><i class="iconfont icon-signin"></i>登录</a>
+                        <a href="#" id="zhuce"><i class="iconfont icon-pluscircled"></i>注册</a>
+                        <a href="https://open.weixin.qq.com/connect/qrconnect?appid=wxf93fff8c0dc1bcc5&redirect_uri=http%3A%2F%2Fwww.yeoner.com%2Fwp-content%2Fthemes%2Fyewan/wechat.php&response_type=code&scope=snsapi_login&state=d6f6a6040b3a979d75ca0e57454ee8fa#wechat_redirect"
+                           id="weixin"><i class="iconfont icon-wechat"></i></a>
+                    </div>
+                    <div class="nav_menu">
+                        <ul class="menu_list">
+                            <li class="list_item"><a href="../index.html">首页</a></li>
+                            <li class="list_item list_item_has_sub_menu">
+                                <a href="../zhuangBei/zhuangBei.html">户外装备</a>
+                                <ul class="sub_menu">
+                                    <li><a href="../zhuangBei/zhuangBei.html?zixun">资讯</a></li>
+                                    <li><a href="../zhuangBei/zhuangBei.html?kupin">酷品</a></li>
+                                    <li><a href="../zhuangBei/zhuangBei.html?ceping">测评</a></li>
+                                </ul>
+                            </li>
+                            <li class="list_item list_item_has_sub_menu current_item">
+                                <a href="../zhiShi/zhiShi.html">户外知识</a>
+                                <ul class="sub_menu">
+                                    <li><a href="../zhiShi/zhiShi.html?tubu">徒步/露营</a></li>
+                                    <li><a href="../zhiShi/zhiShi.html?paobu">跑步/健身</a></li>
+                                    <li><a href="../zhiShi/zhiShi.html?qixing">骑行</a></li>
+                                    <li><a href="../zhiShi/zhiShi.html?huaxue">滑雪</a></li>
+                                    <li><a href="../zhiShi/zhiShi.html?anquan">户外安全</a></li>
+                                </ul>
+                            </li>
+                            <li class="list_item list_item_has_sub_menu">
+                                <a href="../tanSuo/tanSuo.html">户外探索</a>
+                                <ul class="sub_menu">
+                                    <li><a href="../tanSuo/tanSuo.html?meijing">美景</a></li>
+                                    <li><a href="../tanSuo/tanSuo.html?quwen">趣闻</a></li>
+                                </ul>
+                            </li>
+                            <li class="list_item list_item_has_sub_menu">
+                                <a href="../shiPin/shiPin.html">户外视频</a>
+                                <ul class="sub_menu">
+                                    <li><a href="../shiPin/shenRenZhi/shenRenZhi.html">神人志</a></li>
+                                    <li><a href="../shiPin/jiXianYunDong/jiXianYunDong.html">极限运动</a></li>
+                                    <li><a href="../shiPin/huWaiZhuangBei/huWaiZhuangBei.html">户外装备</a></li>
+                                    <li><a href="../shiPin/quWeiShiPin/quWeiShiPin.html">趣味视频</a></li>
+                                </ul>
+                            </li>
+                            <li class="list_item"><a href="../zhongCe/zhongCe.html">装备众测</a></li>
+                            <li class="list_item list_item_has_sub_menu">
+                                <a href="../zuoZhe/zuoZhe.html">作者墙</a>
+                                <ul class="sub_menu">
+                                    <li><a href="../zuoZhe/zuoZhe.html">作者</a></li>
+                                    <li><a href="../zuoZhe/yeWanErShenRen/yeWanErShenRen.html">野玩儿神人</a></li>
+                                </ul>
+                            </li>
+                            <li class="list_item"><a href="../yeWanZhiDao/zhiDao.html">野玩儿知道</a></li>
+                            <li class="list_item list_item_menu_search">
+                                <a href="#" title="点击搜索"><i class="iconfont icon-search1"></i></a>
+                                <section class="search">
+                                    <h2><i class="iconfont icon-search"></i>野玩儿</h2>
+                                    <form class="menu_search_form">
+                                        <select class="search_type">
+                                            <option value="post">文章</option>
+                                            <option value="video">视频</option>
+                                            <option value="test">众测</option>
+                                        </select><!--
+                                        --><input class="text_input" type="text" placeholder="请输入关键字..."><!--
+                                        --><input class="search_btn" type="submit" value="搜索">
+                                    </form>
+                                </section>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!--登入、注册弹框-->
+        <div id="sign" class="sign">
+            <div class="part loginPart">
+                <form id="login">
+                    <h3>登录</h3>
+                    <div class="switch"><i class="iconfont icon-fatoggleon"></i>切换注册</div>
+                    <p>
+                        <label for="username"><i class="iconfont icon-003denglu"></i></label>
+                        <input id="username" class="input-control" type="text" placeholder="请输入用户名">
+                    </p>
+                    <p>
+                        <label for="password"><i class="iconfont icon-suo"></i></label>
+                        <input id="password" class="input-control" type="text" placeholder="请输入密码">
+                    </p>
+                    <p class="safe">
+                        <label for="remember"><input id="remember" type="checkbox" class="rememberme" checked="checked">记住我的登录</label>
+                        <a href="#" class="forgot">忘记密码?</a>
+                    </p>
+                    <p>
+                        <input type="submit" class="submit" value="登录">
+                    </p>
+                    <a class="close">X</a>
+                </form>
+                <div class="other-sign">
+                    <p>您也可以使用第三方账号快捷登录</p>
+                    <div>
+                        <a class="weixinlogin" href="#">
+                            <i class="iconfont icon-wechat"></i><span>微信登录</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="qqlogin" href="#">
+                            <i class="iconfont icon-QQ"></i><span>Q Q登录</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="weibologin" href="#">
+                            <i class="iconfont icon-weibo"></i><span>微博登录</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="part registerPart">
+                <form id="register">
+                    <h3>注册</h3>
+                    <div class="switch"><i class="iconfont icon-fatoggleoff"></i>切换登录</div>
+                    <p>
+                        <label for="user_name"><i class="iconfont icon-003denglu"></i></label>
+                        <input id="user_name" class="input-control" type="text" placeholder="请输入英文用户名">
+                    </p>
+                    <p>
+                        <label for="user_email"><i class="iconfont icon-email"></i></label>
+                        <input id="user_email" class="input-control" type="text" placeholder="输入常用邮箱">
+                    </p>
+                    <p>
+                        <label for="user_password"><i class="iconfont icon-suo"></i></label>
+                        <input id="user_password" class="input-control" type="text" placeholder="密码最小长度为6">
+                    </p>
+                    <p>
+                        <label for="user_password2"><i class="iconfont icon-xunhuan"></i></label>
+                        <input id="user_password2" class="input-control" type="text" placeholder="再次输入密码">
+                    </p>
+                    <p class="captcha_inline">
+                        <input class="input-control" type="text" placeholder="输入验证码">
+                        <img src="http://cdn.yeoner.com/wp-content/plugins/ucenter-and-market-yewan//static/img/captcha-clk.png"
+                             title="点击刷新验证码">
+                    </p>
+                    <p>
+                        <input class="submit" type="submit" value="注册">
+                    </p>
+                    <a class="close">X</a>
+                </form>
+            </div>
+        </div>
 
         <!--内容-->
-        <div id="content"></div>
+        <div id="content">
+            <section class="container">
+                <section class="crumbs_wrap">
+                    <section class="crumbs_cate left">
+                        <h3>户外知识</h3>
+                        <ul>
+                            <li class="cat_item">
+                                <a href="zhiShi.html">全部</a>
+                            </li>
+                            <li class="cat_item">
+                                <a href="zhiShi.html?zhangzhishi">涨姿势</a>
+                            </li>
+                            <li class="cat_item">
+                                <a href="zhiShi.html?qixing">骑行</a>
+                            </li>
+                            <li class="cat_item current_cat">
+                                <a href="zhiShi.html?huaxue">滑雪</a>
+                            </li>
+                            <li class="cat_item">
+                                <a href="zhiShi.html?tubu">徒步/露营</a>
+                            </li>
+                            <li class="cat_item">
+                                <a href="zhiShi.html?paobu">跑步/健身</a>
+                            </li>
+                            <li class="cat_item">
+                                <a href="zhiShi.html?anquan">户外安全</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <!--<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<span class="current">户外装备</span></article>-->
+                    <section class="crumbs_tags">
+                        <span>热门标签:&nbsp;&thinsp;</span>
+                        <a href="http://www.yeoner.com/p/tag/%e8%87%aa%e8%a1%8c%e8%bd%a6" title="117个话题">自行车</a>
+                        <a href="http://www.yeoner.com/p/tag/%e8%bf%90%e5%8a%a8%e7%9b%b8%e6%9c%ba"
+                           title="66个话题">运动相机</a>
+                        <a href="http://www.yeoner.com/p/tag/vr" title="48个话题">VR</a>
+                        <a href="http://www.yeoner.com/p/tag/%e4%bd%b3%e6%98%8e" title="4个话题">佳明</a>
+                        <a href="http://www.yeoner.com/p/tag/%e6%89%8b%e7%8e%af" title="1个话题">手环</a>
+                    </section>
+                </section>
+                <section class="content">
+                    <section class="content_wrap">
+                        <!--<article class="post">-->
+                        <!--<div class="post_thumb left">-->
+                        <!--<a href="http://www.yeoner.com/p/49261.html" title="聪明收纳 比行李箱还NB JNE摄影旅行背包评测">-->
+                        <!--<img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/11/2016110305575416.jpg&h=200&w=294&zc=1"-->
+                        <!--alt="聪明收纳 比行李箱还NB JNE摄影旅行背包评测">-->
+                        <!--</a>-->
+                        <!--</div>-->
+                        <!--<header class="post_head">-->
+                        <!--<h2>-->
+                        <!--<a href="http://www.yeoner.com/p/49261.html" title="聪明收纳 比行李箱还NB JNE摄影旅行背包评测">-->
+                        <!--聪明收纳 比行李箱还NB JNE摄影旅行背包评测-->
+                        <!--</a>-->
+                        <!--</h2>-->
+                        <!--<div class="info up">-->
+                        <!--<span class="author"><img src="http://cdn.yeoner.com/wp-content/uploads/avatars/avatar-33.jpg"><a href="http://www.yeoner.com/p/author/33" target="_blank">三点水</a></span>-->
+                        <!--<span class="actegroy"><a href="zhuangBei.html">户外装备</a>,-->
+                        <!--<a href="cePing/cePing.html">测评</a></span>-->
+                        <!--<span class="date">2016-11-04</span>-->
+                        <!--</div>-->
+                        <!--</header>-->
+                        <!--<div class="excerpt">-->
+                        <!--无论你是不是摄影爱好者，通过购物网站搜索你就会发现，摄影包的类别还不少——常见的有双肩背包、单肩信使包、肩挎包、滚筒包、镜头筒等，而每种类...-->
+                        <!--</div>-->
+                        <!--<div class="info down">-->
+                        <!--<a href="http://www.yeoner.com/p/49261.html" title="聪明收纳 比行李箱还NB JNE摄影旅行背包评测" class="readmore">-->
+                        <!--继续阅读-->
+                        <!--<i class="iconfont icon-right1"></i>-->
+                        <!--</a>-->
+                        <!--<span class="view"><i class="iconfont icon-zy"></i>27</span>-->
+                        <!--<span class="comment"><i class="iconfont icon-comment"></i><a href="http://www.yeoner.com/p/49261.html#respond">0</a></span>-->
+                        <!--<span class="postlist-meta-like like-btn" title="点击喜欢"><i class="iconfont icon-icon_heart"></i><span>0</span></span>-->
+                        <!--<span class="postlist-meta-like like-btn" title="必须登录才能收藏"><i class="iconfont icon-xingxing101"></i><span>0</span></span>-->
+                        <!--</div>-->
+                        <!--</article>-->
+                        <script type="text/html" id="postTemp">
+                            <article class="post">
+                                <div class="post_thumb left">
+                                    <a href="{{ post_thumb_url }}" title="{{ post_thumb_title }}">
+                                        <img src="{{ post_thumb_src }}"
+                                             alt="{{ post_thumb_title }}">
+                                    </a>
+                                </div>
+                                <header class="post_head">
+                                    <h2>
+                                        <a href="{{ post_head_url }}" title="{{ post_thumb_title }}">
+                                            {{ post_thumb_title }}
+                                        </a>
+                                    </h2>
+                                    <div class="info up">
+                                        <span class="author"><img src="{{ post_head_author_img_src }}"><a
+                                                href="{{ post_head_author_url }}"
+                                                target="_blank">{{ post_head_author }}</a></span>
+                                        <span class="categroy"><a href="zhiShi.html">{{ post_head_tag1 }}</a>,
+                                        <a href="">{{ post_head_tag2 }}</a>,
+                                            <a href="">{{ post_head_tag3 }}</a></span>
+                                        <span class="date">{{ post_head_date }}</span>
+                                    </div>
+                                </header>
+                                <div class="excerpt">{{ excerpt }}</div>
+                                <div class="info down">
+                                    <a href="{{ info_url }}" title="{{ post_thumb_title }}" class="readmore">
+                                        继续阅读
+                                        <i class="iconfont icon-right1"></i>
+                                    </a>
+                                    <span class="view"><i class="iconfont icon-zy"></i>{{ info_tag1 }}</span>
+                                    <span class="comment"><i class="iconfont icon-comment"></i><a
+                                            href="{{ info_tag2_url }}">{{ info_tag2 }}</a></span>
+                                    <span class="postlist-meta-like like-btn" title="点击喜欢"><i
+                                            class="iconfont icon-icon_heart"></i><span>{{ info_tag3 }}</span></span>
+                                    <span class="postlist-meta-like like-btn" title="必须登录才能收藏"><i
+                                            class="iconfont icon-xingxing101"></i><span>{{ info_tag4 }}</span></span>
+                                </div>
+                            </article>
+                        </script>
+                        <script type="text/html" id="postTemp01">
+                            <article class="post">
+                                <div class="post_thumb left">
+                                    <a href="{{ post_thumb_url }}" title="{{ post_thumb_title }}">
+                                        <img src="{{ post_thumb_src }}"
+                                             alt="{{ post_thumb_title }}">
+                                    </a>
+                                </div>
+                                <header class="post_head">
+                                    <h2>
+                                        <a href="{{ post_head_url }}" title="{{ post_thumb_title }}">
+                                            {{ post_thumb_title }}
+                                        </a>
+                                    </h2>
+                                    <div class="info up">
+                                        <span class="author"><img src="{{ post_head_author_img_src }}"><a
+                                                href="{{ post_head_author_url }}"
+                                                target="_blank">{{ post_head_author }}</a></span>
+                                        <span class="categroy"><a href="zhiShi.html">{{ post_head_tag1 }}</a>,
+                                        <a href="">{{ post_head_tag2 }}</a></span>
+                                        <span class="date">{{ post_head_date }}</span>
+                                    </div>
+                                </header>
+                                <div class="excerpt">{{ excerpt }}</div>
+                                <div class="info down">
+                                    <a href="{{ info_url }}" title="{{ post_thumb_title }}" class="readmore">
+                                        继续阅读
+                                        <i class="iconfont icon-right1"></i>
+                                    </a>
+                                    <span class="view"><i class="iconfont icon-zy"></i>{{ info_tag1 }}</span>
+                                    <span class="comment"><i class="iconfont icon-comment"></i><a
+                                            href="{{ info_tag2_url }}">{{ info_tag2 }}</a></span>
+                                    <span class="postlist-meta-like like-btn" title="点击喜欢"><i
+                                            class="iconfont icon-icon_heart"></i><span>{{ info_tag3 }}</span></span>
+                                    <span class="postlist-meta-like like-btn" title="必须登录才能收藏"><i
+                                            class="iconfont icon-xingxing101"></i><span>{{ info_tag4 }}</span></span>
+                                </div>
+                            </article>
+                        </script>
+                    </section>
+                    <aside class="sidebar">
+                        <article class="sidebar_widget widget_salong_author">
+                            <div class="sidebar_title">
+                                <h3>推荐作者</h3>
+                            </div>
+                            <ul class="widget_img">
+                                <!--<li>-->
+                                <!--<a class="author_name" href="http://www.yeoner.com/p/author/10?tab=index" title="透明球｜http://www.yeoner.com/p/1885.htmlhttp://www.yeoner.com/p/7167.htmlhttp://www.yeoner.com/p/14235.html">-->
+                                <!--<img src="http://cdn.yeoner.com/wp-content/uploads/avatars/avatar-10.jpg" class="avatar" width="100" height="100">-->
+                                <!--透明球-->
+                                <!--</a>-->
+                                <!--<a href="http://www.yeoner.com/p/41594.html" title="6款户外生活利器 老驴友们表示都喜欢" class="new_post">6款户外生活利器 老驴友们表示都喜欢</a>-->
+                                <!--</li>-->
+                                <script type="text/html" id="authorLiTemp">
+                                    <li>
+                                        <a class="author_name" href="{{ author_url }}" title="{{ author_title }}">
+                                            <img src="{{ author_img_src }}" class="avatar" width="100" height="100">
+                                            {{ author_name }}
+                                        </a>
+                                        <a href="{{ author_article }}" title="{{ author_article_title }}"
+                                           class="new_post">{{ author_article_text }}</a>
+                                    </li>
+                                </script>
+                            </ul>
+                        </article>
+                        <article class="sidebar_widget widget_salong_new">
+                            <div class="sidebar_title">
+                                <h3>最新文章</h3>
+                            </div>
+                            <ul class="widget_img">
+                                <!--<li>-->
+                                <!--<a href="http://www.yeoner.com/p/49261.html" title="">-->
+                                <!--<img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/11/2016110305575416.jpg&h=200&w=294&zc=1" alt="">-->
+                                <!--<span>聪明收纳 比行李箱还NB JNE摄影旅行背包评测</span>-->
+                                <!--</a>-->
+                                <!--<div class="info up">-->
+                                <!--<span class="category">-->
+                                <!--<a href="zhuangBei.html">户外装备</a>,-->
+                                <!--<a href="cePing/cePing.html">测评</a>-->
+                                <!--</span>-->
+                                <!--<span class="date">2016-11-04</span>-->
+                                <!--</div>-->
+                                <!--</li>-->
+                                <script type="text/html" id="newsLiTemp">
+                                    <li>
+                                        <a href="{{ article_url }}" title="{{ article_title }}">
+                                            <img src="{{ article_img_src }}" alt="{{ article_title }}">
+                                            <span>{{ article_title }}</span>
+                                        </a>
+                                        <div class="info up">
+                                            <span class="category">
+                                                <a href="{{ article_tag1 }}">{{ article_tag1_text }}</a>,
+                                                <a href="{{ article_tag2 }}">{{ article_tag2_text }}</a>
+                                            </span>
+                                            <span class="date">{{ article_date }}</span>
+                                        </div>
+                                    </li>
+                                </script>
+                            </ul>
+                        </article>
+                        <article class="sidebar_widget widget_salong_random">
+                            <div class="sidebar_title">
+                                <h3>随机文章</h3>
+                            </div>
+                            <ul class="widget_img">
+                                <!--<li>-->
+                                <!--<a href="http://www.yeoner.com/p/49261.html" title="">-->
+                                <!--<img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://www.yeoner.com/wp-content/uploads/2016/11/2016110305575416.jpg&h=200&w=294&zc=1" alt="">-->
+                                <!--<span>聪明收纳 比行李箱还NB JNE摄影旅行背包评测</span>-->
+                                <!--</a>-->
+                                <!--<div class="info up">-->
+                                <!--<span class="category">-->
+                                <!--<a href="zhuangBei.html">户外装备</a>,-->
+                                <!--<a href="cePing/cePing.html">测评</a>-->
+                                <!--</span>-->
+                                <!--<span class="date">2016-11-04</span>-->
+                                <!--</div>-->
+                                <!--</li>-->
+                                <script type="text/html" id="randomLiTemp">
+                                    <li>
+                                        <a href="{{ random_url }}" title="{{ random_title }}">
+                                            <img src="{{ random_img_src }}" alt="{{ random_info }}">
+                                            <span>{{ random_info }}</span>
+                                        </a>
+                                        <div class="info up">
+                                        <span class="category">
+                                            <a href="{{ random_tag1 }}">{{ random_tag1_text }}</a>,
+                                            <a href="{{ random_tag2 }}">{{ random_tag2_text }}</a>
+                                        </span>
+                                            <span class="date">{{ random_date }}</span>
+                                        </div>
+                                    </li>
+                                </script>
+                            </ul>
+                        </article>
+                        <article class="sidebar_widget widget_sl_comments">
+                            <div class="sidebar_title">
+                                <h3>最新评论</h3>
+                            </div>
+                            <ul class="widget_img">
+                                <!--<li>-->
+                                <!--<section class="recent-comments">-->
+                                <!--<span class="comment-avatar">-->
+                                <!--<img class="avatar" src="http://cdn.yeoner.com/wp-content/uploads/2016/04/avatar.jpg" alt="avatar">-->
+                                <!--<a href="http://www.yeoner.com/test/49262.html#comment-4264" title="在 天石新款轻薄羽绒服 发表的评论">新注册野玩用户，申请评测，如…</a>-->
+                                <!--</span>-->
+                                <!--<span class="comment-author left">xuzengyu</span>-->
+                                <!--<span class="comment-time right">2016-11-04 14:17:56</span>-->
+                                <!--</section>-->
+                                <!--</li>-->
+                                <script type="text/html" id="commentsLiTemp">
+                                    <li>
+                                        <section class="recent-comments">
+                                        <span class="comment-avatar">
+                                            <img class="avatar" src="{{ pinglun_img_src }}" alt="avatar">
+                                            <a href="{{ pinglun_url }}"
+                                               title="{{ pinglun_title }}">{{ pinglun_info }}</a>
+                                        </span>
+                                            <span class="comment-author left">{{ pinglun_author }}</span>
+                                            <span class="comment-time right">{{ pinglun_time }}</span>
+                                        </section>
+                                    </li>
+                                </script>
+                            </ul>
+                        </article>
+                        <article class="sidebar_widget widget_salong_hotpostvideo">
+                            <div class="sidebar_title">
+                                <h3>户外视频</h3>
+                            </div>
+                            <ul class="widget_img">
+                                <!--<li>-->
+                                <!--<a target="_blank" href="http://www.yeoner.com/video/36644.html"-->
+                                <!--title="20个超厉害的跑酷跳跃 看看别学 (3条评论)">-->
+                                <!--<img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r4.ykimg.com/05410408576A2E1F6A0A4C04734DD89A&h=200&w=294&zc=1">-->
+                                <!--<span>20个超厉害的跑酷跳跃 看看别学</span>-->
+                                <!--</a>-->
+                                <!--<div class="info up">-->
+                                <!--<span class="category">-->
+                                <!--<a href="http://www.yeoner.com/video-category/extremesport">极限运动</a>-->
+                                <!--</span>-->
+                                <!--<span class="date">2016-06-22</span>-->
+                                <!--</div>-->
+                                <!--</li>-->
+                                <script type="text/html" id="videoLiTemp">
+                                    <li>
+                                        <a target="_blank" href="{{ shipin_url }}"
+                                           title="{{ shipin_title }}">
+                                            <img src="{{ shipin_img_src }}">
+                                            <span>{{ shipin_info }}</span>
+                                        </a>
+                                        <div class="info up">
+                                            <span class="category">
+                                                <a href="{{ shipin_tag_url }}">{{ shipin_tag }}</a>
+                                            </span>
+                                            <span class="date">{{ shipin_time }}</span>
+                                        </div>
+                                    </li>
+                                </script>
+                            </ul>
+                        </article>
+                    </aside>
+                </section>
+            </section>
+        </div>
 
         <!--底部-->
-        <footer id="footer"></footer>
+        <footer id="footer">
+            <section class="footer_wp">
+                <section class="footer_nav">
+                    <div class="footer_menu">
+                        <ul class="footer_menu_list">
+                            <li class="footer_list_ltem"><a href="#">关于野玩儿</a></li>
+                            <li class="footer_list_ltem"><a href="#">加入野玩儿</a></li>
+                            <li class="footer_list_ltem"><a href="#">合作伙伴</a></li>
+                            <li class="footer_list_ltem"><a href="#">联系野玩儿</a></li>
+                        </ul>
+                    </div>
+                    <p class="copyright">
+                        Copyright © 2015-2017 Yeoner 野玩儿 . 保留所有权利 京ICP备15028529号-1
+                    </p>
+                </section>
+                <section class="footer_logo">
+                    <a href="../index.html" title="野玩儿 | 爱户外，爱科技！">
+                        <img src="http://cdn.yeoner.com/wp-content/themes/yewan/images/footer-logo.png" alt="野玩儿">
+                    </a>
+                    <span class="weixin">
+                        <i title="点击扫描野玩儿微信公众号" class="iconfont icon-wechat"></i>
+                        <img src="http://cdn.yeoner.com/wp-content/themes/yewan/images/weixin.jpg" title="野玩儿微信公众号"
+                             alt="野玩儿微信公众号">
+                    </span>
+                    <span class="app">
+                        <i title="点击扫描下载野玩儿APP" class="iconfont icon-android"></i>
+                        <img src="http://cdn.yeoner.com/wp-content/uploads/2016/07/erweima.png" title="野玩儿APP"
+                             alt="野玩儿APP">
+                    </span>
+                </section>
+                <section class="footer_link">
+                    <h4>友情链接:&nbsp;&thinsp;</h4>
+                    <ul>
+                        <li><a href="http://www.garmin.com.cn/" target="_blank">佳明GARMIN</a></li>
+                        <li><a href="http://www.360.cn/" target="_blank">奇虎360</a></li>
+                        <li><a href="http://yfdxs.com/" target="_blank">远方的雪山</a></li>
+                        <li><a href="http://www.banghw.com/" target="_blank">户外帮</a></li>
+                        <li><a href="http://www.easytour.cn/" target="_blank">易游天下</a></li>
+                        <li><a href="http://www.backpacker.net.cn" target="_blank">背包客·中国网</a></li>
+                        <li><a href="http://go.360.cn/" target="_blank">360旅游</a></li>
+                        <li><a href="http://ww.ispo.com.cn" target="_blank">ISPO</a></li>
+                        <li><a href="http://www.toread.com.cn/" target="_blank">探路者</a></li>
+                        <li><a href="http://www.ezon.cn" target="_blank">EZON宜准</a></li>
+                        <li><a href="http://www.717c.com/" target="_blank">717c骑车论坛</a></li>
+                        <li><a href="http://www.lvye.cn" target="_blank">绿野网</a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+
+        <!--背景黑色-->
+        <div class="bg"></div>
 
         <!--到顶部按钮-->
-        <div id="toTop"></div>
+        <div id="toTop">
+            <a href="#top" title="返回顶部" class="top_btn"><i class="iconfont icon-top"></i></a>
+        </div>
     </body>
 </html>

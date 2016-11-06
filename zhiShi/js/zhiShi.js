@@ -1,3 +1,188 @@
 /**
  * Created by lujiaolan on 16/10/21.
  */
+/**
+ * Created by lujiaolan on 16/10/21.
+ */
+$(function () {
+    var a = location.search.substring(1);
+    var $crumbs_cate = $(".crumbs_cate.left");
+    if (a == "tubu") {
+        var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="zhiShi.html">户外知识</a>&nbsp;»&nbsp;<span class="current">徒步/露营</span></article>');
+        $article.insertAfter($crumbs_cate);
+        $crumbs_cate.find(".cat_item").hide();
+        $(".current_item .sub_menu li:eq(0) a").css("color", "#eb0127");
+    } else if (a == "paobu") {
+        var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="zhiShi.html">户外知识</a>&nbsp;»&nbsp;<span class="current">跑步/健身</span></article>');
+        $article.insertAfter($crumbs_cate);
+        $crumbs_cate.find(".cat_item").hide();
+        $(".current_item .sub_menu li:eq(1) a").css("color", "#eb0127");
+    } else if (a == "qixing") {
+        var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="zhiShi.html">户外知识</a>&nbsp;»&nbsp;<span class="current">骑行</span></article>');
+        $article.insertAfter($crumbs_cate);
+        $crumbs_cate.find(".cat_item").hide();
+        $(".current_item .sub_menu li:eq(2) a").css("color", "#eb0127");
+    }
+    else if (a == "huaxue") {
+        var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="zhiShi.html">户外知识</a>&nbsp;»&nbsp;<span class="current">滑雪</span></article>');
+        $article.insertAfter($crumbs_cate);
+        $(".current_item .sub_menu li:eq(3) a").css("color", "#eb0127");
+    }
+    else if (a == "anquan") {
+        console.log(a);
+        var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="zhiShi.html">户外知识</a>&nbsp;»&nbsp;<span class="current">户外安全</span></article>');
+        $article.insertAfter($crumbs_cate);
+        $crumbs_cate.find(".cat_item").hide();
+        $(".current_item .sub_menu li:eq(4) a").css("color", "#eb0127");
+    }
+    else if (a == "zhangzhishi") {
+        console.log(a);
+        var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="zhiShi.html">户外知识</a>&nbsp;»&nbsp;<span class="current">涨姿势</span></article>');
+        $article.insertAfter($crumbs_cate);
+        $crumbs_cate.find(".cat_item").hide();
+        $(".current_item").removeClass("current_item");
+    }
+    else {
+        // console.log(a);
+        var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<span class="current">户外知识</span></article>');
+        $article.insertAfter($crumbs_cate);
+        $crumbs_cate.find(".cat_item").hide();
+    }
+
+    $.ajax({
+        url: "json/content.json",
+        success: function (data) {
+            function tagHref() {
+                var postArr = $(".content_wrap .post");
+                // console.log(postArr);
+                $.each(postArr,function (i,val) {
+                    // console.log($(val).find("a"));
+                    var $a1 = $(val).find("a:eq(4)");
+                    var $a2 = $(val).find("a:eq(5)");
+                    if($a1.text() == "跑步/健身"){
+                        $a1.attr("href","zhiShi.html?paobu");
+                    }
+                    if($a2.text() == "跑步/健身"){
+                        $a2.attr("href","zhiShi.html?paobu");
+                    }
+                    if($a1.text() == "涨姿势"){
+                        $a1.attr("href","zhiShi.html?zhangzhishi");
+                    }
+                    if($a2.text() == "涨姿势"){
+                        $a2.attr("href","zhiShi.html?zhangzhishi");
+                    }
+                    if($a1.text() == "骑行"){
+                        $a1.attr("href","zhiShi.html?qixing");
+                    }
+                    if($a2.text() == "骑行"){
+                        $a2.attr("href","zhiShi.html?qixing");
+                    }
+                    if($a1.text() == "徒步/露营"){
+                        $a1.attr("href","zhiShi.html?tubu");
+                    }
+                    if($a2.text() == "徒步/露营"){
+                        $a2.attr("href","zhiShi.html?tubu");
+                    }
+                    if($a1.text() == "滑雪"){
+                        $a1.attr("href","zhiShi.html?huaxue");
+                    }
+                    if($a2.text() == "滑雪"){
+                        $a2.attr("href","zhiShi.html?huaxue");
+                    }
+                    if($a1.text() == "户外安全"){
+                        $a1.attr("href","zhiShi.html?anquan");
+                    }
+                    if($a2.text() == "户外安全"){
+                        $a2.attr("href","zhiShi.html?anquan");
+                    }
+                    if($a1.text() == "户外知识"){
+                        $a1.attr("href","zhiShi.html");
+                    }
+                    if($a2.text() == "户外知识"){
+                        $a2.attr("href","zhiShi.html");
+                    }
+                });
+            }
+
+            if(a == "tubu"){
+                $.each(data.tubu, function (i, val) {
+                    if(val.post_head_tag3 == ""){
+                        $(template("postTemp01", val)).appendTo(".content_wrap");
+                    }else {
+                        $(template("postTemp", val)).appendTo(".content_wrap");
+                    }
+                });
+                tagHref();
+            }else if(a == "paobu"){
+                $.each(data.paobu, function (i, val) {
+                    if(val.post_head_tag3 == ""){
+                        $(template("postTemp01", val)).appendTo(".content_wrap");
+                    }else {
+                        $(template("postTemp", val)).appendTo(".content_wrap");
+                    }
+                });
+                tagHref();
+            }else  if(a == "qixing"){
+                $.each(data.qixing, function (i, val) {
+                    if(val.post_head_tag3 == ""){
+                        $(template("postTemp01", val)).appendTo(".content_wrap");
+                    }else {
+                        $(template("postTemp", val)).appendTo(".content_wrap");
+                    }
+                });
+                tagHref();
+            }else  if(a == "huaxue"){
+                $.each(data.huaxue, function (i, val) {
+                    if(val.post_head_tag3 == ""){
+                        $(template("postTemp01", val)).appendTo(".content_wrap");
+                    }else {
+                        $(template("postTemp", val)).appendTo(".content_wrap");
+                    }
+                });
+                tagHref();
+            }else  if(a == "anquan"){
+                $.each(data.anquan, function (i, val) {
+                    if(val.post_head_tag3 == ""){
+                        $(template("postTemp01", val)).appendTo(".content_wrap");
+                    }else {
+                        $(template("postTemp", val)).appendTo(".content_wrap");
+                    }
+                });
+                tagHref();
+            }else  if(a == "zhangzhishi"){
+                $.each(data.zhangzhishi, function (i, val) {
+                    if(val.post_head_tag3 == ""){
+                        $(template("postTemp01", val)).appendTo(".content_wrap");
+                    }else {
+                        $(template("postTemp", val)).appendTo(".content_wrap");
+                    }
+                });
+                tagHref();
+            }else {
+                $.each(data.left, function (i, val) {
+                    if(val.post_head_tag3 == ""){
+                        $(template("postTemp01", val)).appendTo(".content_wrap");
+                    }else {
+                        $(template("postTemp", val)).appendTo(".content_wrap");
+                    }
+                });
+                tagHref();
+            }
+            $.each(data.author, function (i, val) {
+                $(template("authorLiTemp", val)).appendTo(".widget_salong_author .widget_img");
+            });
+            $.each(data.article, function (i, val) {
+                $(template("newsLiTemp", val)).appendTo(".widget_salong_new .widget_img");
+            });
+            $.each(data.random_article, function (i, val) {
+                $(template("randomLiTemp", val)).appendTo(".widget_salong_random .widget_img");
+            });
+            $.each(data.pinglun, function (i, val) {
+                $(template("commentsLiTemp", val)).appendTo(".widget_sl_comments .widget_img")
+            });
+            $.each(data.shipin, function (i, val) {
+                $(template("videoLiTemp", val)).appendTo(".widget_salong_hotpostvideo .widget_img")
+            });
+        }
+    });
+});

@@ -89,6 +89,7 @@
     border: 1px solid #eee;
     padding: 0 12px;
     background-color: #f8f8f8;
+    transition-duration: 0s;
 }
 
 #content .crumbs_cate a:hover,

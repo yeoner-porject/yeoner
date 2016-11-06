@@ -260,8 +260,48 @@
                                         <span class="author"><img src="{{ post_head_author_img_src }}"><a
                                                 href="{{ post_head_author_url }}"
                                                 target="_blank">{{ post_head_author }}</a></span>
-                                        <span class="actegroy"><a href="zhuangBei.html">{{ post_head_tag1 }}</a>,
-                                        <a href="cePing/cePing.html">{{ post_head_tag2 }}</a></span>
+                                        <span class="categroy"><a href="zhuangBei.html">{{ post_head_tag1 }}</a>,
+                                        <a href="">{{ post_head_tag2 }}</a>,
+                                            <a href="">{{ post_head_tag3 }}</a></span>
+                                        <span class="date">{{ post_head_date }}</span>
+                                    </div>
+                                </header>
+                                <div class="excerpt">{{ excerpt }}</div>
+                                <div class="info down">
+                                    <a href="{{ info_url }}" title="{{ post_thumb_title }}" class="readmore">
+                                        继续阅读
+                                        <i class="iconfont icon-right1"></i>
+                                    </a>
+                                    <span class="view"><i class="iconfont icon-zy"></i>{{ info_tag1 }}</span>
+                                    <span class="comment"><i class="iconfont icon-comment"></i><a
+                                            href="{{ info_tag2_url }}">{{ info_tag2 }}</a></span>
+                                    <span class="postlist-meta-like like-btn" title="点击喜欢"><i
+                                            class="iconfont icon-icon_heart"></i><span>{{ info_tag3 }}</span></span>
+                                    <span class="postlist-meta-like like-btn" title="必须登录才能收藏"><i
+                                            class="iconfont icon-xingxing101"></i><span>{{ info_tag4 }}</span></span>
+                                </div>
+                            </article>
+                        </script>
+                        <script type="text/html" id="postTemp01">
+                            <article class="post">
+                                <div class="post_thumb left">
+                                    <a href="{{ post_thumb_url }}" title="{{ post_thumb_title }}">
+                                        <img src="{{ post_thumb_src }}"
+                                             alt="{{ post_thumb_title }}">
+                                    </a>
+                                </div>
+                                <header class="post_head">
+                                    <h2>
+                                        <a href="{{ post_head_url }}" title="{{ post_thumb_title }}">
+                                            {{ post_thumb_title }}
+                                        </a>
+                                    </h2>
+                                    <div class="info up">
+                                        <span class="author"><img src="{{ post_head_author_img_src }}"><a
+                                                href="{{ post_head_author_url }}"
+                                                target="_blank">{{ post_head_author }}</a></span>
+                                        <span class="categroy"><a href="zhuangBei.html">{{ post_head_tag1 }}</a>,
+                                        <a href="">{{ post_head_tag2 }}</a></span>
                                         <span class="date">{{ post_head_date }}</span>
                                     </div>
                                 </header>
