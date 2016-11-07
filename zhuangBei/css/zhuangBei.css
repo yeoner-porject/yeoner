@@ -283,7 +283,7 @@
 
 #content .sidebar {
     width: 300px;
-        float: right;
+    float: right;
 }
 
 #content .sidebar .sidebar_widget {
@@ -430,4 +430,37 @@
     background-color: #f8f8f8;
 }
 
+#content .ias_spinner > div {
+    width: 28px;
+    height: 28px;
+    margin: 5px 0;
+    display: inline-block;
+    text-align: center;
+    background-color: #d11f3c;
+    animation: square-spin 3s 0s cubic-bezier(.09,.57,.49,.9) infinite;
+}
+
+@keyframes square-spin {
+    25% {
+        transform: perspective(100px) rotateX(180deg) rotateY(0deg);
+    }
+    50% {
+        transform: perspective(100px) rotateX(180deg) rotateY(180deg);
+    }
+    75% {
+        transform: perspective(100px) rotateX(0deg) rotateY(180deg);
+    }
+    100% {
+        transform: perspective(100px) rotateX(0deg) rotateY(0deg);
+    }
+}
+
+#content .ias_trigger a {
+    display: block;
+    padding: 7px 20px;
+    font-size: 15px;
+    background-color: #fff;
+    border: 1px solid #f4f4f4;
+    /*position: absolute;*/
+}
 
