@@ -141,11 +141,13 @@ $(function () {
                     })
                 }
                 if(documentTop > 5800){
-                    // var topVal = 5800 - documentTop;
-                    // console.log(topVal);
+                    var $topVal = 5750 - documentTop;
+                    console.log($topVal);
                     // console.log(documentHeight);
                     // console.log(windowHeight);
-                    // $(".move").css("top","auto")
+                    $(".move").css({
+                        "top": $topVal
+                    });
                 }
             });
 
