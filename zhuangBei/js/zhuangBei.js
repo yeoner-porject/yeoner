@@ -6,22 +6,23 @@ $(function () {
     var a = location.search.substring(1);
     var $crumbs_cate = $(".crumbs_cate.left");
     if (a == "zixun") {
+        $crumbs_cate.find(".cat_item").hide();
         var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="zhuangBei.html">户外装备</a>&nbsp;»&nbsp;<span class="current">资讯</span></article>');
         $article.insertAfter($crumbs_cate);
-        $crumbs_cate.find(".cat_item").hide();
         $(".current_item .sub_menu li:eq(0) a").css("color", "#eb0127");
     } else if (a == "kupin") {
+        $crumbs_cate.find("li:eq(1)").addClass("current_cat").siblings().removeClass("current_cat");
         var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="zhuangBei.html">户外装备</a>&nbsp;»&nbsp;<span class="current">酷品</span></article>');
         $article.insertAfter($crumbs_cate);
-        $crumbs_cate.find("li:eq(1)").addClass("current_cat").siblings().removeClass("current_cat");
         $(".current_item .sub_menu li:eq(1) a").css("color", "#eb0127");
     } else if (a == "ceping") {
+        $crumbs_cate.find("li:eq(3)").addClass("current_cat").siblings().removeClass("current_cat");
         var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="zhuangBei.html">户外装备</a>&nbsp;»&nbsp;<span class="current">测评</span></article>');
         $article.insertAfter($crumbs_cate);
-        $crumbs_cate.find("li:eq(3)").addClass("current_cat").siblings().removeClass("current_cat");
         $(".current_item .sub_menu li:eq(2) a").css("color", "#eb0127");
     }
     else {
+        $crumbs_cate.find("li:eq(0)").addClass("current_cat").siblings().removeClass("current_cat");
         var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<span class="current">户外装备</span></article>');
         $article.insertAfter($crumbs_cate);
     }
@@ -108,8 +109,8 @@ $(function () {
 
             // 左边主要内容第一次加载数据
             dataLoad();
-            // 左边主要内容的第二次自动加载
 
+            // 左边主要内容的第二次自动加载
             data_load_more = false;
             $(window).scroll(function () {
                 // 滚动条到顶部的垂直高度
@@ -119,9 +120,9 @@ $(function () {
                 // var windowHeight = $(window).height();
                 // 页面的文档高度
                 // var documentHeight = $(document).height();
-                if(!data_load_more){
+                if (!data_load_more) {
                     //当 documentTop >= (documentHeight-windowHeight) 说明滚动条已经滚动到底部了
-                    if (documentTop >= 4300 ) {
+                    if (documentTop >= 4300) {
                         dataLoad();
                         data_load_more = true;
                         $(".ias_spinner").hide();
@@ -133,14 +134,14 @@ $(function () {
             $(window).scroll(function () {
                 // 滚动条到顶部的垂直高度
                 var documentTop = $(document).scrollTop();
-                if(documentTop < 4860){
+                if (documentTop < 4860) {
                     $(".move").css({
                         position: "static",
                         top: 4825,
                         width: 300
                     })
                 }
-                if(documentTop >= 4860 && documentTop < 5800){
+                if (documentTop >= 4860 && documentTop < 5800) {
                     $(".move").css({
                         position: "fixed",
                         top: 36,
@@ -148,7 +149,7 @@ $(function () {
                         transition: "none"
                     })
                 }
-                if(documentTop >= 5800){
+                if (documentTop >= 5800) {
                     var $topVal = 5850 - documentTop;
                     // console.log($topVal);
                     $(".move").css({
@@ -164,14 +165,21 @@ $(function () {
                 dataLoad();
                 // 滚动条到顶部的垂直高度,被卷上去的高度
                 var currentTop = $(document).scrollTop() + 1225;
+                console.log(currentTop);
                 $(window).scroll(function () {
                     var documentTop = $(document).scrollTop();
                     $(".move").css({
                         position: "fixed",
                         top: 36
                     });
-                    if(documentTop >= currentTop){
-                        var $topVal = (currentTop+50)-documentTop;
+                    if (documentTop < 4860) {
+                        $(".move").css({
+                            position: "static",
+                            top: 4825,
+                            width: 300
+                        })
+                    }else if (documentTop >= currentTop) {
+                        var $topVal = (currentTop + 50) - documentTop;
                         $(".move").css({
                             "top": $topVal
                         });
@@ -186,13 +194,13 @@ $(function () {
             });
             $.each(data.article, function (i, val) {
                 $(template("newsLiTemp", val)).appendTo(".widget_salong_new .widget_img");
-                if(i < 6){
+                if (i < 6) {
                     $(template("newsLiTemp", val)).appendTo(".widget_salong_new01 .widget_img");
                 }
             });
             $.each(data.random_article, function (i, val) {
                 $(template("randomLiTemp", val)).appendTo(".widget_salong_random .widget_img");
-                if(i < 6){
+                if (i < 6) {
                     $(template("randomLiTemp", val)).appendTo(".widget_salong_random01 .widget_img");
                 }
             });

@@ -5,6 +5,7 @@
  * Created by lujiaolan on 16/10/21.
  */
 $(function () {
+    $(".ias_trigger").hide();
     var a = location.search.substring(1);
     var $crumbs_cate = $(".crumbs_cate.left");
     if (a == "tubu") {
@@ -104,78 +105,167 @@ $(function () {
                 });
             }
 
-            if(a == "tubu"){
-                $.each(data.tubu, function (i, val) {
-                    if(val.post_head_tag3 == ""){
-                        $(template("postTemp01", val)).appendTo(".content_wrap");
-                    }else {
-                        $(template("postTemp", val)).appendTo(".content_wrap");
-                    }
-                });
-                tagHref();
-            }else if(a == "paobu"){
-                $.each(data.paobu, function (i, val) {
-                    if(val.post_head_tag3 == ""){
-                        $(template("postTemp01", val)).appendTo(".content_wrap");
-                    }else {
-                        $(template("postTemp", val)).appendTo(".content_wrap");
-                    }
-                });
-                tagHref();
-            }else  if(a == "qixing"){
-                $.each(data.qixing, function (i, val) {
-                    if(val.post_head_tag3 == ""){
-                        $(template("postTemp01", val)).appendTo(".content_wrap");
-                    }else {
-                        $(template("postTemp", val)).appendTo(".content_wrap");
-                    }
-                });
-                tagHref();
-            }else  if(a == "huaxue"){
-                $.each(data.huaxue, function (i, val) {
-                    if(val.post_head_tag3 == ""){
-                        $(template("postTemp01", val)).appendTo(".content_wrap");
-                    }else {
-                        $(template("postTemp", val)).appendTo(".content_wrap");
-                    }
-                });
-                tagHref();
-            }else  if(a == "anquan"){
-                $.each(data.anquan, function (i, val) {
-                    if(val.post_head_tag3 == ""){
-                        $(template("postTemp01", val)).appendTo(".content_wrap");
-                    }else {
-                        $(template("postTemp", val)).appendTo(".content_wrap");
-                    }
-                });
-                tagHref();
-            }else  if(a == "zhangzhishi"){
-                $.each(data.zhangzhishi, function (i, val) {
-                    if(val.post_head_tag3 == ""){
-                        $(template("postTemp01", val)).appendTo(".content_wrap");
-                    }else {
-                        $(template("postTemp", val)).appendTo(".content_wrap");
-                    }
-                });
-                tagHref();
-            }else {
-                $.each(data.left, function (i, val) {
-                    if(val.post_head_tag3 == ""){
-                        $(template("postTemp01", val)).appendTo(".content_wrap");
-                    }else {
-                        $(template("postTemp", val)).appendTo(".content_wrap");
-                    }
-                });
-                tagHref();
+            function dataLoad() {
+                if(a == "tubu"){
+                    $.each(data.tubu, function (i, val) {
+                        if (val.post_head_tag3 == "") {
+                            $(template("postTemp01", val)).insertBefore(".ias_spinner");
+                        } else {
+                            $(template("postTemp", val)).insertBefore(".ias_spinner");
+                        }
+                    });
+                    tagHref();
+                }else if(a == "paobu"){
+                    $.each(data.paobu, function (i, val) {
+                        if (val.post_head_tag3 == "") {
+                            $(template("postTemp01", val)).insertBefore(".ias_spinner");
+                        } else {
+                            $(template("postTemp", val)).insertBefore(".ias_spinner");
+                        }
+                    });
+                    tagHref();
+                }else  if(a == "qixing"){
+                    $.each(data.qixing, function (i, val) {
+                        if (val.post_head_tag3 == "") {
+                            $(template("postTemp01", val)).insertBefore(".ias_spinner");
+                        } else {
+                            $(template("postTemp", val)).insertBefore(".ias_spinner");
+                        }
+                    });
+                    tagHref();
+                }else  if(a == "huaxue"){
+                    $.each(data.huaxue, function (i, val) {
+                        if (val.post_head_tag3 == "") {
+                            $(template("postTemp01", val)).insertBefore(".ias_spinner");
+                        } else {
+                            $(template("postTemp", val)).insertBefore(".ias_spinner");
+                        }
+                    });
+                    tagHref();
+                }else  if(a == "anquan"){
+                    $.each(data.anquan, function (i, val) {
+                        if (val.post_head_tag3 == "") {
+                            $(template("postTemp01", val)).insertBefore(".ias_spinner");
+                        } else {
+                            $(template("postTemp", val)).insertBefore(".ias_spinner");
+                        }
+                    });
+                    tagHref();
+                }else  if(a == "zhangzhishi"){
+                    $.each(data.zhangzhishi, function (i, val) {
+                        if (val.post_head_tag3 == "") {
+                            $(template("postTemp01", val)).insertBefore(".ias_spinner");
+                        } else {
+                            $(template("postTemp", val)).insertBefore(".ias_spinner");
+                        }
+                    });
+                    tagHref();
+                }else {
+                    $.each(data.left, function (i, val) {
+                        if (val.post_head_tag3 == "") {
+                            $(template("postTemp01", val)).insertBefore(".ias_spinner");
+                        } else {
+                            $(template("postTemp", val)).insertBefore(".ias_spinner");
+                        }
+                    });
+                    tagHref();
+                }
             }
+
+            dataLoad();
+
+            // 左边主要内容的第二次自动加载
+            data_load_more = false;
+            $(window).scroll(function () {
+                // 滚动条到顶部的垂直高度
+                var documentTop = $(document).scrollTop();
+                // console.log(documentTop);
+                // 浏览器的高度
+                // var windowHeight = $(window).height();
+                // 页面的文档高度
+                // var documentHeight = $(document).height();
+                if (!data_load_more) {
+                    //当 documentTop >= (documentHeight-windowHeight) 说明滚动条已经滚动到底部了
+                    if (documentTop >= 4300) {
+                        dataLoad();
+                        data_load_more = true;
+                        $(".ias_spinner").hide();
+                        $(".ias_trigger").show();
+                    }
+                }
+            });
+
+            $(window).scroll(function () {
+                // 滚动条到顶部的垂直高度
+                var documentTop = $(document).scrollTop();
+                if (documentTop < 4860) {
+                    $(".move").css({
+                        position: "static",
+                        top: 4825,
+                        width: 300
+                    })
+                }
+                if (documentTop >= 4860 && documentTop < 5800) {
+                    $(".move").css({
+                        position: "fixed",
+                        top: 36,
+                        width: 300,
+                        transition: "none"
+                    })
+                }
+                if (documentTop >= 5800) {
+                    var $topVal = 5850 - documentTop;
+                    // console.log($topVal);
+                    $(".move").css({
+                        "top": $topVal
+                    });
+                    // console.log(documentTop);
+                }
+
+            });
+
+            // 点击加载更多
+            $(".ias_trigger").on("click", function (e) {
+                dataLoad();
+                // 滚动条到顶部的垂直高度,被卷上去的高度
+                var currentTop = $(document).scrollTop() + 1225;
+                console.log(currentTop);
+                $(window).scroll(function () {
+                    var documentTop = $(document).scrollTop();
+                    $(".move").css({
+                        position: "fixed",
+                        top: 36
+                    });
+                    if (documentTop < 4860) {
+                        $(".move").css({
+                            position: "static",
+                            top: 4825,
+                            width: 300
+                        })
+                    }else if (documentTop >= currentTop) {
+                        var $topVal = (currentTop + 50) - documentTop;
+                        $(".move").css({
+                            "top": $topVal
+                        });
+                    }
+                });
+                e.stopPropagation();
+            });
+
             $.each(data.author, function (i, val) {
                 $(template("authorLiTemp", val)).appendTo(".widget_salong_author .widget_img");
             });
             $.each(data.article, function (i, val) {
                 $(template("newsLiTemp", val)).appendTo(".widget_salong_new .widget_img");
+                if (i < 6) {
+                    $(template("newsLiTemp", val)).appendTo(".widget_salong_new01 .widget_img");
+                }
             });
             $.each(data.random_article, function (i, val) {
                 $(template("randomLiTemp", val)).appendTo(".widget_salong_random .widget_img");
+                if (i < 6) {
+                    $(template("randomLiTemp", val)).appendTo(".widget_salong_random01 .widget_img");
+                }
             });
             $.each(data.pinglun, function (i, val) {
                 $(template("commentsLiTemp", val)).appendTo(".widget_sl_comments .widget_img")
