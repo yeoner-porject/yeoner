@@ -169,7 +169,7 @@ $(function () {
                     $(val).find(".test_first").text("名单公布");
                 } else {
                     $(val).find(".test_count span").css({
-                        border: "1px #d11f3c solid",    
+                        border: "1px #d11f3c solid",
                         color: "#d11f3c"
                     });
                     $tag.css("color","#d11f3c")

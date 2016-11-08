@@ -88,9 +88,18 @@ img {
 .tuijian .social,
 .quote,
 .sidebar .sidebar_widget,
-.crumbs_wrap {
+.crumbs_wrap,
+.feature_video {
     padding: 12px;
     background-color: #fff;
     border: 1px solid #f4f4f4;
     overflow: hidden;
+}
+
+.info {
+    font-size: 14px;
+}
+
+.info i {
+    margin-right: 4px;
 }
