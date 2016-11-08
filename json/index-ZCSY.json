@@ -33,7 +33,7 @@
     "test_count_span2": "3台",
     "comment_count": "人申请 ",
     "comment_count_span": "514",
-    "test_state_span": " 试用中 "
+    "test_state_span": "试用中"
   },
   {
     "article_url": "http://www.yeoner.com/test/45614.html",
@@ -45,6 +45,6 @@
     "test_count_span2": "3件",
     "comment_count": "人申请 ",
     "comment_count_span": "648",
-    "test_state_span": " 试用中 "
+    "test_state_span": "试用中"
   }
 ]

@@ -155,6 +155,25 @@ $(function () {
             $.each(data, function (i,val) {
                 var $li = $(template("testTemp",val));
                 $li.appendTo(".test_list .layout_ul");
+            });
+            var zhongCeArr = $(".test_list .layout_ul > li");
+            $.each(zhongCeArr, function (i, val) {
+                var $tag = $(val).find(".test_state span");
+                // console.log(i+$tag.text());
+                if($tag.text() == "试用中"){
+                    $(val).find(".test_count span").css({
+                        border: "1px #6fd469 solid",
+                        color: "#6fd469"
+                    });
+                    $tag.css("color","#6fd469");
+                    $(val).find(".test_first").text("名单公布");
+                } else {
+                    $(val).find(".test_count span").css({
+                        border: "1px #d11f3c solid",    
+                        color: "#d11f3c"
+                    });
+                    $tag.css("color","#d11f3c")
+                }
             })
         }
     });

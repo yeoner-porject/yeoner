@@ -430,11 +430,6 @@
     margin: 8px;
 }
 
-#content .cate .test_main.test_apply .test_count span {
-    border: 1px #d11f3c solid;
-    color: #d11f3c;
-}
-
 #content .cate .test_main .test_count span {
     padding: 2px 8px;
     margin: 0 4px;
@@ -450,8 +445,13 @@
     color: #d11f3c;
 }
 
-#content .cate .test_main.test_apply .test_state {
-    color: #d11f3c;
+#content .cate .test_main .test_first {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2px 8px;
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
 }
 
 #content .effect0 h3,
