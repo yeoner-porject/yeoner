@@ -208,6 +208,8 @@ ul {
     border-radius: 5px;
     /*取消浏览器默认样式*/
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 #header .menu_search_form .search_type {
