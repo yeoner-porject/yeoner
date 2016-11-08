@@ -109,50 +109,76 @@ $(function () {
             // 左边主要内容第一次加载数据
             dataLoad();
             // 左边主要内容的第二次自动加载
+
             data_load_more = false;
             $(window).scroll(function () {
                 // 滚动条到顶部的垂直高度
                 var documentTop = $(document).scrollTop();
+                // console.log(documentTop);
                 // 浏览器的高度
-                var windowHeight = $(window).height();
+                // var windowHeight = $(window).height();
                 // 页面的文档高度
-                var documentHeight = $(document).height();
+                // var documentHeight = $(document).height();
                 if(!data_load_more){
                     //当 documentTop >= (documentHeight-windowHeight) 说明滚动条已经滚动到底部了
-                    if (documentTop >= 4350 ) {
+                    if (documentTop >= 4300 ) {
                         dataLoad();
                         data_load_more = true;
                         $(".ias_spinner").hide();
                         $(".ias_trigger").show();
                     }
                 }
-                if(documentTop < 4815){
+            });
+
+            $(window).scroll(function () {
+                // 滚动条到顶部的垂直高度
+                var documentTop = $(document).scrollTop();
+                if(documentTop < 4860){
                     $(".move").css({
                         position: "static",
-                        top: 4815,
+                        top: 4825,
                         width: 300
                     })
                 }
-                if(documentTop >= 4815 && documentTop < 5800){
+                if(documentTop >= 4860 && documentTop < 5800){
                     $(".move").css({
                         position: "fixed",
                         top: 36,
-                        width: 300
+                        width: 300,
+                        transition: "none"
                     })
                 }
-                if(documentTop > 5800){
-                    var $topVal = 5750 - documentTop;
-                    console.log($topVal);
-                    // console.log(documentHeight);
-                    // console.log(windowHeight);
+                if(documentTop >= 5800){
+                    var $topVal = 5850 - documentTop;
+                    // console.log($topVal);
                     $(".move").css({
                         "top": $topVal
                     });
+                    // console.log(documentTop);
                 }
+
             });
 
             // 点击加载更多
-            $(".ias_trigger").click(dataLoad);
+            $(".ias_trigger").on("click", function (e) {
+                dataLoad();
+                // 滚动条到顶部的垂直高度,被卷上去的高度
+                var currentTop = $(document).scrollTop() + 1225;
+                $(window).scroll(function () {
+                    var documentTop = $(document).scrollTop();
+                    $(".move").css({
+                        position: "fixed",
+                        top: 36
+                    });
+                    if(documentTop >= currentTop){
+                        var $topVal = (currentTop+50)-documentTop;
+                        $(".move").css({
+                            "top": $topVal
+                        });
+                    }
+                });
+                e.stopPropagation();
+            });
 
             // 侧边栏各项数据加载
             $.each(data.author, function (i, val) {
@@ -160,9 +186,15 @@ $(function () {
             });
             $.each(data.article, function (i, val) {
                 $(template("newsLiTemp", val)).appendTo(".widget_salong_new .widget_img");
+                if(i < 6){
+                    $(template("newsLiTemp", val)).appendTo(".widget_salong_new01 .widget_img");
+                }
             });
             $.each(data.random_article, function (i, val) {
                 $(template("randomLiTemp", val)).appendTo(".widget_salong_random .widget_img");
+                if(i < 6){
+                    $(template("randomLiTemp", val)).appendTo(".widget_salong_random01 .widget_img");
+                }
             });
             $.each(data.pinglun, function (i, val) {
                 $(template("commentsLiTemp", val)).appendTo(".widget_sl_comments .widget_img")
