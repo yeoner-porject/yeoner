@@ -13,6 +13,38 @@
         <script src="../common/js/toTop.js"></script>
         <script src="../yeWanZhiDao/js/bootstrap.min.js"></script>
         <script src="../yeWanZhiDao/js/zhiDao.js"></script>
+
+        <style>
+            #toTop {
+                position: fixed;
+                right: 20px;
+                bottom: 20px;
+                padding: 0 5px;
+                z-index: 100;
+            }
+
+            #toTop .top_btn {
+                width: 50px;
+                height: 40px;
+                display: none;
+                background-color: #d9d9d9;
+                border-radius: 3px;
+                text-align: center;
+                line-height: 40px;
+                color: #a6a6a6;
+            }
+            #toTop .top_btn:hover {
+                color: #a6a6a6;
+                background-color: #d0d0d0;
+                transition: linear .1s;
+            }
+
+            #toTop .top_btn i {
+                font-size: 20px;
+                padding: 10px;
+                font-weight: 100;
+            }
+        </style>
     </head>
     <body>
         <!--头部-->
@@ -20,7 +52,7 @@
             <div class="container">
                 <!-- logo -->
                 <div class="aw-logo hidden-xs">
-                    <a href="http://ask.yeoner.com"></a>
+                    <a href="zhiDao.html"></a>
                 </div>
                 <!-- 搜索框 -->
                 <div class="aw-search-box  hidden-xs hidden-sm">
@@ -39,7 +71,7 @@
                                 </p>
                             </div>
                             <div class="mod-footer">
-                                <a href="http://ask.yeoner.com/publish" onClick="$('#header_publish').click();" class="pull-right btn btn-mini btn-success publish">发起问题</a>
+                                <a href="http://ask.yeoner.com/publish" class="pull-right btn btn-mini btn-success publish">发起问题</a>
                             </div>
                         </div>
                     </form>
@@ -56,7 +88,7 @@
                     <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse">
                         <ul class="nav navbar-nav">
                             <li>
-                                <a href="http://ask.yeoner.com" class="active">
+                                <a href="zhiDao.html" class="active">
                                     <i class="icon icon-list"></i>
                                     发现
                                 </a>
@@ -64,34 +96,20 @@
                             <!-- <li><a href="http://ask.yeoner.com/question/" class="">问题</a></li>
                             <li><a href="http://ask.yeoner.com/article/" class="">文章</a></li> -->
                             <li>
-                                <a href="http://ask.yeoner.com/topic/" >
+                                <a href="zhiDao_huaTi.html" >
                                     <i class="icon iconfont icon-duihuakuang2"></i>
                                     话题
                                 </a>
                             </li>
-
-
-
                             <li>
-
                                 <a style="font-weight:bold;">· · ·</a>
-
                                 <div class="dropdown-list pull-right">
-
                                     <ul id="extensions-nav-list">
-
-
-
                                     </ul>
-
                                 </div>
-
                             </li>
-
                         </ul>
-
                     </nav>
-
                 </div>
                 <!-- 用户栏 -->
                 <div class="aw-user-nav">
@@ -116,12 +134,12 @@
                     <div class="col-sm-12">
                         <ul class="list">
                             <li class="active"><a href="../yeWanZhiDao/zhiDao.html">全部</a></li>
-                            <li><a href="../index.html">野玩儿主站</a></li>
-                            <li><a href="http://ask.yeoner.com/explore/category-1">户外知识</a></li>
-                            <li><a href="http://ask.yeoner.com/explore/category-3">运动装备</a></li>
-                            <li><a href="http://ask.yeoner.com/explore/category-4">出行线路</a></li>
-                            <li><a href="http://ask.yeoner.com/explore/category-5">户外安全</a></li>
-                            <li><a href="http://ask.yeoner.com/explore/category-6">极限运动</a></li>
+                            <li><a href="../index.html" target="_blank">野玩儿主站</a></li>
+                            <li><a href="zhiDao_list/zhiDao_ZhiShi.html">户外知识</a></li>
+                            <li><a href="zhiDao_list/zhiDao_ZhuangBei.html">运动装备</a></li>
+                            <li><a href="zhiDao_list/zhiDao_XianLu.html">出行线路</a></li>
+                            <li><a href="zhiDao_list/zhiDao_AnQuan.html">户外安全</a></li>
+                            <li><a href="zhiDao_list/zhiDao_YunDong.html">极限运动</a></li>
                         </ul>
                     </div>
                 </div>
@@ -131,20 +149,28 @@
                     <div class="aw-content-wrap clearfix">
                         <div class="col-sm-12 col-md-9 aw-main-content">
                             <ul class="nav nav-tabs aw-nav-tabs active hidden-xs">
-                                <li><a href="http://ask.yeoner.com/sort_type-unresponsive">等待回复</a></li>
-                                <li><a id="sort_control_hot" href="http://ask.yeoner.com/sort_type-hot__day-7">热门</a></li>
-                                <li><a href="http://ask.yeoner.com/is_recommend-1">推荐</a></li>
+                                <li><a class="huiFu">等待回复</a></li>
+                                <li><a class="reMen">热门</a></li>
+                                <li><a class="tuiJian">推荐</a></li>
                                 <li class="active"><a href="../yeWanZhiDao/zhiDao.html">最新</a></li>
                                 <h2 class="hidden-xs">
                                     <i class="icon icon-list"></i>发现
                                 </h2>
                             </ul>
-                            <div class="aw-mod aw-explore-list">
+                            <div class="aw-tabs" style="display: none">
+                                <ul>
+                                    <li><a day="30">30天</a></li>
+                                    <li class="active"><a day="7">7天</a></li>
+                                    <li><a day="1">当天</a></li>
+                                </ul>
+                            </div>
+                            <div id="list1" class="aw-mod aw-explore-list">
                                 <div class="mod-body">
                                     <div class="aw-common-list">
 
                                     </div>
-                                    <script type="text/html" id="aw-item">
+                                <!--模板-->
+                                <script type="text/html" id="quanBu-aw-item">
                                         <div class="{{aw_item_class}}">
                                             <a class="aw-user-name hidden-xs" href="{{aw_item_url}}">
                                                 <img src="{{aw_item_src}}" alt="">
@@ -179,6 +205,7 @@
                                             </div>
                                         </div>
                                     </script>
+                                <!--模板end-->
                                 </div>
                                 <div class="mod-footer">
                                     <div class="page-control">
@@ -204,6 +231,150 @@
                                         </ul>
                                     </div>
                                 </div>
+                            </div>
+                            <div id="list2" class="aw-mod aw-explore-list" style="display: none">
+                                <div class="mod-body">
+                                    <div class="aw-common-list">
+                                        <div class="aw-item article">
+                                            <a class="aw-user-name hidden-xs" data-id="1" href="http://ask.yeoner.com/people/liangjing414" rel="nofollow"><img src="http://ask.yeoner.com/uploads/avatar/000/00/00/01_avatar_max.jpg" alt=""><i class="icon icon-v i-ve"></i></a>	<div class="aw-question-content">
+                                            <h4>
+                                                <a href="http://ask.yeoner.com/article/1">10招DIY户外装备神技 超炫超实用！</a>
+                                            </h4>
+
+                                            <p>
+                                                <a class="aw-question-tags" href="http://ask.yeoner.com/explore/category-3">运动装备</a>
+                                                • 							<a href="http://ask.yeoner.com/people/liangjing414" class="aw-user-name">liangjing414</a> <span class="text-color-999">发表了文章 • 0 个评论 • 65 次浏览 • 2016-07-19 10:19</span>
+                                                <span class="text-color-999 related-topic collapse"> • 来自相关话题</span>
+                                            </p>
+
+                                            <!-- 文章内容调用 -->
+                                            <div class="markitup-box">
+                                                <div class="img pull-right"></div>
+                                                出门旅行或者参加野外活动，你常常担心自己拿的东西太多背不动？没事，今天野玩君就教你10招DIY户外装备的神技，让你的行李大瘦身，多带几样东西都毫无压力。<br>
+                                                <br>
+                                                1.自制露营灯：把头灯反扣在白色的水壶上，就能将其改造成一盏营地灯。<br>
+                                                <br>
+                                                [4 (1)]<br>
+                                                <br>
+                                                2.腰带变身厨房挂钩：在野外，要想把厨具挂起来，这时候不妨把腰带困在树上，再陪几个挂钩就能轻松搞定。<br>
+                                                <br>
+                                                [5 (1)]<br>
+                                                <br>
+                                                3.夏天露营防蚊：可以在篝火里放点鼠尾草来熏一下。<br>
+                                                <br>
+                                                [2 (1)]<br>
+                                                <br>
+                                                4.DIY蜡烛的烛台：烧烤签+蜡烛，在野外点燃蜡烛也不怕没地方放置或放不稳了。<br>
+                                                <br>
+                                                [3 (1)]<br>
+                                                <br>
+                                                5.自制生火燃料：涂了蜡的化妆棉是很好的引火物，要是把它做成饼状，更便于携带。<br>
+                                                <br>
+                                                [9 (1)]<br>
+                                                <br>
+                                                6.将药瓶改装成你的药箱：其实，药瓶可以用来装一些创可贴、晕车贴、棉签、口服液等药品，这就成了你的迷你工具箱。<br>
+                                                <br>
+                                                [4]<br>
+                                                <br>
+                                                7.自制一盏油灯：找来合适的瓶子（比如旅行装的护肤品瓶子），装上油和灯芯就可以了。不过要注意，如果瓶子的瓶口没有金属包裹，就需要自行包裹，以防烧坏瓶子。<br>
+                                                <br>
+                                                [1 (1)]<br>
+                                                <br>
+                                                8.用塑料的婴儿食品盒装火柴和粘砂纸，放置被压坏或弄湿。<br>
+                                                <br>
+                                                [11]<br>
+                                                <br>
+                                                9.小盒子装佐料：不管是露营还是长途旅行，用小小的盒子（比如口香糖盒子等）装一些佐料，就不用担心路上吃不习惯了。<br>
+                                                <br>
+                                                [10]<br>
+                                                <br>
+                                                10.巧用鸡蛋纸托盘：出去露营烧烤时，可以将火石装在纸托盘里，以防摩擦起火，或被压碎或潮湿。<br>
+                                                <br>
+                                                [6 (1)]<br>
+                                                <br>
+                                                Via：diyncrafts 			<a class="more" href="http://ask.yeoner.com/article/1">查看全部</a>
+                                            </div>
+
+                                            <div class="collapse all-content">
+                                                出门旅行或者参加野外活动，你常常担心自己拿的东西太多背不动？没事，今天野玩君就教你10招DIY户外装备的神技，让你的行李大瘦身，多带几样东西都毫无压力。<br>
+                                                <br>
+                                                1.自制露营灯：把头灯反扣在白色的水壶上，就能将其改造成一盏营地灯。<br>
+                                                <br>
+                                                [4 (1)]<br>
+                                                <br>
+                                                2.腰带变身厨房挂钩：在野外，要想把厨具挂起来，这时候不妨把腰带困在树上，再陪几个挂钩就能轻松搞定。<br>
+                                                <br>
+                                                [5 (1)]<br>
+                                                <br>
+                                                3.夏天露营防蚊：可以在篝火里放点鼠尾草来熏一下。<br>
+                                                <br>
+                                                [2 (1)]<br>
+                                                <br>
+                                                4.DIY蜡烛的烛台：烧烤签+蜡烛，在野外点燃蜡烛也不怕没地方放置或放不稳了。<br>
+                                                <br>
+                                                [3 (1)]<br>
+                                                <br>
+                                                5.自制生火燃料：涂了蜡的化妆棉是很好的引火物，要是把它做成饼状，更便于携带。<br>
+                                                <br>
+                                                [9 (1)]<br>
+                                                <br>
+                                                6.将药瓶改装成你的药箱：其实，药瓶可以用来装一些创可贴、晕车贴、棉签、口服液等药品，这就成了你的迷你工具箱。<br>
+                                                <br>
+                                                [4]<br>
+                                                <br>
+                                                7.自制一盏油灯：找来合适的瓶子（比如旅行装的护肤品瓶子），装上油和灯芯就可以了。不过要注意，如果瓶子的瓶口没有金属包裹，就需要自行包裹，以防烧坏瓶子。<br>
+                                                <br>
+                                                [1 (1)]<br>
+                                                <br>
+                                                8.用塑料的婴儿食品盒装火柴和粘砂纸，放置被压坏或弄湿。<br>
+                                                <br>
+                                                [11]<br>
+                                                <br>
+                                                9.小盒子装佐料：不管是露营还是长途旅行，用小小的盒子（比如口香糖盒子等）装一些佐料，就不用担心路上吃不习惯了。<br>
+                                                <br>
+                                                [10]<br>
+                                                <br>
+                                                10.巧用鸡蛋纸托盘：出去露营烧烤时，可以将火石装在纸托盘里，以防摩擦起火，或被压碎或潮湿。<br>
+                                                <br>
+                                                [6 (1)]<br>
+                                                <br>
+                                                Via：diyncrafts		</div>
+                                            <!-- end 文章内容调用 -->
+                                        </div>
+                                        </div>
+                                        <div class="aw-item active">
+                                            <a class="aw-user-name hidden-xs" data-id="16" href="http://ask.yeoner.com/people/%E4%B8%80%E7%B2%92%E7%B1%B3" rel="nofollow"><img src="http://ask.yeoner.com/uploads/avatar/000/00/00/16_avatar_max.jpg" alt=""></a>	<div class="aw-question-content">
+                                            <h4>
+                                                <a href="http://ask.yeoner.com/question/10">想去华山，但自身有点恐高，想问问会不会受到影响？</a>
+                                            </h4>
+                                            <a href="http://ask.yeoner.com/question/10#!answer_form" class="pull-right text-color-999">回复</a>
+
+                                            <p>
+                                                <a class="aw-question-tags" href="http://ask.yeoner.com/explore/category-4">出行线路</a>
+                                                • 													<a href="http://ask.yeoner.com/people/%E4%B8%80%E7%B2%92%E7%B1%B3" class="aw-user-name">一粒米</a>				<span class="text-color-999">发起了问题 • 1 人关注 • 0 个回复 • 35 次浏览 • 2015-11-19 19:38				</span>
+                                                <span class="text-color-999 related-topic collapse"> • 来自相关话题</span>
+                                            </p>
+
+                                        </div>
+                                        </div>
+                                        <div class="aw-item active">
+                                            <a class="aw-user-name hidden-xs" data-id="20" href="http://ask.yeoner.com/people/%E5%B0%8F%E9%97%AE" rel="nofollow"><img src="http://ask.yeoner.com/uploads/avatar/000/00/00/20_avatar_max.jpg" alt=""></a>	<div class="aw-question-content">
+                                            <h4>
+                                                <a href="http://ask.yeoner.com/question/54">如何选择户外保险？</a>
+                                            </h4>
+                                            <a href="http://ask.yeoner.com/question/54#!answer_form" class="pull-right text-color-999">回复</a>
+
+                                            <p>
+                                                <a class="aw-question-tags" href="http://ask.yeoner.com/explore/category-1">户外知识</a>
+                                                • 													<a href="http://ask.yeoner.com/people/%E5%B0%8F%E9%97%AE" class="aw-user-name">小问</a>				<span class="text-color-999">发起了问题 • 0 人关注 • 0 个回复 • 30 次浏览 • 2015-11-20 03:58				</span>
+                                                <span class="text-color-999 related-topic collapse"> • 来自相关话题</span>
+                                            </p>
+
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mod-footer"></div>
                             </div>
                         </div>
                         <!--侧边栏-->
@@ -239,7 +410,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>

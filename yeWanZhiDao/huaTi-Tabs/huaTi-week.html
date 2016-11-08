@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>话题广场 - 野玩儿知道</title>
+    <link rel="stylesheet" type="text/css" href="../../common/iconfont/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../common/css/toTop.css">
+    <link rel="stylesheet" type="text/css" href="../../yeWanZhiDao/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../yeWanZhiDao/css/zhiDao_huaTi.css">
+
+    <script src="../../common/js/jquery-3.0.0.js"></script>
+    <script src="../../common/js/artTemplate.js"></script>
+    <script src="../../common/js/toTop.js"></script>
+    <script src="../../yeWanZhiDao/js/bootstrap.min.js"></script>
+    <script src="../../yeWanZhiDao/js/zhiDao_huaTi.js"></script>
+
+    <style>
+        #toTop {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            padding: 0 5px;
+            z-index: 100;
+        }
+
+        #toTop .top_btn {
+            width: 50px;
+            height: 40px;
+            display: none;
+            background-color: #d9d9d9;
+            border-radius: 3px;
+            text-align: center;
+            line-height: 40px;
+            color: #a6a6a6;
+        }
+        #toTop .top_btn:hover {
+            color: #a6a6a6;
+            background-color: #d0d0d0;
+            transition: linear .1s;
+        }
+
+        #toTop .top_btn i {
+            font-size: 20px;
+            padding: 10px;
+            font-weight: 100;
+        }
+    </style>
+</head>
+<body>
+<!--头部-->
+<header id="header" class="aw-top-menu-wrap">
+    <div class="container">
+        <!-- logo -->
+        <div class="aw-logo hidden-xs">
+            <a href="../zhiDao.html"></a>
+        </div>
+        <!-- 搜索框 -->
+        <div class="aw-search-box  hidden-xs hidden-sm">
+            <form class="navbar-search" action="http://ask.yeoner.com/search/" id="global_search_form" method="post">
+                <input class="form-control search-query" type="text" placeholder="搜索问题、话题或人" autocomplete="off" name="q" id="aw-search-query" />
+                        <span title="搜索" id="global_search_btns">
+                            <i class="icon iconfont icon-search"></i>
+                        </span>
+                <div class="aw-dropdown" id="aw-dropdown">
+                    <div class="mod-body">
+                        <p class="title">输入关键字进行搜索</p>
+                        <ul class="aw-dropdown-list collapse"></ul>
+                        <p class="search">
+                            <span>搜索:</span>
+                            <a></a>
+                        </p>
+                    </div>
+                    <div class="mod-footer">
+                        <a href="http://ask.yeoner.com/publish" class="pull-right btn btn-mini btn-success publish">发起问题</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- 导航 -->
+        <div class="aw-top-nav navbar">
+            <div class="navbar-header">
+                <button  class="navbar-toggle pull-left">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="../zhiDao.html" >
+                            <i class="icon icon-list"></i>
+                            发现
+                        </a>
+                    </li>
+                    <!-- <li><a href="http://ask.yeoner.com/question/" class="">问题</a></li>
+                    <li><a href="http://ask.yeoner.com/article/" class="">文章</a></li> -->
+                    <li>
+                        <a href="../zhiDao_huaTi.html" class="active">
+                            <i class="icon iconfont icon-duihuakuang2"></i>
+                            话题
+                        </a>
+                    </li>
+                    <li>
+                        <a style="font-weight:bold;">· · ·</a>
+                        <div class="dropdown-list pull-right">
+                            <ul id="extensions-nav-list">
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- 用户栏 -->
+        <div class="aw-user-nav">
+
+            <!-- 登陆&注册栏 -->
+
+
+            <a class="login btn btn-normal btn-primary" href="http://ask.yeoner.com/login/">登录</a>
+
+            <a class="register btn btn-normal btn-success" href="http://ask.yeoner.com/account/register/">注册</a>
+
+            <!-- end 登陆&注册栏 -->
+
+        </div>
+    </div>
+</header>
+
+<!--内容-->
+<div id="content" class="aw-container-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="aw-content-wrap clearfix">
+                <div class="col-sm-12 col-md-9 aw-main-content">
+                    <!-- tab切换 -->
+                    <ul class="nav nav-tabs aw-nav-tabs active hidden-xs">
+                        <li><a href="../huaTi-Tabs/huaTi-month.html">30 天</a></li>
+                        <li class="active"><a href="../huaTi-Tabs/huaTi-week.html">7 天</a></li>
+                        <li><a href="../zhiDao_huaTi.html">全部</a></li>
+                        <h2 class="hidden-xs"><i class="icon iconfont icon-duihuakuang2"></i> 热门话题</h2>
+                    </ul>
+                    <!-- 话题分类 -->
+                    <div class="aw-mod aw-topic-category">
+                        <div class="mod-body clearfix">
+                            <ul>
+                                <li>
+                                    <a class="active" href="../zhiDao_huaTi.html">全部话题</a>
+                                </li>
+                                <li>
+                                    <a class="beiJing" href="javascript:;">北京游</a>
+                                </li>
+                                <li>
+                                    <a class="pinPai" href="javascript:;">户外品牌</a>
+                                </li>
+                                <li>
+                                    <a class="shiPin" href="javascript:;">户外视频</a>
+                                </li>
+                                <li>
+                                    <a class="yunDong" href="javascript:;">运动相机</a>
+                                </li>
+                                <li>
+                                    <a class="qiXing" href="javascript:;">骑行</a>
+                                </li>
+                                <li>
+                                    <a class="gaoYuan" href="javascript:;">高原反应</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 我关注的话题 -->
+                    <div id="quanBu" class="aw-mod aw-topic-list">
+                        <div class="mod-body clearfix">
+
+                        </div>
+                        <!--模板-->
+                        <script type="text/html" id="weekHuaTi">
+                            <div class="aw-item">
+                                <!-- 话题图片 -->
+                                <a class="img aw-border-radius-5" href="{{aw_item_url}}">
+                                    <img src="{{aw_item_src}}" alt="">
+                                </a>
+                                <p class="clearfix">
+                                    <!-- 话题内容 -->
+                                    <span class="topic-tag">
+                                        <a class="text" href="{{clearfix_a}}">
+                                            {{clearfix_a_t}}
+                                        </a>
+                                    </span>
+                                </p>
+                                <p class="text-color-999">
+                                    <span>{{aw_item_p1_span1}}</span>
+                                    <span>{{aw_item_p1_span2}}</span>
+                                </p>
+                                <p class="text-color-999">
+                                    {{aw_item_p2}}
+                                </p>
+                            </div>
+                        </script>
+                        <!--模板end-->
+                        <div class="mod-footer clearfix">
+                            <div class="page-control">
+                                <ul class="pagination pull-right">
+                                    <li class="active"><a href="javascript:;">1</a></li>
+                                    <li><a href="http://ask.yeoner.com/topic/page-2">2</a></li>
+                                    <li><a href="http://ask.yeoner.com/topic/page-3">3</a></li>
+                                    <li><a href="http://ask.yeoner.com/topic/page-4">4</a></li>
+                                    <li><a href="http://ask.yeoner.com/topic/page-2">&gt;</a></li>
+                                    <li><a href="http://ask.yeoner.com/topic/page-5">&gt;&gt;</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--北京游-->
+                    <div id="beiJing" style="display: none" class="aw-mod aw-topic-list">
+                        <div class="mod-body clearfix">
+                            <div class="aw-item">
+                                <!-- 话题图片 -->
+                                <a class="img aw-border-radius-5" href="http://ask.yeoner.com/topic/%E5%8C%97%E4%BA%AC%E6%B8%B8" data-id="11">
+                                    <img src="http://ask.yeoner.com/static/common/topic-mid-img.png" alt="">
+                                </a>
+                                <!-- end 话题图片 -->
+                                <p class="clearfix">
+                                    <!-- 话题内容 -->
+                                    <span class="topic-tag">
+                                        <a class="text" href="http://ask.yeoner.com/topic/%E5%8C%97%E4%BA%AC%E6%B8%B8" data-id="11">北京游</a>
+                                    </span>
+                                    <!-- end 话题内容 -->
+                                </p>
+                                <p class="text-color-999">
+                                    <span>0 个讨论</span>
+                                    <span>1 个关注</span>
+                                </p>
+                                <p class="text-color-999">
+                                    7 天新增 0 个讨论, 30 天新增 0 个讨论                                </p>
+                            </div>
+                        </div>
+                        <div class="mod-footer clearfix">
+                        </div>
+                    </div>
+                    <!--品牌-->
+                    <div id="pinPai" style="display: none" class="aw-mod aw-topic-list">
+                        <div class="mod-body clearfix">
+                            <div class="aw-item">
+                                <!-- 话题图片 -->
+                                <a class="img aw-border-radius-5" href="http://ask.yeoner.com/topic/%E6%88%B7%E5%A4%96%E5%93%81%E7%89%8C" data-id="4">
+                                    <img src="http://ask.yeoner.com/static/common/topic-mid-img.png" alt="">
+                                </a>
+                                <!-- end 话题图片 -->
+                                <p class="clearfix">
+                                    <!-- 话题内容 -->
+                                    <span class="topic-tag">
+                                        <a class="text" href="http://ask.yeoner.com/topic/%E6%88%B7%E5%A4%96%E5%93%81%E7%89%8C" data-id="4">户外品牌</a>
+                                    </span>
+                                    <!-- end 话题内容 -->
+                                </p>
+                                <p class="text-color-999">
+                                    <span>2 个讨论</span>
+                                    <span>1 个关注</span>
+                                </p>
+                                <p class="text-color-999">
+                                    7 天新增 2 个讨论, 30 天新增 2 个讨论                                </p>
+                            </div>
+                        </div>
+                        <div class="mod-footer clearfix">
+                        </div>
+                    </div>
+                    <!--视频-->
+                    <div id="shiPin" style="display: none" class="aw-mod aw-topic-list">
+                        <div class="mod-body clearfix">
+                            <div class="aw-item">
+                                <!-- 话题图片 -->
+                                <a class="img aw-border-radius-5" href="http://ask.yeoner.com/topic/%E6%88%B7%E5%A4%96%E8%A7%86%E9%A2%91" data-id="10">
+                                    <img src="http://ask.yeoner.com/static/common/topic-mid-img.png" alt="">
+                                </a>
+                                <!-- end 话题图片 -->
+                                <p class="clearfix">
+                                    <!-- 话题内容 -->
+                                    <span class="topic-tag">
+                                        <a class="text" href="http://ask.yeoner.com/topic/%E6%88%B7%E5%A4%96%E8%A7%86%E9%A2%91" data-id="10">户外视频</a>
+                                    </span>
+                                    <!-- end 话题内容 -->
+                                </p>
+                                <p class="text-color-999">
+                                    <span>0 个讨论</span>
+                                    <span>1 个关注</span>
+                                </p>
+                                <p class="text-color-999">
+                                    7 天新增 0 个讨论, 30 天新增 0 个讨论                                </p>
+                            </div>
+                        </div>
+                        <div class="mod-footer clearfix">
+                        </div>
+                    </div>
+                    <!--运动-->
+                    <div id="yunDong" style="display: none" class="aw-mod aw-topic-list">
+                        <div class="mod-body clearfix">
+                            <div class="aw-item">
+                                <!-- 话题图片 -->
+                                <a class="img aw-border-radius-5" href="http://ask.yeoner.com/topic/%E8%BF%90%E5%8A%A8%E7%9B%B8%E6%9C%BA" data-id="9">
+                                    <img src="http://ask.yeoner.com/static/common/topic-mid-img.png" alt="">
+                                </a>
+                                <!-- end 话题图片 -->
+                                <p class="clearfix">
+                                    <!-- 话题内容 -->
+                                    <span class="topic-tag">
+                                        <a class="text" href="http://ask.yeoner.com/topic/%E8%BF%90%E5%8A%A8%E7%9B%B8%E6%9C%BA" data-id="9">运动相机</a>
+                                    </span>
+                                    <!-- end 话题内容 -->
+                                </p>
+                                <p class="text-color-999">
+                                    <span>0 个讨论</span>
+                                    <span>1 个关注</span>
+                                </p>
+                                <p class="text-color-999">
+                                    7 天新增 0 个讨论, 30 天新增 0 个讨论                                </p>
+                            </div>
+                        </div>
+                        <div class="mod-footer clearfix">
+                        </div>
+                    </div>
+                    <!--骑行-->
+                    <div id="qiXing" style="display: none" class="aw-mod aw-topic-list">
+                        <div class="mod-body clearfix">
+                            <div class="aw-item">
+                                <!-- 话题图片 -->
+                                <a class="img aw-border-radius-5" href="http://ask.yeoner.com/topic/%E9%AA%91%E8%A1%8C" data-id="6">
+                                    <img src="http://ask.yeoner.com/static/common/topic-mid-img.png" alt="">
+                                </a>
+                                <!-- end 话题图片 -->
+                                <p class="clearfix">
+                                    <!-- 话题内容 -->
+                                    <span class="topic-tag">
+                                        <a class="text" href="http://ask.yeoner.com/topic/%E9%AA%91%E8%A1%8C" data-id="6">骑行</a>
+                                    </span>
+                                    <!-- end 话题内容 -->
+                                </p>
+                                <p class="text-color-999">
+                                    <span>5 个讨论</span>
+                                    <span>1 个关注</span>
+                                </p>
+                                <p class="text-color-999">
+                                    7 天新增 5 个讨论, 30 天新增 5 个讨论                                </p>
+                            </div>
+                        </div>
+                        <div class="mod-footer clearfix">
+                        </div>
+                    </div>
+                    <!--高原-->
+                    <div id="gaoYuan" style="display: none" class="aw-mod aw-topic-list">
+                        <div class="mod-body clearfix">
+                            <div class="aw-item">
+                                <!-- 话题图片 -->
+                                <a class="img aw-border-radius-5" href="http://ask.yeoner.com/topic/%E9%AB%98%E5%8E%9F%E5%8F%8D%E5%BA%94" data-id="1">
+                                    <img src="http://ask.yeoner.com/static/common/topic-mid-img.png" alt="">
+                                </a>
+                                <!-- end 话题图片 -->
+                                <p class="clearfix">
+                                    <!-- 话题内容 -->
+                                    <span class="topic-tag">
+                                        <a class="text" href="http://ask.yeoner.com/topic/%E9%AB%98%E5%8E%9F%E5%8F%8D%E5%BA%94" data-id="1">高原反应</a>
+                                    </span>
+                                    <!-- end 话题内容 -->
+                                </p>
+                                <p class="text-color-999">
+                                    <span>2 个讨论</span>
+                                    <span>0 个关注</span>
+                                </p>
+                                <p class="text-color-999">
+                                    7 天新增 2 个讨论, 30 天新增 2 个讨论                                </p>
+                            </div>
+                        </div>
+                        <div class="mod-footer clearfix">
+                        </div>
+                    </div>
+                </div>
+                <!--侧边栏-->
+                <div class="col-sm-3 col-md-3 aw-side-bar hidden-xs hidden-sm">
+                    <!-- 今日话题 -->
+                    <div class="aw-mod topic-daily hidden-xs">
+                        <div class="mod-head">
+                            <h3>今日话题</h3>
+                        </div>
+                        <div class="mod-body">
+                            <dl>
+                                <dt class="pull-left">
+                                    <!-- 话题图片 -->
+                                    <a data-id="" class="img aw-border-radius-5" href="../zhiDao_huaTi.html">
+                                        <img src="http://ask.yeoner.com/static/common/topic-mid-img.png" alt="">
+                                    </a>
+                                    <!-- end 话题图片 -->
+                                </dt>
+                                <dd class="pull-left">
+                                </dd>
+                            </dl>
+                            <!-- 话题描述 -->
+                            <p>
+                                <span></span>
+                                ...<a href="../zhiDao_huaTi.html">进入话题 »</a>
+                            </p>
+                            <!-- end 话题描述 -->
+                        </div>
+                    </div>
+                    <!-- 新增话题 -->
+                    <div class="aw-mod new-topic">
+                        <div class="mod-head">
+                            <h3>新增话题</h3>
+                        </div>
+                        <div class="mod-body clearfix">
+                            <div class="aw-topic-bar">
+                                <div class="topic-bar clearfix">
+                                    <span class="topic-tag">
+                                        <a class="text" href="http://ask.yeoner.com/topic/%E5%A6%82%E4%BD%95%E9%98%B2%E9%87%8E%E5%85%BD" data-id="82">如何防野兽</a>
+                                    </span>
+                                    <span class="topic-tag">
+                                        <a class="text" href="http://ask.yeoner.com/topic/%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F" data-id="81">生活方式</a>
+                                    </span>
+                                    <span class="topic-tag">
+                                        <a class="text" href="http://ask.yeoner.com/topic/%E6%96%87%E5%8C%96" data-id="80">文化</a>
+                                    </span>
+                                    <span class="topic-tag">
+                                        <a class="text" href="http://ask.yeoner.com/topic/SUUNTO" data-id="79">SUUNTO</a>
+                                    </span>
+                                    <span class="topic-tag">
+                                        <a class="text" href="http://ask.yeoner.com/topic/%E6%99%BA%E8%83%BD%E6%89%8B%E8%A1%A8" data-id="78">智能手表</a>
+                                    </span>
+                                    <span class="topic-tag">
+                                        <a class="text" href="http://ask.yeoner.com/topic/%E7%99%BB%E5%B1%B1%E8%A1%A8" data-id="77">登山表</a>
+                                    </span>
+                                    <span class="topic-tag">
+                                        <a class="text" href="http://ask.yeoner.com/topic/%E6%89%8B%E8%A1%A8" data-id="76">手表</a>
+                                    </span>
+                                    <span class="topic-tag">
+                                        <a class="text" href="http://ask.yeoner.com/topic/%E6%88%B7%E5%A4%96" data-id="75">户外</a>
+                                    </span>
+                                    <span class="topic-tag">
+                                        <a class="text" href="http://ask.yeoner.com/topic/%E8%B7%B3%E4%BC%9E" data-id="74">跳伞</a>
+                                    </span>
+                                    <span class="topic-tag">
+                                        <a class="text" href="http://ask.yeoner.com/topic/%E6%BB%91%E9%9B%AA" data-id="73">滑雪</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--底部-->
+<footer id="footer" class="aw-footer-wrap">
+    <div class="aw-footer">
+        Copyright © 2016
+        <span class="hidden-xs"> - 京ICP备15028529号-1, All Rights Reserved</span>
+                <span class="hidden-xs">
+                    Powered By
+                    <a href="http://www.wecenter.com/?copyright" target="blank">WeCenter 3.1.9</a>
+                </span>
+    </div>
+</footer>
+
+<!--到顶部按钮-->
+<div id="toTop">
+    <a href="#top" title="返回顶部" class="top_btn"><i class="iconfont icon-up"></i></a>
+</div>
+
+</body>
+</html>

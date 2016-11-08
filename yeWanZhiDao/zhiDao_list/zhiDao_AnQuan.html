@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>户外安全 - 野玩儿知道</title>
+    <link rel="stylesheet" type="text/css" href="../../common/iconfont/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../common/css/toTop.css">
+    <link rel="stylesheet" type="text/css" href="../../yeWanZhiDao/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../yeWanZhiDao/css/zhiDao.css">
+
+    <script src="../../common/js/jquery-3.0.0.js"></script>
+    <script src="../../common/js/artTemplate.js"></script>
+    <script src="../../common/js/toTop.js"></script>
+    <script src="../../yeWanZhiDao/js/bootstrap.min.js"></script>
+    <script src="../../yeWanZhiDao/js/zhiDao.js"></script>
+
+    <style>
+        #toTop {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            padding: 0 5px;
+            z-index: 100;
+        }
+
+        #toTop .top_btn {
+            width: 50px;
+            height: 40px;
+            display: none;
+            background-color: #d9d9d9;
+            border-radius: 3px;
+            text-align: center;
+            line-height: 40px;
+            color: #a6a6a6;
+        }
+        #toTop .top_btn:hover {
+            color: #a6a6a6;
+            background-color: #d0d0d0;
+            transition: linear .1s;
+        }
+
+        #toTop .top_btn i {
+            font-size: 20px;
+            padding: 10px;
+            font-weight: 100;
+        }
+    </style>
+</head>
+<body>
+<!--头部-->
+<header id="header" class="aw-top-menu-wrap">
+    <div class="container">
+        <!-- logo -->
+        <div class="aw-logo hidden-xs">
+            <a href="../zhiDao.html"></a>
+        </div>
+        <!-- 搜索框 -->
+        <div class="aw-search-box  hidden-xs hidden-sm">
+            <form class="navbar-search" action="http://ask.yeoner.com/search/" id="global_search_form" method="post">
+                <input class="form-control search-query" type="text" placeholder="搜索问题、话题或人" autocomplete="off" name="q" id="aw-search-query" />
+                        <span title="搜索" id="global_search_btns">
+                            <i class="icon iconfont icon-search"></i>
+                        </span>
+                <div class="aw-dropdown" id="aw-dropdown">
+                    <div class="mod-body">
+                        <p class="title">输入关键字进行搜索</p>
+                        <ul class="aw-dropdown-list collapse"></ul>
+                        <p class="search">
+                            <span>搜索:</span>
+                            <a></a>
+                        </p>
+                    </div>
+                    <div class="mod-footer">
+                        <a href="http://ask.yeoner.com/publish" class="pull-right btn btn-mini btn-success publish">发起问题</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- 导航 -->
+        <div class="aw-top-nav navbar">
+            <div class="navbar-header">
+                <button  class="navbar-toggle pull-left">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="../zhiDao.html" class="active">
+                            <i class="icon icon-list"></i>
+                            发现
+                        </a>
+                    </li>
+                    <!-- <li><a href="http://ask.yeoner.com/question/" class="">问题</a></li>
+                    <li><a href="http://ask.yeoner.com/article/" class="">文章</a></li> -->
+                    <li>
+                        <a href="../zhiDao_huaTi.html" >
+                            <i class="icon iconfont icon-duihuakuang2"></i>
+                            话题
+                        </a>
+                    </li>
+                    <li>
+                        <a style="font-weight:bold;">· · ·</a>
+                        <div class="dropdown-list pull-right">
+                            <ul id="extensions-nav-list">
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- 用户栏 -->
+        <div class="aw-user-nav">
+
+            <!-- 登陆&注册栏 -->
+
+
+            <a class="login btn btn-normal btn-primary" href="http://ask.yeoner.com/login/">登录</a>
+
+            <a class="register btn btn-normal btn-success" href="http://ask.yeoner.com/account/register/">注册</a>
+
+            <!-- end 登陆&注册栏 -->
+
+        </div>
+    </div>
+</header>
+
+<!--内容-->
+<div id="content" class="aw-container-wrap">
+    <div class="container category">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="list">
+                    <li><a href="../../yeWanZhiDao/zhiDao.html">全部</a></li>
+                    <li><a href="../../index.html" target="_blank">野玩儿主站</a></li>
+                    <li><a href="../zhiDao_list/zhiDao_ZhiShi.html">户外知识</a></li>
+                    <li><a href="../zhiDao_list/zhiDao_ZhuangBei.html">运动装备</a></li>
+                    <li><a href="../zhiDao_list/zhiDao_XianLu.html">出行线路</a></li>
+                    <li class="active"><a href="../zhiDao_list/zhiDao_AnQuan.html">户外安全</a></li>
+                    <li><a href="../zhiDao_list/zhiDao_YunDong.html">极限运动</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="aw-content-wrap clearfix">
+                <div class="col-sm-12 col-md-9 aw-main-content">
+                    <ul class="nav nav-tabs aw-nav-tabs active hidden-xs">
+                        <li><a class="huiFu">等待回复</a></li>
+                        <li><a class="reMen">热门</a></li>
+                        <li><a class="tuiJian">推荐</a></li>
+                        <li class="active"><a href="../../yeWanZhiDao/zhiDao_list/zhiDao_AnQuan.html">最新</a></li>
+                        <h2 class="hidden-xs">
+                            <i class="icon icon-list"></i>发现
+                        </h2>
+                    </ul>
+                    <div class="aw-tabs" style="display: none">
+                        <ul>
+                            <li><a day="30">30天</a></li>
+                            <li class="active"><a day="7">7天</a></li>
+                            <li><a day="1">当天</a></li>
+                        </ul>
+                    </div>
+                    <div id="list1" class="aw-mod aw-explore-list">
+                        <div class="mod-body">
+                            <div class="aw-common-list">
+
+                            </div>
+                            <!--模板-->
+                            <script type="text/html" id="anQuan-aw-item">
+                                <div class="{{aw_item_class}}">
+                                    <a class="aw-user-name hidden-xs" href="{{aw_item_url}}">
+                                        <img src="{{aw_item_src}}" alt="">
+                                        <i class="{{aw_item_i}}"></i>
+                                    </a>
+                                    <div class="aw-question-content">
+                                        <h4>
+                                            <a href="{{aw_question_h4_a}}">{{aw_question_h4}}</a>
+                                        </h4>
+                                        <div class="pull-right hidden-xs contribute">
+                                            <span class="pull-right text-color-999">{{contribute_span}}</span>
+                                            <a class="aw-user-name" href="{{contribute_a1}}">
+                                                <img src="{{contribute_a1_img}}" alt="">
+                                            </a>
+                                            <a class="aw-user-name" href="{{contribute_a2}}">
+                                                <img src="{{contribute_a2_img}}" alt="">
+                                            </a>
+                                        </div>
+                                        <p>
+                                            <a class="aw-question-tags" href="{{aw_question_p_a1}}">{{aw_question_p_a1_t}}</a>
+                                            •
+                                            <a class="aw-user-name" href="{{aw_question_p_a2}}">{{aw_question_p_a2_t}}</a>
+                                            <span class="text-color-999">{{aw_question_p_span}}</span>
+                                        </p>
+                                        <!-- 文章内容调用 -->
+                                        <div class="markitup-box">
+                                            <div class="img pull-right"></div>
+                                            {{aw_question_article}}
+                                            <a class="more" href="http://ask.yeoner.com/article/1">查看全部</a>
+                                        </div>
+                                        <!-- end 文章内容调用 -->
+                                    </div>
+                                </div>
+                            </script>
+                        </div>
+                        <div class="mod-footer">
+                            <div class="page-control">
+                                <ul class="pagination pull-right">
+                                    <li class="active">
+                                        <a href="javascript:;">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://ask.yeoner.com/sort_type-new__day-0__is_recommend-0__page-2">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://ask.yeoner.com/sort_type-new__day-0__is_recommend-0__page-3">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://ask.yeoner.com/sort_type-new__day-0__is_recommend-0__page-4">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://ask.yeoner.com/sort_type-new__day-0__is_recommend-0__page-2">&gt;</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://ask.yeoner.com/sort_type-new__day-0__is_recommend-0__page-12">&gt;&gt;</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="list2" class="aw-mod aw-explore-list" style="display: none">
+                        <div class="mod-body">
+                            <div class="aw-common-list"></div>
+                        </div>
+                        <div class="mod-footer"></div>
+                    </div>
+                </div>
+                <!--侧边栏-->
+                <div class="col-sm-12 col-md-3 aw-side-bar hidden-xs hidden-sm">
+                    <div class="aw-mod aw-text-align-justify">
+                        <div class="mod-head">
+                            <a class="pull-right" href="http://ask.yeoner.com/topic/channel-hot">更多 ></a>
+                            <h3>热门话题</h3>
+                        </div>
+                        <div class="mod-body"></div>
+                    </div>
+                    <div class="aw-mod aw-text-align-justify">
+                        <div class="mod-head">
+                            <a class="pull-right" href="http://ask.yeoner.com/people/">更多 ></a>
+                            <h3>热门用户</h3>
+                        </div>
+                        <div class="mod-body">
+                            <dl>
+                                <dt class="pull-left aw-border-radius-5">
+                                    <a href="http://ask.yeoner.com/people/%E9%9A%8F%E9%A3%8E%E9%A3%98%E6%89%AC">
+                                        <img src="http://ask.yeoner.com/uploads/avatar/000/00/00/89_avatar_mid.jpg" alt="">
+                                    </a>
+                                </dt>
+                                <dd class="pull-left">
+                                    <a class="aw-user-name" href="http://ask.yeoner.com/people/%E9%9A%8F%E9%A3%8E%E9%A3%98%E6%89%AC">随风飘扬</a>
+                                    <p class="signature"></p>
+                                    <p>
+                                        <b>0</b> 个问题,
+                                        <b>0</b> 次赞同
+                                    </p>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--底部-->
+<footer id="footer" class="aw-footer-wrap">
+    <div class="aw-footer">
+        Copyright © 2016
+        <span class="hidden-xs"> - 京ICP备15028529号-1, All Rights Reserved</span>
+                <span class="hidden-xs">
+                    Powered By
+                    <a href="http://www.wecenter.com/?copyright" target="blank">WeCenter 3.1.9</a>
+                </span>
+    </div>
+</footer>
+
+<!--到顶部按钮-->
+<div id="toTop">
+    <a href="#top" title="返回顶部" class="top_btn"><i class="iconfont icon-up"></i></a>
+</div>
+</body>
+</html>
