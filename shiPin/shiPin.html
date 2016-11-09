@@ -215,7 +215,20 @@
                         <div class="feature_video_img">
                             <div id="youkuplayer" style="overflow: hidden; background: black; position: relative;">
                                 <div class="iva-alertWrap"></div>
-                                <div class="container1478603148615" style="height: 100%; width: 100%; position: relative; background: black; filter: blur(0px); cursor: none;"></div>
+                                <div class="container1478603148615" style="height: 100%; width: 100%; position: relative; background: black; filter: blur(0px); cursor: none;">
+                                    <div class="player_for_user" style="position:absolute;z-index:30;height:100%;width:100%;color:white">
+                                        <div class="iva-wrap iva-parent iva-sleep" style="-webkit-tap-highlight-color: transparent; user-select: none; cursor: default;">
+                                            <div class="iva-canvasParent" style="position: relative; overflow: hidden; width: 800px; height: 416px;">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="player_control_bar skin_0"></div>
+                                    <div class="is_buffering"></div>
+                                    <div class="right_menu"></div>
+                                    <div class="right_window"></div>
+                                    <object id="venvyFlash"></object>
+                                </div>
                             </div>
                         </div>
                         <header class="post_head">
@@ -267,22 +280,88 @@
                             </section>
                             <section class="swiper_container">
                                 <section class="swiper_wrapper" style="width: 1363px">
-                                    <article class="swiper_slide" style="width: 262.5px; margin-right: 10px;">
-                                        <a href="http://www.yeoner.com/video/34760.html" target="_blank" title="野玩儿神人志｜瓮楠：我不是坏孩子" class="imglayout">
-                                            <img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r1.ykimg.com/054104085710B2B96A0A4A045DA9D9D6&h=200&w=294&zc=1">
-                                            <h3>野玩儿神人志｜瓮楠：我不是坏孩子</h3>
-                                            <div class="lg"></div>
-                                            <span class="player">
+                                    <!--<article class="swiper_slide" style="width: 262.5px; margin-right: 10px;">-->
+                                        <!--<a href="http://www.yeoner.com/video/34760.html" target="_blank" title="野玩儿神人志｜瓮楠：我不是坏孩子" class="imglayout">-->
+                                            <!--<img src="http://www.yeoner.com/wp-content/themes/yewan/includes/functions/timthumb.php?src=http://r1.ykimg.com/054104085710B2B96A0A4A045DA9D9D6&h=200&w=294&zc=1">-->
+                                            <!--<h3>野玩儿神人志｜瓮楠：我不是坏孩子</h3>-->
+                                            <!--<div class="lg"></div>-->
+                                            <!--<span class="player">-->
+                                                <!--<i class="iconfont icon-play"></i>-->
+                                            <!--</span>-->
+                                        <!--</a>-->
+                                    <!--</article>-->
+                                    <script type="text/html" id="vedioTemp">
+                                        <article class="swiper_slide" style="width: 262.5px; margin-right: 10px;">
+                                            <a href="{{ swiper_url }}" target="_blank" title="{{ swiper_title }}" class="imglayout">
+                                                <img src="{{ swiper_img_src }}">
+                                                <h3>{{ swiper_h3 }}</h3>
+                                                <div class="lg"></div>
+                                                <span class="player">
                                                 <i class="iconfont icon-play"></i>
                                             </span>
-                                        </a>
-                                    </article>
+                                            </a>
+                                        </article>
+                                    </script>
                                 </section>
                             </section>
                         </section>
-                        <section class="video_cat"></section>
-                        <section class="video_cat"></section>
-                        <section class="video_cat"></section>
+                        <section class="video_cat">
+                            <section class="video_title">
+                                <h3>
+                                    <a href="shiPin.html?jixian" target="_blank" title="查看更多 极限运动 的文章">极限运动</a>
+                                </h3>
+                                <div class="swiper_pagination">
+                                    <span class="swiper_pagination_bullet swiper_pagination_bullet_active"></span>
+                                    <span class="swiper_pagination_bullet"></span>
+                                    <span class="swiper_pagination_bullet"></span>
+                                    <span class="swiper_pagination_bullet"></span>
+                                    <span class="swiper_pagination_bullet"></span>
+                                </div>
+                                <div class="swiper_button swiper_button_prev swiper_button_disabled"><</div>
+                                <div class="swiper_button swiper_button_next">></div>
+                            </section>
+                            <section class="swiper_container">
+                                <section class="swiper_wrapper" style="width: 2180px"></section>
+                            </section>
+                        </section>
+                        <section class="video_cat">
+                            <section class="video_title">
+                                <h3>
+                                    <a href="shiPin.html?zhuangbei" target="_blank" title="查看更多 户外装备 的文章">户外装备</a>
+                                </h3>
+                                <div class="swiper_pagination">
+                                    <span class="swiper_pagination_bullet swiper_pagination_bullet_active"></span>
+                                    <span class="swiper_pagination_bullet"></span>
+                                    <span class="swiper_pagination_bullet"></span>
+                                    <span class="swiper_pagination_bullet"></span>
+                                    <span class="swiper_pagination_bullet"></span>
+                                </div>
+                                <div class="swiper_button swiper_button_prev swiper_button_disabled"><</div>
+                                <div class="swiper_button swiper_button_next">></div>
+                            </section>
+                            <section class="swiper_container">
+                                <section class="swiper_wrapper" style="width: 2180px"></section>
+                            </section>
+                        </section>
+                        <section class="video_cat">
+                            <section class="video_title">
+                                <h3>
+                                    <a href="shiPin.html?quwei" target="_blank" title="查看更多 趣味视频 的文章">趣味视频</a>
+                                </h3>
+                                <div class="swiper_pagination">
+                                    <span class="swiper_pagination_bullet swiper_pagination_bullet_active"></span>
+                                    <span class="swiper_pagination_bullet"></span>
+                                    <span class="swiper_pagination_bullet"></span>
+                                    <span class="swiper_pagination_bullet"></span>
+                                    <span class="swiper_pagination_bullet"></span>
+                                </div>
+                                <div class="swiper_button swiper_button_prev swiper_button_disabled"><</div>
+                                <div class="swiper_button swiper_button_next">></div>
+                            </section>
+                            <section class="swiper_container">
+                                <section class="swiper_wrapper" style="width: 2180px"></section>
+                            </section>
+                        </section>
                     </section>
                 </section>
             </section>
