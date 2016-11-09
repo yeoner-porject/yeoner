@@ -431,10 +431,10 @@ form {
     font-size: 20px;
 }
 .aw-nav-tabs > li > a:hover {
-    border: none;
-    border-bottom: 2px solid #155faa;
-    background-color: #fff;
-    color: #333;
+    border: none!important;
+    border-bottom: 2px solid #155faa !important;
+    background-color: #fff !important;
+    color: #333 !important;
 }
 .aw-topic-category {
     padding: 0 20px;
