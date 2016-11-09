@@ -2,23 +2,316 @@
  * Created by lujiaolan on 16/11/8.
  */
 $(function () {
-   $.ajax({
-       url: "json/content.json",
-       success: function (data) {
-           // console.log(data);
-           $.each(data.shenrenzhi, function (i, val) {
-               // console.log(val);
-               $(template("vedioTemp",val)).appendTo(".video_cat:eq(0) .swiper_wrapper");
-           });
-           $.each(data.jixian, function (i, val) {
-               $(template("vedioTemp",val)).appendTo(".video_cat:eq(1) .swiper_wrapper");
-           });
-           $.each(data.zhuangbei, function (i, val) {
-               $(template("vedioTemp",val)).appendTo(".video_cat:eq(2) .swiper_wrapper");
-           });
-           $.each(data.quwei, function (i, val) {
-               $(template("vedioTemp",val)).appendTo(".video_cat:eq(3) .swiper_wrapper");
-           })
-       }
-   })
+    var a = location.search.substring(1);
+    var $crumbs_cate = $(".crumbs_cate.left");
+    console.log(a);
+    $.ajax({
+        url: "json/content.json",
+        success: function (data) {
+            // console.log(data);
+            $.each(data.shenrenzhi, function (i, val) {
+                // console.log(val);
+                if(a == "shenrenzhi"){
+                    if(i < 20){
+                        $(template("vedioTemp", val)).appendTo(".video_cat:eq(0) .swiper_wrapper");
+                    }
+                }else {
+                    $(template("vedioTemp", val)).appendTo(".video_cat:eq(0) .swiper_wrapper");
+                }
+            });
+            $.each(data.jixian, function (i, val) {
+                if(a == "jixian"){
+                    if(i < 20){
+                        $(template("vedioTemp", val)).appendTo(".video_cat:eq(1) .swiper_wrapper");
+                    }
+                }else {
+                    $(template("vedioTemp", val)).appendTo(".video_cat:eq(1) .swiper_wrapper");
+                }
+            });
+            $.each(data.zhuangbei, function (i, val) {
+                if(a == "zhuangbei"){
+                    if(i < 20){
+                        $(template("vedioTemp", val)).appendTo(".video_cat:eq(2) .swiper_wrapper");
+                    }
+                }else {
+                    $(template("vedioTemp", val)).appendTo(".video_cat:eq(2) .swiper_wrapper");
+                }
+
+            });
+            $.each(data.quwei, function (i, val) {
+                if(a == "quwei"){
+                    if(i < 20){
+                        $(template("vedioTemp", val)).appendTo(".video_cat:eq(3) .swiper_wrapper");
+                    }
+                }else {
+                    $(template("vedioTemp", val)).appendTo(".video_cat:eq(3) .swiper_wrapper");
+                }
+            })
+        }
+    });
+
+
+    // 点击圆点移动视频
+    function page1() {
+        $(this).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+        $(this).parent().parent().parent().find(".swiper_wrapper").css("transform", "translate3d(0px, 0px, 0px)");
+        $(this).parent().parent().parent().find(".swiper_button_prev").addClass("swiper_button_disabled");
+        $(this).parent().parent().parent().find(".swiper_button_next").removeClass("swiper_button_disabled");
+    }
+
+    function page2() {
+        $(this).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+        $(this).parent().parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-272.5px, 0px, 0px)");
+        $(this).parent().parent().parent().find(".swiper_button_prev").removeClass("swiper_button_disabled");
+        $(this).parent().parent().parent().find(".swiper_button_next").removeClass("swiper_button_disabled");
+    }
+
+    function page3() {
+        $(this).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+        // console.log($(this).parent().parent().find("a").text().trim());
+        if ($(this).parent().parent().find("a").text().trim() == "神人志") {
+            $(this).parent().parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-273px, 0px, 0px)");
+            $(this).parent().parent().parent().find(".swiper_button_next").addClass("swiper_button_disabled");
+        } else {
+            $(this).parent().parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-545px, 0px, 0px)");
+        }
+        $(this).parent().parent().parent().find(".swiper_button_prev").removeClass("swiper_button_disabled");
+    }
+
+    function page4() {
+        $(this).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+        $(this).parent().parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-817.5px, 0px, 0px)");
+        $(this).parent().parent().parent().find(".swiper_button_prev").removeClass("swiper_button_disabled");
+    }
+
+    function page5() {
+        $(this).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+        $(this).parent().parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-1090px, 0px, 0px)");
+        $(this).parent().parent().parent().find(".swiper_button_next").addClass("swiper_button_disabled");
+        $(this).parent().parent().parent().find(".swiper_button_prev").removeClass("swiper_button_disabled");
+    }
+
+    var $pages1 = $(".video_cat:eq(0) .swiper_pagination .swiper_pagination_bullet");
+    var $pages2 = $(".video_cat:eq(1) .swiper_pagination .swiper_pagination_bullet");
+    var $pages3 = $(".video_cat:eq(2) .swiper_pagination .swiper_pagination_bullet");
+    var $pages4 = $(".video_cat:eq(3) .swiper_pagination .swiper_pagination_bullet");
+    // console.log($pages1);
+    $pages1.eq(0).click(page1);
+    $pages1.eq(1).click(page2);
+    $pages1.eq(2).click(page3);
+
+    $pages2.eq(0).click(page1);
+    $pages2.eq(1).click(page2);
+    $pages2.eq(2).click(page3);
+    $pages2.eq(3).click(page4);
+    $pages2.eq(4).click(page5);
+
+    $pages3.eq(0).click(page1);
+    $pages3.eq(1).click(page2);
+    $pages3.eq(2).click(page3);
+    $pages3.eq(3).click(page4);
+    $pages3.eq(4).click(page5);
+
+    $pages4.eq(0).click(page1);
+    $pages4.eq(1).click(page2);
+    $pages4.eq(2).click(page3);
+    $pages4.eq(3).click(page4);
+    $pages4.eq(4).click(page5);
+
+    // 点击左右按钮移动视频
+    var $btns1 = $(".video_cat:eq(0) .swiper_button");
+    var $btns2 = $(".video_cat:eq(1) .swiper_button");
+    var $btns3 = $(".video_cat:eq(2) .swiper_button");
+    var $btns4 = $(".video_cat:eq(3) .swiper_button");
+    // console.log($btns1);
+
+    $btns1.eq(0).click(function () {
+        $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(0px, 0px, 0px)");
+        $pages1.eq(0).addClass("swiper_pagination_bullet_active")
+            .siblings().removeClass("swiper_pagination_bullet_active");
+        $(this).addClass("swiper_button_disabled");
+        $btns1.eq(1).removeClass("swiper_button_disabled");
+    });
+    $btns1.eq(1).click(function () {
+        $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-272.5px, 0px, 0px)");
+        $btns1.eq(0).removeClass("swiper_button_disabled");
+        if ($pages1.eq(1).hasClass("swiper_pagination_bullet_active")) {
+            $pages1.eq(2).addClass("swiper_pagination_bullet_active")
+                .siblings().removeClass("swiper_pagination_bullet_active");
+            $(this).addClass("swiper_button_disabled");
+        } else {
+            $pages1.eq(1).addClass("swiper_pagination_bullet_active")
+                .siblings().removeClass("swiper_pagination_bullet_active");
+        }
+    });
+    
+    $btns2.eq(0).click(function () {
+        if($pages2.eq(1).hasClass("swiper_pagination_bullet_active")){
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(0px, 0px, 0px)");
+            $pages2.eq(0).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+            $(this).addClass("swiper_button_disabled");
+        }
+        if($pages2.eq(2).hasClass("swiper_pagination_bullet_active")){
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-272.5px, 0px, 0px)");
+            $pages2.eq(1).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+        }
+        if($pages2.eq(3).hasClass("swiper_pagination_bullet_active")){
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-545px, 0px, 0px)");
+            $pages2.eq(2).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+        }
+        if($pages2.eq(4).hasClass("swiper_pagination_bullet_active")){
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-817.5px, 0px, 0px)");
+            $pages2.eq(3).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+            $btns2.eq(1).removeClass("swiper_button_disabled");
+        }
+    });
+    $btns2.eq(1).click(function () {
+        if($pages2.eq(0).hasClass("swiper_pagination_bullet_active")){
+            $pages2.eq(1).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+            $btns2.eq(0).removeClass("swiper_button_disabled");
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-272.5px, 0px, 0px)");
+        }else if($pages2.eq(1).hasClass("swiper_pagination_bullet_active")){
+            $pages2.eq(2).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-545px, 0px, 0px)");
+
+        }else if($pages2.eq(2).hasClass("swiper_pagination_bullet_active")){
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-817.5px, 0px, 0px)");
+            $pages2.eq(3).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+        }
+        else if($pages2.eq(3).hasClass("swiper_pagination_bullet_active")){
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-1090px, 0px, 0px)");
+            $pages2.eq(4).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+            $(this).addClass("swiper_button_disabled");
+        }
+    });
+
+    $btns3.eq(0).click(function () {
+        if($pages3.eq(1).hasClass("swiper_pagination_bullet_active")){
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(0px, 0px, 0px)");
+            $pages3.eq(0).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+            $(this).addClass("swiper_button_disabled");
+        }
+        if($pages3.eq(2).hasClass("swiper_pagination_bullet_active")){
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-272.5px, 0px, 0px)");
+            $pages3.eq(1).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+        }
+        if($pages3.eq(3).hasClass("swiper_pagination_bullet_active")){
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-545px, 0px, 0px)");
+            $pages3.eq(2).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+        }
+        if($pages3.eq(4).hasClass("swiper_pagination_bullet_active")){
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-817.5px, 0px, 0px)");
+            $pages3.eq(3).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+            $btns3.eq(1).removeClass("swiper_button_disabled");
+        }
+    });
+    $btns3.eq(1).click(function () {
+        if($pages3.eq(0).hasClass("swiper_pagination_bullet_active")){
+            $pages3.eq(1).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+            $btns3.eq(0).removeClass("swiper_button_disabled");
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-272.5px, 0px, 0px)");
+        }else if($pages3.eq(1).hasClass("swiper_pagination_bullet_active")){
+            $pages3.eq(2).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-545px, 0px, 0px)");
+
+        }else if($pages3.eq(2).hasClass("swiper_pagination_bullet_active")){
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-817.5px, 0px, 0px)");
+            $pages3.eq(3).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+        }
+        else if($pages3.eq(3).hasClass("swiper_pagination_bullet_active")){
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-1090px, 0px, 0px)");
+            $pages3.eq(4).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+            $(this).addClass("swiper_button_disabled");
+        }
+    });
+
+    $btns4.eq(0).click(function () {
+        if($pages4.eq(1).hasClass("swiper_pagination_bullet_active")){
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(0px, 0px, 0px)");
+            $pages4.eq(0).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+            $(this).addClass("swiper_button_disabled");
+        }
+        if($pages4.eq(2).hasClass("swiper_pagination_bullet_active")){
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-272.5px, 0px, 0px)");
+            $pages4.eq(1).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+        }
+        if($pages4.eq(3).hasClass("swiper_pagination_bullet_active")){
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-545px, 0px, 0px)");
+            $pages4.eq(2).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+        }
+        if($pages4.eq(4).hasClass("swiper_pagination_bullet_active")){
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-817.5px, 0px, 0px)");
+            $pages4.eq(3).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+            $btns4.eq(1).removeClass("swiper_button_disabled");
+        }
+    });
+    $btns4.eq(1).click(function () {
+        if($pages4.eq(0).hasClass("swiper_pagination_bullet_active")){
+            $pages4.eq(1).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+            $btns4.eq(0).removeClass("swiper_button_disabled");
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-272.5px, 0px, 0px)");
+        }else if($pages4.eq(1).hasClass("swiper_pagination_bullet_active")){
+            $pages4.eq(2).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-545px, 0px, 0px)");
+
+        }else if($pages4.eq(2).hasClass("swiper_pagination_bullet_active")){
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-817.5px, 0px, 0px)");
+            $pages4.eq(3).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+        }
+        else if($pages4.eq(3).hasClass("swiper_pagination_bullet_active")){
+            $(this).parent().parent().find(".swiper_wrapper").css("transform", "translate3d(-1090px, 0px, 0px)");
+            $pages4.eq(4).addClass("swiper_pagination_bullet_active").siblings().removeClass("swiper_pagination_bullet_active");
+            $(this).addClass("swiper_button_disabled");
+        }
+    });
+
+    if(a == "shenrenzhi"){
+        $crumbs_cate.find("li:eq(3)").addClass("current_cat").siblings().removeClass("current_cat");
+        var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="shiPin.html">户外视频</a>&nbsp;»&nbsp;<span class="current">神人志</span></article>');
+        $article.insertAfter($crumbs_cate);
+        $(".current_item .sub_menu li:eq(0) a").css("color", "#eb0127");
+        $(".feature_video").hide();
+        $(".video_cat:eq(0)").find(".video_title").hide();
+        $(".video_cat:eq(0)").find(".swiper_wrapper").css("width","1090px");
+        $(".video_cat:eq(1)").hide();
+        $(".video_cat:eq(2)").hide();
+        $(".video_cat:eq(3)").hide();
+    }
+    if(a == "jixian"){
+        $crumbs_cate.find("li:eq(2)").addClass("current_cat").siblings().removeClass("current_cat");
+        var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="shiPin.html">户外视频</a>&nbsp;»&nbsp;<span class="current">极限运动</span></article>');
+        $article.insertAfter($crumbs_cate);
+        $(".current_item .sub_menu li:eq(1) a").css("color", "#eb0127");
+        $(".feature_video").hide();
+        $(".video_cat:eq(1)").find(".video_title").hide();
+        $(".video_cat:eq(1)").find(".swiper_wrapper").css("width","1090px");
+        $(".video_cat:eq(0)").hide();
+        $(".video_cat:eq(2)").hide();
+        $(".video_cat:eq(3)").hide();
+    }
+    if(a == "zhuangbei"){
+        $crumbs_cate.find("li:eq(1)").addClass("current_cat").siblings().removeClass("current_cat");
+        var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="shiPin.html">户外视频</a>&nbsp;»&nbsp;<span class="current">户外装备</span></article>');
+        $article.insertAfter($crumbs_cate);
+        $(".current_item .sub_menu li:eq(2) a").css("color", "#eb0127");
+        $(".feature_video").hide();
+        $(".video_cat:eq(2)").find(".video_title").hide();
+        $(".video_cat:eq(2)").find(".swiper_wrapper").css("width","1090px");
+        $(".video_cat:eq(0)").hide();
+        $(".video_cat:eq(1)").hide();
+        $(".video_cat:eq(3)").hide();
+    }
+    if(a == "quwei"){
+        $crumbs_cate.find("li:eq(4)").addClass("current_cat").siblings().removeClass("current_cat");
+        var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="shiPin.html">户外视频</a>&nbsp;»&nbsp;<span class="current">趣味视频</span></article>');
+        $article.insertAfter($crumbs_cate);
+        $(".current_item .sub_menu li:eq(3) a").css("color", "#eb0127");
+        $(".feature_video").hide();
+        $(".video_cat:eq(3)").find(".video_title").hide();
+        $(".video_cat:eq(3)").find(".swiper_wrapper").css("width","1090px");
+        $(".video_cat:eq(1)").hide();
+        $(".video_cat:eq(2)").hide();
+        $(".video_cat:eq(0)").hide();
+    }
+
 });

@@ -294,6 +294,10 @@
     background-color: #ddd;
 }
 
+#content .video_title .swiper_pagination > span:hover {
+    background-color: #aaa;
+}
+
 #content .swiper_pagination_bullet_active,
 #content .swiper_pagination_bullet:hover {
     opacity: 1;
@@ -306,6 +310,12 @@
     border: 1px solid #eee;
     text-align: center;
     line-height: 16px;
+    cursor: pointer;
+}
+
+#content .video_title .swiper_button:hover {
+    background-color: #eb0127;
+    color: #d11f3c;
 }
 
 #content .video_title .swiper_button.swiper_button_disabled {
@@ -334,6 +344,7 @@
     height: auto;
     z-index: 1;
     box-sizing: content-box;
+    transition-duration: 300ms;
 }
 
 #content .video_cat .swiper_slide {
