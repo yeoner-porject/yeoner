@@ -276,8 +276,7 @@ $(function () {
         $(".video_cat:eq(1)").hide();
         $(".video_cat:eq(2)").hide();
         $(".video_cat:eq(3)").hide();
-    }
-    if(a == "jixian"){
+    }else if(a == "jixian"){
         $crumbs_cate.find("li:eq(2)").addClass("current_cat").siblings().removeClass("current_cat");
         var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="shiPin.html">户外视频</a>&nbsp;»&nbsp;<span class="current">极限运动</span></article>');
         $article.insertAfter($crumbs_cate);
@@ -288,8 +287,7 @@ $(function () {
         $(".video_cat:eq(0)").hide();
         $(".video_cat:eq(2)").hide();
         $(".video_cat:eq(3)").hide();
-    }
-    if(a == "zhuangbei"){
+    }else if(a == "zhuangbei"){
         $crumbs_cate.find("li:eq(1)").addClass("current_cat").siblings().removeClass("current_cat");
         var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="shiPin.html">户外视频</a>&nbsp;»&nbsp;<span class="current">户外装备</span></article>');
         $article.insertAfter($crumbs_cate);
@@ -300,8 +298,7 @@ $(function () {
         $(".video_cat:eq(0)").hide();
         $(".video_cat:eq(1)").hide();
         $(".video_cat:eq(3)").hide();
-    }
-    if(a == "quwei"){
+    }else if(a == "quwei"){
         $crumbs_cate.find("li:eq(4)").addClass("current_cat").siblings().removeClass("current_cat");
         var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="shiPin.html">户外视频</a>&nbsp;»&nbsp;<span class="current">趣味视频</span></article>');
         $article.insertAfter($crumbs_cate);
@@ -312,6 +309,8 @@ $(function () {
         $(".video_cat:eq(1)").hide();
         $(".video_cat:eq(2)").hide();
         $(".video_cat:eq(0)").hide();
+    }else {
+        $crumbs_cate.find("li:eq(0)").addClass("current_cat").siblings().removeClass("current_cat");
     }
 
 });
