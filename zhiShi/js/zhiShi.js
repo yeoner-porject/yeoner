@@ -13,21 +13,25 @@ $(function () {
         $article.insertAfter($crumbs_cate);
         $crumbs_cate.find(".cat_item").hide();
         $(".current_item .sub_menu li:eq(0) a").css("color", "#eb0127");
+        document.title = "徒步/露营 | 野玩儿";
     } else if (a == "paobu") {
         var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="zhiShi.html">户外知识</a>&nbsp;»&nbsp;<span class="current">跑步/健身</span></article>');
         $article.insertAfter($crumbs_cate);
         $crumbs_cate.find(".cat_item").hide();
         $(".current_item .sub_menu li:eq(1) a").css("color", "#eb0127");
+        document.title = "跑步/健身 | 野玩儿";
     } else if (a == "qixing") {
         var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="zhiShi.html">户外知识</a>&nbsp;»&nbsp;<span class="current">骑行</span></article>');
         $article.insertAfter($crumbs_cate);
         $crumbs_cate.find(".cat_item").hide();
         $(".current_item .sub_menu li:eq(2) a").css("color", "#eb0127");
+        document.title = "骑行 | 野玩儿";
     }
     else if (a == "huaxue") {
         var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="zhiShi.html">户外知识</a>&nbsp;»&nbsp;<span class="current">滑雪</span></article>');
         $article.insertAfter($crumbs_cate);
         $(".current_item .sub_menu li:eq(3) a").css("color", "#eb0127");
+        document.title = "滑雪 | 野玩儿";
     }
     else if (a == "anquan") {
         console.log(a);
@@ -35,6 +39,7 @@ $(function () {
         $article.insertAfter($crumbs_cate);
         $crumbs_cate.find(".cat_item").hide();
         $(".current_item .sub_menu li:eq(4) a").css("color", "#eb0127");
+        document.title = "安全 | 野玩儿";
     }
     else if (a == "zhangzhishi") {
         console.log(a);
@@ -42,6 +47,7 @@ $(function () {
         $article.insertAfter($crumbs_cate);
         $crumbs_cate.find(".cat_item").hide();
         $(".current_item").removeClass("current_item");
+        document.title = "涨姿势 | 野玩儿";
     }
     else {
         // console.log(a);

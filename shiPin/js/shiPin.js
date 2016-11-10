@@ -14,6 +14,7 @@ $(function () {
                 if (a == "shenrenzhi") {
                     if (i < 20) {
                         $(template("vedioTemp", val)).appendTo(".video_cat:eq(0) .swiper_wrapper");
+                        document.title = "神人志 | 野玩儿";
                     }
                 } else {
                     $(template("vedioTemp", val)).appendTo(".video_cat:eq(0) .swiper_wrapper");
@@ -23,6 +24,7 @@ $(function () {
                 if (a == "jixian") {
                     if (i < 20) {
                         $(template("vedioTemp", val)).appendTo(".video_cat:eq(1) .swiper_wrapper");
+                        document.title = "极限运动 | 野玩儿";
                     }
                 } else {
                     $(template("vedioTemp", val)).appendTo(".video_cat:eq(1) .swiper_wrapper");
@@ -32,6 +34,7 @@ $(function () {
                 if (a == "zhuangbei") {
                     if (i < 20) {
                         $(template("vedioTemp", val)).appendTo(".video_cat:eq(2) .swiper_wrapper");
+                        document.title = "户外装备 | 野玩儿";
                     }
                 } else {
                     $(template("vedioTemp", val)).appendTo(".video_cat:eq(2) .swiper_wrapper");
@@ -42,6 +45,7 @@ $(function () {
                 if (a == "quwei") {
                     if (i < 20) {
                         $(template("vedioTemp", val)).appendTo(".video_cat:eq(3) .swiper_wrapper");
+                        document.title = "趣味视频 | 野玩儿";
                     }
                 } else {
                     $(template("vedioTemp", val)).appendTo(".video_cat:eq(3) .swiper_wrapper");
@@ -315,29 +319,29 @@ $(function () {
 
     // $("#youkuplayer").mouseenter(function () {
     //     $(".skin_0").addClass("show");
-        // setInterval(function () {
-        //     $(".skin_0").removeClass("show");
-        // },5000);
+    //     setInterval(function () {
+    //         $(".skin_0").removeClass("show");
+    //     },5000);
     // }).mouseleave(function () {
     //     setInterval(function () {
     //         $(".skin_0").removeClass("show");
     //     },3000);
     // }).mousemove(function () {
     //     $(".skin_0").addClass("show");
-        // setInterval(function () {
-        //     $(".skin_0").removeClass("show");
-        // },5000);
+    //     setInterval(function () {
+    //         $(".skin_0").removeClass("show");
+    //     },5000);
     // });
 
     $(".player_control_bar_format_button").hover(function () {
         $(".player_control_bar_format_select").show();
-    },function () {
+    }, function () {
         $(".player_control_bar_format_select").hide();
     });
 
     $(".player_control_bar_volume_button").hover(function () {
         $(".player_control_bar_volume_bar").show();
-    },function () {
+    }, function () {
         $(".player_control_bar_volume_bar").hide();
     });
 
@@ -348,12 +352,93 @@ $(function () {
     // })
 
     $(".player_control_bar_progress").hover(function () {
-        console.log("success");
-        $("#content .skin_0 .player_control_bar_progress_played:after").css("opacity","1");
-        $("#content .skin_0 .player_control_bar_progress_played:before").css("opacity","1");
-    },function () {
-        console.log("success");
-        $("#content .skin_0 .player_control_bar_progress_played:after").css("opacity","0");
-        $("#content .skin_0 .player_control_bar_progress_played:before").css("opacity","0");
+        $("#content .skin_0 .player_control_bar_progress_played:after").css("opacity", "1");
+        $("#content .skin_0 .player_control_bar_progress_played:before").css("opacity", "1");
+    }, function () {
+        $("#content .skin_0 .player_control_bar_progress_played:after").css("opacity", "0");
+        $("#content .skin_0 .player_control_bar_progress_played:before").css("opacity", "0");
+    });
+
+    var j = 0;
+    var k = 0;
+    var i = 0;
+    setInterval(function () {
+        i++;
+        $(".player_control_bar_current").text("00:0" + i);
+        if (i > 9) {
+            $(".player_control_bar_current").text("00:" + i);
+        }
+        if (i > 59) {
+            j = parseInt(i / 60);
+            if (k > 59) {
+                k = 0;
+            }
+            $(".player_control_bar_current").text("0" + j + ":0" + k);
+            if (k > 9) {
+                $(".player_control_bar_current").text("0" + j + ":" + k);
+            }
+            k++;
+        }
+        $width = (351/246) * i;
+        $(".player_control_bar_progress_played").css("width",$width);
+        console.log(i);
+        if(i > 246){
+            $(".player_control_bar_current").text("04:06");
+            $(".player_control_bar_progress_played").css("width","100%");
+        }
+    }, 1000);
+
+
+    var fullscreen = function () {
+        elem = document.getElementById("youkuplayer");
+        if (elem.webkitRequestFullScreen) {
+            elem.webkitRequestFullScreen();
+        } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+        } else if (elem.requestFullScreen) {
+            elem.requestFullscreen();
+        } else {
+            //浏览器不支持全屏API或已被禁用
+        }
+        $(".player_control_bar_fullscreen i:eq(0)").css("display", "none");
+        $(".player_control_bar_fullscreen i:eq(1)").css("display", "block");
+    };
+    var exitFullscreen = function () {
+        var elem = document;
+        if (elem.webkitCancelFullScreen) {
+            elem.webkitCancelFullScreen();
+        } else if (elem.mozCancelFullScreen) {
+            elem.mozCancelFullScreen();
+        } else if (elem.cancelFullScreen) {
+            elem.cancelFullScreen();
+        } else if (elem.exitFullscreen) {
+            elem.exitFullscreen();
+        } else {
+            //浏览器不支持全屏API或已被禁用
+        }
+        $(".player_control_bar_fullscreen i:eq(1)").css("display", "none");
+        $(".player_control_bar_fullscreen i:eq(0)").css("display", "block");
+    };
+    $(".icon-quanping").click(function () {
+        fullscreen();
+    });
+    $(".icon-kuanping").click(function () {
+        exitFullscreen();
+    });
+
+
+    $(".icon-yinliang1").click(function () {
+        $(".icon-yinliang").show();
+        $(this).hide();
+        $("#content .skin_0 .player_control_bar_volume_show").css("background-color", "#cbbaae");
+    });
+    $(".icon-yinliang").click(function () {
+        $(this).hide();
+        $(".icon-yinliang1").show();
+        $("#content .skin_0 .player_control_bar_volume_show").css("background-color", "#09d1b1")
     })
+
+
+
+
 });

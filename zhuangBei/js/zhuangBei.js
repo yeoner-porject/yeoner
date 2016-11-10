@@ -10,16 +10,19 @@ $(function () {
         var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="zhuangBei.html">户外装备</a>&nbsp;»&nbsp;<span class="current">资讯</span></article>');
         $article.insertAfter($crumbs_cate);
         $(".current_item .sub_menu li:eq(0) a").css("color", "#eb0127");
+        document.title = "资讯 | 野玩儿";
     } else if (a == "kupin") {
         $crumbs_cate.find("li:eq(1)").addClass("current_cat").siblings().removeClass("current_cat");
         var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="zhuangBei.html">户外装备</a>&nbsp;»&nbsp;<span class="current">酷品</span></article>');
         $article.insertAfter($crumbs_cate);
         $(".current_item .sub_menu li:eq(1) a").css("color", "#eb0127");
+        document.title = "酷品 | 野玩儿";
     } else if (a == "ceping") {
         $crumbs_cate.find("li:eq(3)").addClass("current_cat").siblings().removeClass("current_cat");
         var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="zhuangBei.html">户外装备</a>&nbsp;»&nbsp;<span class="current">测评</span></article>');
         $article.insertAfter($crumbs_cate);
         $(".current_item .sub_menu li:eq(2) a").css("color", "#eb0127");
+        document.title = "测试 | 野玩儿";
     }
     else {
         $crumbs_cate.find("li:eq(0)").addClass("current_cat").siblings().removeClass("current_cat");

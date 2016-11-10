@@ -13,11 +13,13 @@ $(function () {
         var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="tanSuo.html">户外探索</a>&nbsp;»&nbsp;<span class="current">美景</span></article>');
         $article.insertAfter($crumbs_cate);
         $(".current_item .sub_menu li:eq(0) a").css("color", "#eb0127");
+        document.title = "美景 | 野玩儿";
     } else if (a == "quwen") {
         $crumbs_cate.find("li:eq(2)").addClass("current_cat").siblings().removeClass("current_cat");
         var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<a href="tanSuo.html">户外探索</a>&nbsp;»&nbsp;<span class="current">趣闻</span></article>');
         $article.insertAfter($crumbs_cate);
         $(".current_item .sub_menu li:eq(1) a").css("color", "#eb0127");
+        document.title = "趣闻 | 野玩儿";
     } else {
         $crumbs_cate.find("li:eq(0)").addClass("current_cat").siblings().removeClass("current_cat");
         var $article = $('<article class="crumbs right"><a href="../index.html">首页</a>&nbsp;»&nbsp;<span class="current">户外探索</span></article>');
