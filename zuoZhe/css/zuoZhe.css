@@ -40,6 +40,9 @@ img {
     margin: 0 auto;
     max-width: 100%;
 }
+.header-menu .menu > li.current-post-ancestor::before, .header-menu .menu > li.current-menu-parent::before, .header-menu .menu > li.current-menu-item::before, .header-menu .menu > li.current-post-ancestor::after, .header-menu .menu > li.current-menu-parent::after, .header-menu .menu > li.current-menu-item::after, .header-menu ul > li.current-post-ancestor > a, .header-menu ul > li.current-menu-parent > a, .header-menu ul > li.current-menu-item > a {
+    color: #eb0127 !important;
+}
 
 
 
