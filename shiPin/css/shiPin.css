@@ -245,6 +245,11 @@
     transform: translateY(19px);
 }
 
+#content .skin_0 .player_control_bar_progress_played.hover:after,
+#content .skin_0 .player_control_bar_progress_played.hover:before {
+    opacity: 1;
+}
+
 #content .skin_0 .player_control_bar_progress_played:after {
     top: 2px;
     -webkit-transform: translateY(-19px);
@@ -372,7 +377,7 @@
 }
 
 #content .skin_0 .player_control_bar_volume_bar {
-    z-index: 20;
+    z-index: 40;
     display: none;
     position: absolute;
     top: auto;

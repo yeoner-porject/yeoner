@@ -317,78 +317,39 @@ $(function () {
         $crumbs_cate.find("li:eq(0)").addClass("current_cat").siblings().removeClass("current_cat");
     }
 
-    // $("#youkuplayer").mouseenter(function () {
-    //     $(".skin_0").addClass("show");
-    //     setInterval(function () {
-    //         $(".skin_0").removeClass("show");
-    //     },5000);
-    // }).mouseleave(function () {
-    //     setInterval(function () {
-    //         $(".skin_0").removeClass("show");
-    //     },3000);
-    // }).mousemove(function () {
-    //     $(".skin_0").addClass("show");
-    //     setInterval(function () {
-    //         $(".skin_0").removeClass("show");
-    //     },5000);
-    // });
+    // 进度条显示设置
+    $("#youkuplayer").mouseenter(function () {
+        $(".skin_0").addClass("show");
+        setTimeout(function () {
+            $(".skin_0").removeClass("show");
+        },5000);
+    }).mouseleave(function () {
+        setTimeout(function () {
+            $(".skin_0").removeClass("show");
+        },5000);
+    }).mousemove(function () {
+        $(".skin_0").addClass("show");
+        setTimeout(function () {
+            $(".skin_0").removeClass("show");
+        },5000);
+    });
 
+    // 清晰度选项设置
     $(".player_control_bar_format_button").hover(function () {
         $(".player_control_bar_format_select").show();
     }, function () {
         $(".player_control_bar_format_select").hide();
     });
 
-    $(".player_control_bar_volume_button").hover(function () {
-        $(".player_control_bar_volume_bar").show();
-    }, function () {
-        $(".player_control_bar_volume_bar").hide();
-    });
-
-    // $(".skin_0").mouseenter(function () {
-    //     $(".skin_0").addClass("show");
-    // }).mouseleave(function () {
-    //     $(".skin_0").removeClass("show");
-    // })
-
     $(".player_control_bar_progress").hover(function () {
-        $("#content .skin_0 .player_control_bar_progress_played:after").css("opacity", "1");
-        $("#content .skin_0 .player_control_bar_progress_played:before").css("opacity", "1");
-    }, function () {
-        $("#content .skin_0 .player_control_bar_progress_played:after").css("opacity", "0");
-        $("#content .skin_0 .player_control_bar_progress_played:before").css("opacity", "0");
+        // console.log("success");
+        $("#content .skin_0 .player_control_bar_progress_played").addClass("hover");
+    },function () {
+        // console.log("success");
+        $("#content .skin_0 .player_control_bar_progress_played").removeClass("hover");
     });
 
-    var j = 0;
-    var k = 0;
-    var i = 0;
-    setInterval(function () {
-        i++;
-        $(".player_control_bar_current").text("00:0" + i);
-        if (i > 9) {
-            $(".player_control_bar_current").text("00:" + i);
-        }
-        if (i > 59) {
-            j = parseInt(i / 60);
-            if (k > 59) {
-                k = 0;
-            }
-            $(".player_control_bar_current").text("0" + j + ":0" + k);
-            if (k > 9) {
-                $(".player_control_bar_current").text("0" + j + ":" + k);
-            }
-            k++;
-        }
-        $width = (351/246) * i;
-        $(".player_control_bar_progress_played").css("width",$width);
-        console.log(i);
-        if(i > 246){
-            $(".player_control_bar_current").text("04:06");
-            $(".player_control_bar_progress_played").css("width","100%");
-        }
-    }, 1000);
-
-
+    // 全屏设置
     var fullscreen = function () {
         elem = document.getElementById("youkuplayer");
         if (elem.webkitRequestFullScreen) {
@@ -400,6 +361,7 @@ $(function () {
         } else {
             //浏览器不支持全屏API或已被禁用
         }
+        // 全屏设置的不同按钮转换
         $(".player_control_bar_fullscreen i:eq(0)").css("display", "none");
         $(".player_control_bar_fullscreen i:eq(1)").css("display", "block");
     };
@@ -426,7 +388,13 @@ $(function () {
         exitFullscreen();
     });
 
-
+    // 声音条显示设置
+    $(".player_control_bar_volume_button").hover(function () {
+        $(".player_control_bar_volume_bar").show();
+    }, function () {
+        $(".player_control_bar_volume_bar").hide();
+    });
+    // 静音和音量键之间的切换显示
     $(".icon-yinliang1").click(function () {
         $(".icon-yinliang").show();
         $(this).hide();
@@ -436,8 +404,96 @@ $(function () {
         $(this).hide();
         $(".icon-yinliang1").show();
         $("#content .skin_0 .player_control_bar_volume_show").css("background-color", "#09d1b1")
-    })
+    });
+    //声音控制
+    $(".player_control_bar_volume_bar").click(function (e) {
+        console.log(e.pageY);
+        $(".player_control_bar_volume_show").height((637-e.pageY)/80*100+"%");
+        //音量
+        document.getElementById("video1").volume = (637-e.pageY)/80;
+        //静音
+        if(e.pageY >= 637 ){
+            $(".icon-yinliang").show();
+            $(".icon-yinliang1").hide();
+        }else{
+            $(".icon-yinliang1").show();
+            $(".icon-yinliang").hide();
+        };
+    });
 
+    // 视频总时长获取和设置
+    var t=0,h=0,m,pro=0,durtime,num;
+    document.getElementById("video1").oncanplay=function () {
+        //总时长
+        durtime=$("#youkuplayer video").get(0).duration + 6;
+        // console.log(durtime);
+        if(Math.round(durtime)%60>=10){
+            num="0"+Math.floor(Math.round(durtime)/60)+":"+Math.round(durtime)%60;
+        }else{
+            num="0"+Math.floor(Math.round(durtime)/60)+":0"+Math.round(durtime)%60;
+        }
+        $(".player_control_bar_total").text(num);
+        // console.log($("#youkuplayer video").get(0).readyState);
+
+    };
+
+    var flag = true;
+    // 视频点击事件
+    $("#video1").click(function () {
+        if(flag){
+            // 播放视频
+            $("#video1").get(0).play();
+
+            //时间
+            m=setInterval(function () {
+                t++;
+                $(".player_control_bar_current").text("0"+h+":0"+t);
+                if(t>=10){
+                    $(".player_control_bar_current").text("0"+h+":"+t);
+                };
+                if(t>=59){
+                    h++;
+                    t=-1;
+                };
+                //进度条
+                pro++;
+                $(".player_control_bar_progress_played").width(pro*0.4+"%");
+                if($(".player_control_bar_current").text()===num){
+                    clearInterval(m);
+                    t=0,h=0,pro=0;
+                };
+            },1000);
+            flag = false;
+        }else {
+            // 暂停视频
+            $("#video1").get(0).pause();
+            clearInterval(m);
+            flag = true;
+        }
+    });
+
+    // 自动播放,triggerHandler() 方法触发被选元素的指定事件类型。但不会执行浏览器默认动作，也不会产生事件冒泡。
+    $("#video1").triggerHandler("click");
+
+    //快进点击
+    $(".player_control_bar_progress").click(function (e) {
+        // console.log(e.pageX);
+        $(".player_control_bar_progress_played").width((e.pageX-250)/352*100+"%");
+        pro=(e.pageX-250)/352*100/0.4;
+        //当前播放时间
+        document.getElementById("video1").currentTime=(e.pageX-250)/352*Math.round(durtime);
+        //console.log((e.pageX-290)/859*Math.round(durtime));
+        h=Math.floor((e.pageX-250)/352*Math.round(durtime)/60);
+        t=Math.round((e.pageX-250)/352*Math.round(durtime)%60);
+        $(".player_control_bar_current").text("0"+h+":0"+t);
+        if(t>=10){
+            $(".player_control_bar_current").text("0"+h+":"+t);
+        };
+        if($(".current-time").text()===num){
+            clearInterval(m);
+            t=0,h=0,pro=0;
+        };
+    });
 
 
 
