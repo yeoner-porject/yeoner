@@ -322,16 +322,16 @@ $(function () {
         $(".skin_0").addClass("show");
         setTimeout(function () {
             $(".skin_0").removeClass("show");
-        },5000);
+        },10000);
     }).mouseleave(function () {
         setTimeout(function () {
             $(".skin_0").removeClass("show");
-        },5000);
+        },10000);
     }).mousemove(function () {
         $(".skin_0").addClass("show");
         setTimeout(function () {
             $(".skin_0").removeClass("show");
-        },5000);
+        },10000);
     });
 
     // 清晰度选项设置
